@@ -1,37 +1,15 @@
-// Vendors
-@import 'vendors/bourbon/bourbon';
-@import 'vendors/base/base';
-@import 'vendors/neat/neat';
+// main.scss
 
-// Utils
-// @import 'utils/variables';
-// @import 'utils/functions';
-// @import 'utils/mixins';
-// @import 'utils/placeholders';
+// This is the primary manifest file
+// Files should be imported according to the folder they live in,
+// one after the other in the following order:
 
-// Base
-@import 'base/normalize';
+// Dependencies
+@import "vendors/vendors";
+@import "utils/utils";
 
-// Layout
-// @import 'layout/navigation';
-// @import 'layout/grid';
-// @import 'layout/header';
-// @import 'layout/footer';
-// @import 'layout/sidebar';
-// @import 'layout/forms';
-
-// Components
-// @import 'components/buttons';
-// @import 'components/carousel';
-// @import 'components/cover';
-// @import 'components/dropdown';
-
-// Pages
-// @import 'pages/home';
-// @import 'pages/contact';
-
-// Themes
-// @import 'themes/theme';
-// @import 'themes/admin';
-
-// @import 'shame'
+@import "base/base";
+@import "layout/layout";
+@import "components/components";
+// pages/
+// themes/
