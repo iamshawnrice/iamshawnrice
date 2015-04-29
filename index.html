@@ -14,7 +14,7 @@
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
-  <body>
+  <body ng-controller="MainCtrl">
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -30,7 +30,8 @@
           </span>
         </p>
       </header>
-      <section ui-view class="main-content"></section>
+      <section ui-view class="main-content">
+      </section>
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>

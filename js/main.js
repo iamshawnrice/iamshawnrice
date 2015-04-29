@@ -15,3 +15,13 @@ IASR.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'partials/playlists.html'
     });
 });
+
+IASR.controller('MainCtrl', function($scope) {
+
+  var playlists = $.ajax({
+    url: 'http://localhost:8888/iamshawnrice-api/wp-json/posts?type=playlist',
+    dataType: 'json'
+  });
+
+  $scope.playlists = playlists;
+});
