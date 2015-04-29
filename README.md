@@ -1,2 +1,2 @@
-# ng-boilerplate
-Angular starter app built on HTML5 Boilerplate &amp; Bourbon
+# iamshawnrice.com
+Personal blog & portfolio site for Shawn Rice

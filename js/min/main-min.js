@@ -1,1 +1,1 @@
-$(document).ready(function(){});
+var IASR=angular.module("IASR",["ui.router"]);IASR.config(function(t,l){l.otherwise("/"),t.state("about",{url:"/about",templateUrl:"partials/about.html"}).state("playlists",{url:"/playlists",templateUrl:"partials/playlists.html"})});
