@@ -16,10 +16,6 @@ body {
 
 // Header
 .site-header {
-  @include transform(translateY(-100%));
-  @include transitioned(all, .5s);
-  position: absolute;
-  top: 100%;
   font-size: 10em;
 
   .site-title {
@@ -37,12 +33,6 @@ body {
       display: inline-block;
     }
   }
-
-  &.boom {
-    @include transform(translateY(0));
-    top: 0;
-    font-size: 2em;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -53,4 +43,11 @@ body {
   .site-nav {
     font-size: 2em;
   }
+}
+
+.little-box {
+  border: 1px solid $gray-4;
+  background: $iasr-blue;
+  width: 200px;
+  height: 200px;
 }
