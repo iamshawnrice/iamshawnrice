@@ -8,20 +8,33 @@ IASR.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('about', {
       url: '/about',
-      templateUrl: 'partials/about.html'
+      templateUrl: 'partials/about.html',
+      controller: 'AboutCtrl'
     })
     .state('playlists', {
       url: '/playlists',
-      templateUrl: 'partials/playlists.html'
+      templateUrl: 'partials/playlists.html',
+      controller: 'PlaylistsCtrl'
     });
 });
 
-IASR.controller('MainCtrl', function($scope) {
+IASR.controller('PlaylistsCtrl', function($scope, $http) {
+  $scope.playlists = [];
 
-  var playlists = $.ajax({
-    url: 'http://localhost:8888/iamshawnrice-api/wp-json/posts?type=playlist',
-    dataType: 'json'
-  });
+  $http.get('/iamshawnrice-api/wp-json/posts?type=playlist')
+    .success(function(data) {
+      $scope.playlists = data;
+    });
+});
 
-  $scope.playlists = playlists;
+IASR.controller('AboutCtrl', function($scope, $http, $sce) {
+  $scope.about = [];
+  $scope.aboutContent = '';
+
+  $http.get('/iamshawnrice-api/wp-json/pages/27')
+    .success(function(data) {
+      $scope.about = data;
+    });
+
+  $scope.about.aboutContent = $sce.trustAsHtml($scope.about.content);
 });
