@@ -2,8 +2,13 @@
 
 var IASR = angular.module('IASR', ['ui.router']);
 
-IASR.config(function($stateProvider, $urlRouterProvider) {
+IASR.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/');
+
+  $locationProvider.html5Mode({
+    enabled: true,
+    requireBase: true
+  });
 
   $stateProvider
     .state('about', {
