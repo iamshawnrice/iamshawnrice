@@ -14,16 +14,16 @@ IASR.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('about', {
       url: '/about',
       templateUrl: 'partials/about.html',
-      controller: 'AboutCtrl'
+      controller: 'AboutController'
     })
     .state('playlists', {
       url: '/playlists',
       templateUrl: 'partials/playlists.html',
-      controller: 'PlaylistsCtrl'
+      controller: 'PlaylistsController'
     });
 });
 
-IASR.controller('PlaylistsCtrl', function($scope, $http) {
+IASR.controller('PlaylistsController', function($scope, $http) {
   $scope.playlists = [];
 
   $http.get('/iamshawnrice-api/wp-json/posts?type=playlist')
@@ -32,7 +32,7 @@ IASR.controller('PlaylistsCtrl', function($scope, $http) {
     });
 });
 
-IASR.controller('AboutCtrl', function($scope, $http, $sce) {
+IASR.controller('AboutController', function($scope, $http, $sce) {
   $scope.about = [];
   $scope.aboutContent = '';
 
