@@ -2,13 +2,8 @@
 
 var IASR = angular.module('IASR', ['ui.router']);
 
-IASR.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+IASR.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
-
-  $locationProvider.html5Mode({
-    enabled: true,
-    requireBase: true
-  });
 
   $stateProvider
     .state('about', {
@@ -23,23 +18,46 @@ IASR.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     });
 });
 
-IASR.controller('PlaylistsController', function($scope, $http) {
-  $scope.playlists = [];
+/*
+  Controllers
+*/
 
-  $http.get('/iamshawnrice-api/wp-json/posts?type=playlist')
-    .success(function(data) {
-      $scope.playlists = data;
-    });
+IASR.controller('PlaylistsController', function($scope, playlistsFactory) {
+  playlistsFactory.getPlaylists().then(function(data) {
+    $scope.playlists = data;
+  });
 });
 
-IASR.controller('AboutController', function($scope, $http, $sce) {
-  $scope.about = [];
-  $scope.aboutContent = '';
+IASR.controller('AboutController', function($scope, aboutFactory) {
+  aboutFactory.getAbout().then(function(data) {
+    $scope.about = data;
+  });
+});
 
-  $http.get('/iamshawnrice-api/wp-json/pages/27')
-    .success(function(data) {
-      $scope.about = data;
-    });
+/*
+  Factories
+*/
 
-  $scope.about.aboutContent = $sce.trustAsHtml($scope.about.content);
+IASR.factory('playlistsFactory', function($http) {
+  return {
+    getPlaylists: function() {
+      return $http.get('/iamshawnrice-api/wp-json/posts?type=playlist')
+        .then(function(result) {
+        //resolve the promise as the data
+          return result.data;
+        });
+      }
+   };
+});
+
+IASR.factory('aboutFactory', function($http) {
+  return {
+    getAbout: function() {
+      return $http.get('/iamshawnrice-api/wp-json/pages/27')
+        .then(function(result) {
+        //resolve the promise as the data
+          return result.data;
+        });
+      }
+   };
 });
