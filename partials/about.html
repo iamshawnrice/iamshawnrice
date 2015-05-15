@@ -1,3 +1,5 @@
-<h1>{{ about.title }}</h1>
+<article>
+  <h1>{{ about.title }}</h1>
 
-{{ about.content }}
+  <section ng-bind-html="about.content"></section>
+</article>
