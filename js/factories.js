@@ -23,24 +23,22 @@ IASR.factory('playlistsFactory', function($http, $q) {
       .success(function(data) {
         deferred.resolve(data);
       });
+
       return deferred.promise;
   }
 
-  return service;
-});
-
-IASR.factory('playlistFactory', function($http, $q) {
-  var service = {};
-
-  service.getPlaylists = function(slug) {
+  service.getPlaylist = function(id) {
     var deferred = $q.defer(),
-        url = 
+        urlBase = 'http://localhost:8888/iamshawnrice/api/wp-json/posts/',
+        urlId = id.toString(),
+        urlParam = '?type=playlist', 
+        link = urlBase + urlId + urlParam;
 
-
-    $http.get('http://localhost:8888/iamshawnrice/api/wp-json/posts?type=playlist')
+    $http.get(link)
       .success(function(data) {
         deferred.resolve(data);
       });
+
       return deferred.promise;
   }
 

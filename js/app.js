@@ -17,12 +17,12 @@ IASR.config(function($stateProvider, $urlRouterProvider) {
       controller: 'PlaylistsController'
     })
     .state('playlist', {
-      url: '/playlists/:slug',
+      url: '/playlists/:id',
       templateUrl: 'partials/playlist.html',
-      controller: function($scope, $stateParams) {
-        var slug = $stateParams.slug;
-
-        $scope.playlist = PlaylistsController.slug;
+      controller: function($scope, $stateParams, playlistsFactory) {
+        playlistsFactory.getPlaylist($stateParams.id).then(function(data) {
+          $scope.playlist = data;
+        });
       }
     });
 });
