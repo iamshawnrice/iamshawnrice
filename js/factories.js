@@ -2,15 +2,24 @@
   Factories
 */
 
-IASR.factory('aboutFactory', function($http) {
-  return {
-    getAbout: function() {
-      return $http.get('http://localhost:8888/iamshawnrice/api/wp-json/pages/27')
-        .then(function(result) {
-          return result.data;
-        });
-      }
-   };
+IASR.factory('pageFactory', function($http, $q) {
+  var service = {};
+  
+  service.getPage = function(id) {
+    var deferred = $q.defer(),
+        urlBase = 'http://localhost:8888/iamshawnrice/api/wp-json/pages/',
+        urlId = id.toString(),
+        link = urlBase + urlId;
+
+    $http.get(link)
+      .success(function(data) {
+        deferred.resolve(data);
+      });
+
+      return deferred.promise;
+    };
+
+  return service;
 });
 
 IASR.factory('playlistsFactory', function($http, $q) {
@@ -25,7 +34,7 @@ IASR.factory('playlistsFactory', function($http, $q) {
       });
 
       return deferred.promise;
-  }
+  };
 
   service.getPlaylist = function(id) {
     var deferred = $q.defer(),
@@ -40,7 +49,7 @@ IASR.factory('playlistsFactory', function($http, $q) {
       });
 
       return deferred.promise;
-  }
+  };
 
   return service;
 });

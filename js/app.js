@@ -24,5 +24,10 @@ IASR.config(function($stateProvider, $urlRouterProvider) {
           $scope.playlist = data;
         });
       }
+    })
+    .state('webdeveloper', {
+      url: '/web-developer',
+      templateUrl: 'partials/webdeveloper.html',
+      controller: 'DevController'
     });
 });
