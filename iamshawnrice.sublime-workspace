@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"get",
+				"getPlaylists"
+			],
+			[
 				"tran",
 				"translateY"
 			]
@@ -12,45 +16,34 @@
 	"buffers":
 	[
 		{
-			"file": "partials/playlists.html",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 133,
+				"buffer_size": 3552,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "js/controllers.js",
+			"file": "sass/layout/_layout.scss",
 			"settings":
 			{
-				"buffer_size": 343,
+				"buffer_size": 2926,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "/* global angular:true, IASR:true */\n\nvar IASR = angular.module('IASR', ['ui.router']);\n\nIASR.config(function($stateProvider, $urlRouterProvider) {\n  $urlRouterProvider.otherwise('/');\n\n  $stateProvider\n    .state('about', {\n      url: '/about',\n      templateUrl: 'partials/about.html',\n      controller: 'AboutController'\n    })\n    .state('playlists', {\n      url: '/playlists',\n      templateUrl: 'partials/playlists.html',\n      controller: 'PlaylistsController'\n    })\n    .state('playlist', {\n      url: '/playlists/:id',\n      templateUrl: 'partials/playlist.html',\n      controller: function($scope, $stateParams) {\n        var id = $stateParams.id;\n\n        $scope.playlist = PlaylistsController.id;\n      }\n    });\n});\n",
-			"file": "js/app.js",
-			"file_size": 753,
-			"file_write_time": 130759565750000000,
+			"file": "sass/main.scss",
 			"settings":
 			{
-				"buffer_size": 730,
+				"buffer_size": 332,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "js/factories.js",
+			"file": "sass/vendors/_vendors.scss",
 			"settings":
 			{
-				"buffer_size": 731,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "partials/playlist.html",
-			"settings":
-			{
-				"buffer_size": 20,
+				"buffer_size": 68,
 				"line_ending": "Unix"
 			}
 		}
@@ -97,23 +90,22 @@
 	"expanded_folders":
 	[
 		"/Users/shawnrice/Sites/iamshawnrice",
-		"/Users/shawnrice/Sites/iamshawnrice/js",
-		"/Users/shawnrice/Sites/iamshawnrice/partials",
-		"/Users/shawnrice/Sites/iamshawnrice/sass",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/base"
+		"/Users/shawnrice/Sites/iamshawnrice/bower_components/angular-sanitize",
+		"/Users/shawnrice/Sites/iamshawnrice/sass"
 	],
 	"file_history":
 	[
-		"/Users/shawnrice/Sites/iamshawnrice/index.html",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_layout.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/about.html",
-		"/Users/shawnrice/Sites/iamshawnrice/partials/playlists.html",
-		"/Users/shawnrice/Sites/iamshawnrice/partials/playlist.html",
-		"/Users/shawnrice/Sites/iamshawnrice/js/app.js",
+		"/Users/shawnrice/Sites/iamshawnrice/index.html",
 		"/Users/shawnrice/Sites/iamshawnrice/js/controllers.js",
 		"/Users/shawnrice/Sites/iamshawnrice/js/factories.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/main.js",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/playlist.html",
+		"/Users/shawnrice/Sites/iamshawnrice/js/app.js",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/playlists.html",
 		"/Users/shawnrice/Sites/iamshawnrice/bower.json",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_layout.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/api/wp-config.php",
+		"/Users/shawnrice/Sites/iamshawnrice/js/main.js",
 		"/Users/shawnrice/Sites/iamshawnrice/README.md",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/main.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_mixins.scss",
@@ -159,6 +151,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"content",
 			"router"
 		],
 		"highlight": true,
@@ -177,32 +170,34 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "partials/playlists.html",
+					"file": "index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 133,
+						"buffer_size": 3552,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								70,
-								70
+								1531,
+								1531
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 226.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -210,54 +205,54 @@
 				},
 				{
 					"buffer": 1,
-					"file": "js/controllers.js",
+					"file": "sass/layout/_layout.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 343,
+						"buffer_size": 2926,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								891,
+								891
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 518.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "js/app.js",
-					"semi_transient": false,
+					"file": "sass/main.scss",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 730,
+						"buffer_size": 332,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								621,
-								621
+								205,
+								190
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -268,60 +263,30 @@
 				},
 				{
 					"buffer": 3,
-					"file": "js/factories.js",
+					"file": "sass/vendors/_vendors.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 731,
+						"buffer_size": 68,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								397,
-								397
+								68,
+								68
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "partials/playlist.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 20,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -376,12 +341,48 @@
 		"selected_items":
 		[
 			[
+				"vendors/vendors",
+				"sass/vendors/_vendors.scss"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
 				"fac",
 				"js/factories.js"
 			],
 			[
+				"abou",
+				"partials/about.html"
+			],
+			[
+				"pl",
+				"partials/playlists.html"
+			],
+			[
 				"play",
 				"partials/playlist.html"
+			],
+			[
+				"b",
+				"bower.json"
+			],
+			[
+				"about.",
+				"partials/about.html"
+			],
+			[
+				"playlists",
+				"partials/playlists.html"
+			],
+			[
+				"app.js",
+				"js/app.js"
+			],
+			[
+				"contr",
+				"js/controllers.js"
 			],
 			[
 				"app",
@@ -390,10 +391,6 @@
 			[
 				"contro",
 				"js/controllers.js"
-			],
-			[
-				"index",
-				"index.html"
 			],
 			[
 				"about",
@@ -445,9 +442,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "jor",
+		"last_filter": "ju",
 		"selected_items":
 		[
+			[
+				"ju",
+				"~/Sites/jordanlross/wp-content/themes/jordanlross/jordanlross.sublime-project"
+			],
 			[
 				"jor",
 				"~/Sites/jordanlross/wp-content/themes/jordanlross/jordanlross.sublime-project"

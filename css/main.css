@@ -195,6 +195,33 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon/fonts/icomoon.eot?-a00vc7");
+  src: url("../fonts/icomoon/fonts/icomoon.eot?#iefix-a00vc7") format("embedded-opentype"), url("../fonts/icomoon/fonts/icomoon.woff?-a00vc7") format("woff"), url("../fonts/icomoon/fonts/icomoon.ttf?-a00vc7") format("truetype"), url("../fonts/icomoon/fonts/icomoon.svg?-a00vc7#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-twitter:before {
+  content: "\ea91"; }
+
+.icon-github:before {
+  content: "\eab1"; }
+
+.icon-linkedin2:before {
+  content: "\eac9"; }
+
 #skip {
   overflow: hidden;
   text-indent: 101%;
@@ -347,9 +374,6 @@ p.author {
   font-weight: 700;
   src: local("Noto Sans Bold Italic"), local("NotoSans-BoldItalic"), url(http://fonts.gstatic.com/s/notosans/v6/9Z3uUWMRR7crzm1TjRicDv79_ZuUxCigM2DespTnFaw.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
-body {
-  margin: 0; }
-
 a {
   -webkit-transition: color 0.25s;
   -moz-transition: color 0.25s;
@@ -365,12 +389,15 @@ body {
   background: #f7f5f2;
   color: #464541;
   position: relative;
-  min-height: 100%; }
+  min-height: 100%;
+  height: 100%;
+  margin: 0; }
 
 .body-wrap {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding: 0 5% 2em; }
   .body-wrap::after {
     clear: both;
     content: "";
@@ -400,8 +427,41 @@ body {
 
   .site-nav {
     font-size: 2em; } }
-.little-box {
-  border: 1px solid #464541;
-  background: #6b83a6;
-  width: 200px;
-  height: 200px; }
+footer[role="contentinfo"] {
+  background: #464541;
+  padding: 2em 5%;
+  font-family: "Radley", serif;
+  font-size: 1.5em; }
+  footer[role="contentinfo"]::after {
+    clear: both;
+    content: "";
+    display: table; }
+  footer[role="contentinfo"] a {
+    -webkit-transition: color 0.25s;
+    -moz-transition: color 0.25s;
+    transition: color 0.25s;
+    color: #edeae2; }
+    footer[role="contentinfo"] a:hover {
+      color: #6b83a6; }
+  footer[role="contentinfo"] ul {
+    list-style: none; }
+    footer[role="contentinfo"] ul li {
+      display: inline;
+      padding: 0 .25em; }
+  footer[role="contentinfo"] .footer-about {
+    float: left; }
+    footer[role="contentinfo"] .footer-about li:first-of-type {
+      padding-left: 0; }
+  footer[role="contentinfo"] .footer-social {
+    float: right; }
+    footer[role="contentinfo"] .footer-social li:last-of-type {
+      padding-right: 0; }
+  @media screen and (max-width: 25em) {
+    footer[role="contentinfo"] .footer-about,
+    footer[role="contentinfo"] .footer-social {
+      float: none;
+      text-align: center; }
+      footer[role="contentinfo"] .footer-about li:first-of-type, footer[role="contentinfo"] .footer-about li:last-of-type,
+      footer[role="contentinfo"] .footer-social li:first-of-type,
+      footer[role="contentinfo"] .footer-social li:last-of-type {
+        padding: 0 .25em; } }

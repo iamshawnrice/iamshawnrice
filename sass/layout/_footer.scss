@@ -1,0 +1,52 @@
+// Footer
+footer[role="contentinfo"] {
+  @include clearfix;
+  background: $gray-4;
+  padding: 2em 5%;
+  font-family: $serif;
+  font-size: 1.5em;
+
+  a {
+    @include link($iasr-white, $iasr-blue);
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline;
+      padding: 0 .25em;
+    }
+  }
+
+  .footer-about {
+    float: left;
+
+    li:first-of-type {
+      padding-left: 0;
+    }
+  }
+
+  .footer-social {
+    float: right;
+
+    li:last-of-type {
+      padding-right: 0;
+    }
+  }
+
+  @media screen and (max-width: $small-screen) {
+    .footer-about,
+    .footer-social {
+      float: none;
+      text-align: center;
+
+      li {
+        &:first-of-type,
+        &:last-of-type {
+          padding: 0 .25em;
+        }
+      }
+    }
+  }
+}
