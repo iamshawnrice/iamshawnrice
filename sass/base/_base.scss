@@ -217,7 +217,22 @@ body {
   margin: 0;
 }
 
+
+$footer-height: 132px;
+
+@media screen and (max-width: $small-screen) {
+  $footer-height: 168px;
+}
+
 .body-wrap {
   @include outer-container;
   padding: 0 5% 2em;
+  min-height: 100%;
+  margin-bottom: -$footer-height;
+
+  &:after {
+    content: "";
+    display: block;
+    height: $footer-height;
+  }
 }

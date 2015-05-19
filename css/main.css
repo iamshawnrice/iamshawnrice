@@ -397,11 +397,17 @@ body {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 5% 2em; }
+  padding: 0 5% 2em;
+  min-height: 100%;
+  margin-bottom: -132px; }
   .body-wrap::after {
     clear: both;
     content: "";
     display: table; }
+  .body-wrap:after {
+    content: "";
+    display: block;
+    height: 132px; }
 
 .site-header {
   font-size: 10em; }
