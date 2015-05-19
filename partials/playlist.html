@@ -1,6 +1,8 @@
 <article>
-  <h1>{{ playlist.title }}</h1>
-  <p class="date">{{ playlist.date }}</p>
+  <header class="article-header">
+    <h1>{{ playlist.title }}</h1>
+    <p class="date">{{ playlist.date }}</p>
+  </header>
 
   <section class="introduction" ng-bind-html="playlist.content"></section>
 

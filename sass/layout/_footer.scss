@@ -1,10 +1,15 @@
 // Footer
 footer[role="contentinfo"] {
-  @include clearfix;
   background: $gray-4;
-  padding: 2em 5%;
   font-family: $serif;
   font-size: 1.5em;
+
+  .foot-wrap {
+    @include clearfix;
+    padding: 1em 5%;
+    max-width: $large-screen;
+    margin: 0 auto;
+  }
 
   a {
     @include link($iasr-white, $iasr-blue);
