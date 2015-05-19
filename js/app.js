@@ -3,7 +3,7 @@
 var IASR = angular.module('IASR', ['ui.router', 'ngSanitize']);
 
 IASR.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-  $locationProvider.html5Mode(true).hashPrefix('#');
+  $locationProvider.hashPrefix('!');
 
   $urlRouterProvider.otherwise('/');
 
@@ -21,11 +21,7 @@ IASR.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('playlist', {
       url: '/playlists/:id',
       templateUrl: 'partials/playlist.html',
-      controller: function($scope, $stateParams, playlistsFactory) {
-        playlistsFactory.getPlaylist($stateParams.id).then(function(data) {
-          $scope.playlist = data;
-        });
-      }
+      controller: 'PlaylistController'
     })
     .state('webdeveloper', {
       url: '/web-developer',
