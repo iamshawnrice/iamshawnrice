@@ -7,7 +7,7 @@ IASR.factory('pageFactory', function($http, $q) {
   
   service.getPage = function(id) {
     var deferred = $q.defer(),
-        urlBase = 'http://localhost:8888/iamshawnrice/api/wp-json/pages/',
+        urlBase = '/api/wp-json/pages/',
         urlId = id.toString(),
         link = urlBase + urlId;
 
@@ -28,7 +28,7 @@ IASR.factory('playlistsFactory', function($http, $q) {
   service.getPlaylists = function() {
     var deferred = $q.defer();
 
-    $http.get('http://localhost:8888/iamshawnrice/api/wp-json/posts?type=playlist')
+    $http.get('/api/wp-json/posts?type=playlist')
       .success(function(data) {
         deferred.resolve(data);
       });
@@ -38,7 +38,7 @@ IASR.factory('playlistsFactory', function($http, $q) {
 
   service.getPlaylist = function(id) {
     var deferred = $q.defer(),
-        urlBase = 'http://localhost:8888/iamshawnrice/api/wp-json/posts/',
+        urlBase = '/api/wp-json/posts/',
         urlId = id.toString(),
         urlParam = '?type=playlist', 
         link = urlBase + urlId + urlParam;
