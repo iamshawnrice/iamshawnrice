@@ -1,21 +1,19 @@
 <article>
-  <header class="article-header">
-    <h1>{{ playlist.title }}</h1>
-    <p class="date">{{ playlist.date }}</p>
-  </header>
+  <iasr-article-header title="playlist.title" date="playlist.date" class="article-header">
+  </iasr-article-header>
 
   <section class="introduction" ng-bind-html="playlist.content"></section>
 
   <section class="player">
-    <iframe width="440px" height="630px" frameborder="0" ng-src="{{ playerUrl }}">
+    <iframe width="440px" height="630px" frameborder="0" ng-src="{{ ::playerUrl }}">
     </iframe>
   </section>
 
   <section class="track-list">
     <ol>
       <li ng-repeat="track in playlist.meta.track_listing">
-        <strong>{{ track.track_artist }}</strong> - 
-        <em>{{ track.track_name }}</em>
+        <strong>{{ ::track.track_artist }}</strong> - 
+        <em>{{ ::track.track_name }}</em>
       </li>
     </ol>
   </section>
