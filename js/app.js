@@ -3,7 +3,7 @@
 var IASR = angular.module('IASR', ['ui.router', 'ngSanitize']);
 
 IASR.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-  $locationProvider.hashPrefix('!');
+  $locationProvider.html5Mode(true).hashPrefix('!');
 
   $urlRouterProvider.otherwise('/');
 

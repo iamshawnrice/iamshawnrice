@@ -19,22 +19,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "partials/playlist.html",
-			"settings":
-			{
-				"buffer_size": 527,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 3078,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -79,29 +63,38 @@
 	[
 		"/Users/shawnrice/Sites/iamshawnrice",
 		"/Users/shawnrice/Sites/iamshawnrice/js",
-		"/Users/shawnrice/Sites/iamshawnrice/partials"
+		"/Users/shawnrice/Sites/iamshawnrice/sass",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/base",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/components"
 	],
 	"file_history":
 	[
+		"/Applications/MAMP/conf/apache/httpd.conf",
+		"/Users/shawnrice/Sites/iamshawnrice/.htaccess",
 		"/Users/shawnrice/Sites/iamshawnrice/js/directives.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/factories.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/app.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/controllers.js",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/about.html",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/playlist.html",
-		"/Users/shawnrice/Sites/iamshawnrice/partials/iasr-mixtape.html",
 		"/Users/shawnrice/Sites/iamshawnrice/index.html",
-		"/Users/shawnrice/Sites/iamshawnrice/partials/playlists.html",
-		"/Users/shawnrice/Sites/iamshawnrice/partials/webdeveloper.html",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_mixins.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_variables.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_base.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/app.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/factories.js",
+		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/themes/iasr/js/main.js",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_footer.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_base.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_variables.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_components.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_headers.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_extends.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_utils.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/webdeveloper.html",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_header.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/iasr-mixtape.html",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/playlists.html",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_mixins.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_layout.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/vendors/_vendors.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/main.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_header.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/fonts/icomoon/_style.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/partials/about.html",
 		"/Users/shawnrice/Sites/iamshawnrice/bower.json",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-config.php",
 		"/Users/shawnrice/Sites/iamshawnrice/js/main.js",
@@ -149,6 +142,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"rewrite",
+			"AllowOverride",
+			"VirtualHost",
+			"virtualHost",
 			"little-box",
 			"content",
 			"router"
@@ -169,69 +166,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "partials/playlist.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 527,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								213,
-								213
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3078,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2572,
-								2572
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 604.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -284,20 +220,68 @@
 		"selected_items":
 		[
 			[
-				"index",
-				"index.html"
+				"about",
+				"partials/about.html"
 			],
 			[
 				"play",
 				"partials/playlist.html"
 			],
 			[
-				"app.js",
-				"js/app.js"
+				"index",
+				"index.html"
+			],
+			[
+				"cont",
+				"js/controllers.js"
 			],
 			[
 				"fac",
 				"js/factories.js"
+			],
+			[
+				"con",
+				"js/controllers.js"
+			],
+			[
+				"app",
+				"js/app.js"
+			],
+			[
+				"main.js",
+				"api/wp-content/themes/iasr/js/main.js"
+			],
+			[
+				"var",
+				"sass/utils/_variables.scss"
+			],
+			[
+				"footer",
+				"sass/layout/_footer.scss"
+			],
+			[
+				"base.scss",
+				"sass/base/_base.scss"
+			],
+			[
+				"playlist",
+				"partials/playlist.html"
+			],
+			[
+				"header.scss",
+				"sass/layout/_header.scss"
+			],
+			[
+				"footer.scss",
+				"sass/layout/_footer.scss"
+			],
+			[
+				"paly",
+				"partials/playlist.html"
+			],
+			[
+				"app.js",
+				"js/app.js"
 			],
 			[
 				"control",
@@ -308,31 +292,7 @@
 				"js/directives.js"
 			],
 			[
-				"app",
-				"js/app.js"
-			],
-			[
-				"cont",
-				"js/controllers.js"
-			],
-			[
-				"con",
-				"js/controllers.js"
-			],
-			[
-				"about",
-				"partials/about.html"
-			],
-			[
 				"base",
-				"sass/base/_base.scss"
-			],
-			[
-				"var",
-				"sass/utils/_variables.scss"
-			],
-			[
-				"base.scss",
 				"sass/base/_base.scss"
 			],
 			[
@@ -393,10 +353,6 @@
 			],
 			[
 				"main",
-				"js/main.js"
-			],
-			[
-				"main.js",
 				"js/main.js"
 			],
 			[
