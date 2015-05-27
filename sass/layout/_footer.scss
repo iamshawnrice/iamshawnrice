@@ -3,6 +3,7 @@ footer[role="contentinfo"] {
   background: $gray-4;
   font-family: $serif;
   font-size: 1.5em;
+  min-height: $footer-height;
 
   .foot-wrap {
     @include clearfix;
@@ -41,6 +42,8 @@ footer[role="contentinfo"] {
   }
 
   @media screen and (max-width: $small-screen) {
+    font-size: 1em;
+
     .footer-about,
     .footer-social {
       float: none;

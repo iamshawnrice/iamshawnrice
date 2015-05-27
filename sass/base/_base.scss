@@ -66,10 +66,6 @@
     font-size: 1.9em;
     font-weight: 700;
     margin-bottom: 0.3em;
-
-    @include media($medium-screen) {
-      font-size: 2.6em;
-    }
   }
 
   h2 {
@@ -221,10 +217,6 @@ body {
 
 
 $footer-height: 126px;
-
-@media screen and (max-width: $small-screen) {
-  $footer-height: 180px;
-}
 
 .body-wrap {
   max-width: $large-screen;

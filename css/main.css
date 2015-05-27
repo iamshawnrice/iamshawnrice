@@ -271,9 +271,6 @@ h1 {
   font-size: 1.9em;
   font-weight: 700;
   margin-bottom: 0.3em; }
-  @media screen and (min-width: 40em) {
-    h1 {
-      font-size: 2.6em; } }
 
 h2 {
   font-family: "Radley", serif;
@@ -281,7 +278,7 @@ h2 {
   font-weight: 400;
   line-height: 1.25em;
   margin-bottom: .9em; }
-  @media screen and (min-width: 40em) {
+  @media screen and (min-width: 61.25em) {
     h2 {
       font-size: 1.5em; } }
 
@@ -429,17 +426,19 @@ body {
       display: inline-block; }
       .site-header .site-nav a:hover {
         color: #464541; }
+  @media screen and (max-width: 61.25em) {
+    .site-header {
+      font-size: 4em; } }
+  @media screen and (max-width: 40em) {
+    .site-header {
+      font-size: 2.5em;
+      padding: .5em 0; } }
 
-@media screen and (max-width: 600px) {
-  .site-title {
-    font-size: 4em; }
-
-  .site-nav {
-    font-size: 2em; } }
 footer[role="contentinfo"] {
   background: #464541;
   font-family: "Radley", serif;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  min-height: 126px; }
   footer[role="contentinfo"] .foot-wrap {
     padding: 1em 5%;
     max-width: 1440px;
@@ -468,12 +467,14 @@ footer[role="contentinfo"] {
     float: right; }
     footer[role="contentinfo"] .footer-social li:last-of-type {
       padding-right: 0; }
-  @media screen and (max-width: 30em) {
-    footer[role="contentinfo"] .footer-about,
-    footer[role="contentinfo"] .footer-social {
-      float: none;
-      text-align: center; }
-      footer[role="contentinfo"] .footer-about li:first-of-type, footer[role="contentinfo"] .footer-about li:last-of-type,
-      footer[role="contentinfo"] .footer-social li:first-of-type,
-      footer[role="contentinfo"] .footer-social li:last-of-type {
-        padding: 0 .25em; } }
+  @media screen and (max-width: 40em) {
+    footer[role="contentinfo"] {
+      font-size: 1em; }
+      footer[role="contentinfo"] .footer-about,
+      footer[role="contentinfo"] .footer-social {
+        float: none;
+        text-align: center; }
+        footer[role="contentinfo"] .footer-about li:first-of-type, footer[role="contentinfo"] .footer-about li:last-of-type,
+        footer[role="contentinfo"] .footer-social li:first-of-type,
+        footer[role="contentinfo"] .footer-social li:last-of-type {
+          padding: 0 .25em; } }
