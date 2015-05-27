@@ -10,7 +10,7 @@ IASR.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
     .state('about', {
       url: '/about',
-      templateUrl: 'partials/about.html',
+      templateUrl: 'partials/page.html',
       controller: 'AboutController'
     })
     .state('playlists', {
@@ -25,7 +25,7 @@ IASR.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     })
     .state('webdeveloper', {
       url: '/web-developer',
-      templateUrl: 'partials/webdeveloper.html',
+      templateUrl: 'partials/page.html',
       controller: 'DevController'
     });
 });

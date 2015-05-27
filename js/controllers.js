@@ -4,7 +4,7 @@
 
 IASR.controller('AboutController', function($scope, pageFactory) {
   pageFactory.getPage(2).then(function(data) {
-    $scope.about = data;
+    $scope.page = data;
   });
 });
 
@@ -23,6 +23,6 @@ IASR.controller('PlaylistController', function($scope, $stateParams, playlistsFa
 
 IASR.controller('DevController', function($scope, pageFactory) {
   pageFactory.getPage(27).then(function(data) {
-    $scope.about = data;
+    $scope.page = data;
   });
 });
