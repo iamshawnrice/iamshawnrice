@@ -1,1 +1,1 @@
-IASR.directive("iasrArticleHeader",function(){return{restrict:"E",scope:{title:"=",date:"="},template:"<h1>{{ ::playlist.title }}</h1><p class=\"date\">{{ ::playlist.date | date : 'longDate' }}</p>"}});
+IASR.directive("iasrArticleHeader",function(){return{restrict:"E",transclude:!0,scope:{title:"=",date:"=?"},template:'<h1>{{ ::title }}</h1><p ng-if="date" class="date">{{ ::date | date : \'longDate\' }}</p><span ng-transclude></span>'}}),IASR.directive("iasrPaplow",function(){return{restrict:"E",templateUrl:"partials/paplow.html"}});

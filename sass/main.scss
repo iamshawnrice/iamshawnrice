@@ -6,11 +6,21 @@
 
 // Dependencies
 @import "vendors/vendors";
-@import "utils/utils";
+@import "utils/extends";
+@import "utils/mixins";
+@import "utils/variables";
 
+// Icons
 @import "../fonts/icomoon/style";
+
+// Global Styles
 @import "base/base";
-@import "layout/layout";
-@import "components/components";
-// pages/
-// themes/
+
+// Layout
+@import "layout/header";
+@import "layout/footer";
+
+// Components
+@import "components/headers";
+@import "components/paplow";
+
