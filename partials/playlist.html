@@ -1,6 +1,12 @@
 <article>
-  <iasr-article-header title="playlist.title" date="playlist.date" class="article-header">
-  </iasr-article-header>
+  <header class="article-header">
+    <h1 class="article-title" ng-animate-ref="{{ playlist.ID }}">
+      {{ ::playlist.title }}
+    </h1>
+    <p ng-if="playlist.date" class="date">
+      {{ ::playlist.date | date : 'longDate' }}
+    </p>
+  </header>
 
   <section class="introduction" ng-bind-html="playlist.content"></section>
 

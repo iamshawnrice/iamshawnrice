@@ -401,13 +401,41 @@ body {
 .body-wrap {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 5% 2em;
+  padding: 0 5%;
   min-height: 100%;
-  margin-bottom: -126px; }
+  margin-bottom: -126px;
+  position: relative; }
   .body-wrap:after {
     content: "";
     display: block;
     height: 126px; }
+
+.main-content {
+  padding-bottom: 200px; }
+
+.view-animation {
+  -webkit-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
+  -moz-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
+  transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
+  position: relative; }
+  .view-animation.ng-enter {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%); }
+  .view-animation.ng-leave, .view-animation.ng-enter.ng-enter-active {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
+  .view-animation.ng-leave.ng-leave-active {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%); }
 
 .site-header {
   font-size: 6em; }
@@ -478,3 +506,24 @@ footer[role="contentinfo"] {
         footer[role="contentinfo"] .footer-social li:first-of-type,
         footer[role="contentinfo"] .footer-social li:last-of-type {
           padding: 0 .25em; } }
+
+.article-header .article-title,
+.page-header .article-title {
+  -webkit-transition: 0.25s all ease-in-out;
+  -moz-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out; }
+
+.paplow-box {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 526px;
+  height: 145px; }
+  .paplow-box .paplow {
+    width: 100%;
+    height: 100%; }
