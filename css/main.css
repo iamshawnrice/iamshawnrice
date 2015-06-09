@@ -404,7 +404,8 @@ body {
   padding: 0 5%;
   min-height: 100%;
   margin-bottom: -126px;
-  position: relative; }
+  position: relative;
+  z-index: 1; }
   .body-wrap:after {
     content: "";
     display: block;
@@ -412,30 +413,6 @@ body {
 
 .main-content {
   padding-bottom: 200px; }
-
-.view-animation {
-  -webkit-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
-  -moz-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
-  transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
-  position: relative; }
-  .view-animation.ng-enter {
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
-    transform: translateX(-100%); }
-  .view-animation.ng-leave, .view-animation.ng-enter.ng-enter-active {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0); }
-  .view-animation.ng-leave.ng-leave-active {
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
-    transform: translateX(100%); }
 
 .site-header {
   font-size: 6em; }
@@ -466,7 +443,9 @@ footer[role="contentinfo"] {
   background: #464541;
   font-family: "Radley", serif;
   font-size: 1.5em;
-  min-height: 126px; }
+  min-height: 126px;
+  position: relative;
+  z-index: 2; }
   footer[role="contentinfo"] .foot-wrap {
     padding: 1em 5%;
     max-width: 1440px;
@@ -507,11 +486,16 @@ footer[role="contentinfo"] {
         footer[role="contentinfo"] .footer-social li:last-of-type {
           padding: 0 .25em; } }
 
-.article-header .article-title,
-.page-header .article-title {
-  -webkit-transition: 0.25s all ease-in-out;
-  -moz-transition: 0.25s all ease-in-out;
-  transition: 0.25s all ease-in-out; }
+.article-link {
+  -webkit-transition: color 0.25s;
+  -moz-transition: color 0.25s;
+  transition: color 0.25s;
+  color: #464541;
+  -webkit-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
+  -moz-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
+  transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245); }
+  .article-link:hover {
+    color: #6b83a6; }
 
 .paplow-box {
   position: absolute;

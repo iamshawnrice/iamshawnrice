@@ -1,0 +1,5 @@
+// Article List
+.article-link {
+  @include link($gray-4, $iasr-blue);
+  @include transitioned;
+}

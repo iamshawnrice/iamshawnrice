@@ -1,8 +1,4 @@
 .article-header,
 .page-header {
   @extend %title-header;
-
-  .article-title {
-    @include transition(.25s all ease-in-out);
-  }
 }

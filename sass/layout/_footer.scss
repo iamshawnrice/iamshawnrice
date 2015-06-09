@@ -4,6 +4,8 @@ footer[role="contentinfo"] {
   font-family: $serif;
   font-size: 1.5em;
   min-height: $footer-height;
+  position: relative;
+  z-index: 2;
 
   .foot-wrap {
     @include clearfix;

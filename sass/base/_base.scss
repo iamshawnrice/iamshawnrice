@@ -28,6 +28,7 @@ $footer-height: 126px;
   min-height: 100%;
   margin-bottom: -$footer-height;
   position: relative;
+  z-index: 1;
 
   &:after {
     content: "";
@@ -38,23 +39,4 @@ $footer-height: 126px;
 
 .main-content {
   padding-bottom: 200px;
-}
-
-// ng-animate helpers
-.view-animation {
-  @include transitioned;
-  position: relative;
-
-  &.ng-enter {
-    @include transform(translateX(-100%));
-  }
-
-  &.ng-leave,
-  &.ng-enter.ng-enter-active {
-    @include transform(translateX(0));
-  }
-
-  &.ng-leave.ng-leave-active {
-    @include transform(translateX(100%));
-  }
 }

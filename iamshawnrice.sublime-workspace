@@ -19,6 +19,46 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "sass/base/_base.scss",
+			"settings":
+			{
+				"buffer_size": 879,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/utils/_mixins.scss",
+			"settings":
+			{
+				"buffer_size": 294,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/base/_fonts.scss",
+			"settings":
+			{
+				"buffer_size": 2358,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/base/_overrides.scss",
+			"settings":
+			{
+				"buffer_size": 2435,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/main.scss",
+			"settings":
+			{
+				"buffer_size": 551,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -62,39 +102,46 @@
 	"expanded_folders":
 	[
 		"/Users/shawnrice/Sites/iamshawnrice",
-		"/Users/shawnrice/Sites/iamshawnrice/js"
+		"/Users/shawnrice/Sites/iamshawnrice/sass",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/base",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/components",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/layout",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/utils"
 	],
 	"file_history":
 	[
-		"/Users/shawnrice/Sites/iamshawnrice/partials/page.html",
-		"/Users/shawnrice/Sites/iamshawnrice/js/app.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/controllers.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/factories.js",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_headers.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/index.html",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/playlist.html",
+		"/Users/shawnrice/Sites/iamshawnrice/js/app.js",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/playlists.html",
+		"/Users/shawnrice/Sites/iamshawnrice/js/directives.js",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_paplow.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_base.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/paplow.html",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/main.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_components.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/js/factories.js",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/footer.html",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/page.html",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers.js",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/plugins/wp-json-api-playlists/plugin.php",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/plugins/WP-JSON-API-ACF-master/plugin.php",
 		"/Users/shawnrice/Sites/iamshawnrice/.gitignore",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_header.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_base.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_footer.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_variables.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/main.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_grid-settings.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/vendors/_vendors.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/index.html",
 		"/Users/shawnrice/Sites/iamshawnrice/.htaccess",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-config.php",
 		"/Applications/MAMP/conf/apache/httpd.conf",
-		"/Users/shawnrice/Sites/iamshawnrice/js/directives.js",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/about.html",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/themes/iasr/js/main.js",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_components.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_headers.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_extends.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_utils.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/webdeveloper.html",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/iasr-mixtape.html",
-		"/Users/shawnrice/Sites/iamshawnrice/partials/playlists.html",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_mixins.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_layout.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/fonts/icomoon/_style.scss",
@@ -144,6 +191,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".article-title",
 			"$small-screen",
 			"rewrite",
 			"AllowOverride",
@@ -169,8 +217,155 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "sass/base/_base.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 879,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								702,
+								702
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 226.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sass/utils/_mixins.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 294,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sass/base/_fonts.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2358,
+								2358
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 141.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sass/base/_overrides.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2435,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2435,
+								2435
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sass/main.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 551,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								393,
+								393
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -223,8 +418,48 @@
 		"selected_items":
 		[
 			[
+				"_mix",
+				"sass/utils/_mixins.scss"
+			],
+			[
+				"main.scss",
+				"sass/main.scss"
+			],
+			[
+				"headers.scss",
+				"sass/components/_headers.scss"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"playlists",
+				"partials/playlists.html"
+			],
+			[
+				"play",
+				"partials/playlist.html"
+			],
+			[
+				"base.scss",
+				"sass/base/_base.scss"
+			],
+			[
+				"paplow",
+				"partials/paplow.html"
+			],
+			[
+				"_pap",
+				"sass/components/_paplow.scss"
+			],
+			[
 				"playlist",
 				"partials/playlist.html"
+			],
+			[
+				"fac",
+				"js/factories.js"
 			],
 			[
 				".gitig",
@@ -271,14 +506,6 @@
 				"sass/base/_base.scss"
 			],
 			[
-				"main.scss",
-				"sass/main.scss"
-			],
-			[
-				"index",
-				"index.html"
-			],
-			[
 				"app.js",
 				"js/app.js"
 			],
@@ -287,16 +514,8 @@
 				"partials/about.html"
 			],
 			[
-				"play",
-				"partials/playlist.html"
-			],
-			[
 				"cont",
 				"js/controllers.js"
-			],
-			[
-				"fac",
-				"js/factories.js"
 			],
 			[
 				"con",
@@ -313,10 +532,6 @@
 			[
 				"footer",
 				"sass/layout/_footer.scss"
-			],
-			[
-				"base.scss",
-				"sass/base/_base.scss"
 			],
 			[
 				"footer.scss",
@@ -361,10 +576,6 @@
 			[
 				"about.",
 				"partials/about.html"
-			],
-			[
-				"playlists",
-				"partials/playlists.html"
 			],
 			[
 				"contr",

@@ -1,6 +1,6 @@
 /* global angular:true, IASR:true */
 
-var IASR = angular.module('IASR', ['ui.router', 'ngSanitize', 'ngAnimate']);
+var IASR = angular.module('IASR', ['ui.router', 'ngSanitize']);
 
 IASR.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   $locationProvider.html5Mode(true).hashPrefix('!');
