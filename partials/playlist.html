@@ -10,9 +10,12 @@
 
   <section class="introduction" ng-bind-html="playlist.content"></section>
 
-  <section class="player">
-    <iframe width="440px" height="630px" frameborder="0" ng-src="{{ ::playerUrl }}">
-    </iframe>
+  <section class="services">
+    <li ng-repeat="service in playlist.meta.share_links">
+      <a href="{{ service.url }}" target="_blank">
+        <span class="icon icon-{{ service.audio_service }}"></span>
+      </a>
+    </li>
   </section>
 
   <section class="track-list">
