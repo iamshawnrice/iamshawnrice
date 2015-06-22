@@ -1,1 +1,0 @@
-var IASR=angular.module("IASR",["ui.router"]);IASR.config(function(l,t){t.otherwise("/"),l.state("about",{url:"/about",templateUrl:"partials/about.html",controller:"AboutController"}).state("playlists",{url:"/playlists",templateUrl:"partials/playlists.html",controller:"PlaylistsController"})});

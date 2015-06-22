@@ -1,19 +1,21 @@
-/* global angular:true, IASR:true */
+define([
+    'angularAMD',
+    'angular-ui-router'
+], function(angularAMD) {
+  'use strict';
 
-(function() {
-  var IASR = angular.module('IASR', ['ui.router', 'ngSanitize']);
+  var app = angular.module('IASR', ['ui.router']);
 
-  IASR.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-    $locationProvider.html5Mode(true).hashPrefix('!');
-
+  app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
-      .state('about', {
+      .state('about', angularAMD.route({
         url: '/about',
         templateUrl: 'partials/page.html',
-        controller: 'AboutController'
-      })
+        controller: 'AboutController',
+        controllerUrl: './controllers/about-controller'
+      }))
       .state('playlists', {
         url: '/playlists',
         templateUrl: 'partials/playlists.html',
@@ -30,4 +32,6 @@
         controller: 'DevController'
       });
   });
-})();
+
+  return angularAMD.bootstrap(app);
+});
