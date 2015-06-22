@@ -1,10 +1,11 @@
 define([
     'angularAMD',
-    'angular-ui-router'
+    'angular-ui-router',
+    'angular-sanitize'
 ], function(angularAMD) {
   'use strict';
 
-  var app = angular.module('IASR', ['ui.router']);
+  var app = angular.module('IASR', ['ui.router', 'ngSanitize']);
 
   app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise('/');
