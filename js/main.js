@@ -7,14 +7,14 @@ require.config({
     'angular-ui-router': '../bower_components/angular-ui-router/release/angular-ui-router',
     'angularAMD': '../bower_components/angularAMD/angularAMD',
     // Factories
-    'page-factory': './factories/page-factory'
+    'page-factory': './factories/page-factory',
+    'playlists-factory': './factories/playlists-factory'
   },
   shim: {
     'angular-animate': ['angular'],
     'angular-sanitize': ['angular'],
     'angular-ui-router': ['angular'],
-    'angularAMD': ['angular'],
-    'page-factory': ['angular-sanitize']
+    'angularAMD': ['angular']
   },
   deps: ['app']
 });

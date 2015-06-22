@@ -17,21 +17,24 @@ define([
         controller: 'AboutController',
         controllerUrl: './controllers/about-controller'
       }))
-      .state('playlists', {
+      .state('playlists', angularAMD.route({
         url: '/playlists',
         templateUrl: 'partials/playlists.html',
-        controller: 'PlaylistsController'
-      })
-      .state('playlist', {
+        controller: 'PlaylistsController',
+        controllerUrl: './controllers/playlists-controller'
+      }))
+      .state('playlist', angularAMD.route({
         url: '/playlists/:id',
         templateUrl: 'partials/playlist.html',
-        controller: 'PlaylistController'
-      })
-      .state('webdeveloper', {
+        controller: 'PlaylistController',
+        controllerUrl: './controllers/playlist-controller'
+      }))
+      .state('webdeveloper', angularAMD.route({
         url: '/web-developer',
         templateUrl: 'partials/page.html',
-        controller: 'DevController'
-      });
+        controller: 'DevController',
+        controllerUrl: './controllers/dev-controller'
+      }));
   });
 
   return angularAMD.bootstrap(app);

@@ -1,6 +1,4 @@
-define([
-    'app'
-], function(app) {
+define(['app'], function(app) {
   app.factory('pageFactory', function($http, $q) {
     var service = {};
 
