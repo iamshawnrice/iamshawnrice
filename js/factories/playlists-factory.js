@@ -5,7 +5,7 @@ define(['app'], function(app) {
     service.getPlaylists = function() {
       var deferred = $q.defer();
 
-      $http.get('/api/wp-json/posts?type=playlist')
+      $http.get('/api/wp-json/posts')
         .success(function(data) {
           deferred.resolve(data);
         });
@@ -17,7 +17,7 @@ define(['app'], function(app) {
       var deferred = $q.defer(),
           urlBase = '/api/wp-json/posts/',
           urlId = id.toString(),
-          urlParam = '?type=playlist',
+          urlParam = '?cat=playlist',
           link = urlBase + urlId + urlParam;
 
       $http.get(link)
