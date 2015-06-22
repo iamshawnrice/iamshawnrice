@@ -8,7 +8,6 @@ define([
   var app = angular.module('IASR', ['ui.router', 'ngSanitize']);
 
   app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-    $urlRouterProvider.otherwise('/');
 
     $stateProvider
       .state('about', angularAMD.route({
@@ -35,6 +34,10 @@ define([
         controller: 'DevController',
         controllerUrl: './controllers/dev-controller'
       }));
+
+    $urlRouterProvider.otherwise('/');
+
+    $locationProvider.html5Mode(true);
   });
 
   return angularAMD.bootstrap(app);
