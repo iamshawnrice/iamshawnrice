@@ -1,6 +1,7 @@
 require.config({
   baseUrl: 'js',
   paths: {
+    // Vendors and Dependencies
     'angular': '../bower_components/angular/angular',
     'angular-animate': '../bower_components/angular-animate/angular-animate',
     'angular-sanitize': '../bower_components/angular-sanitize/angular-sanitize',
