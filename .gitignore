@@ -4,3 +4,4 @@
 .codekit-cache
 /sass/.sass-cache
 /sass/.sass-cache/*
+config.codekit
