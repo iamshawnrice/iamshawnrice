@@ -1,0 +1,56 @@
+.playlist {
+  .services {
+    text-align: center;
+  }
+
+  .service-links {
+    font-size: 2em;
+  }
+
+  .service {
+    display: inline-block;
+    padding: 10px 20px;
+
+    a {
+      @include transitioned;
+      box-sizing: content-box;
+      padding: 10px;
+      width: 60px;
+      height: 60px;
+      display: block;
+      position: relative;
+      border-radius: 50%;
+
+      .icon {
+        position: relative;
+        top: -2px;
+        left: 1px;
+        z-index: 2;
+      }
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    $services: (
+      play-music: $google-orange,
+      rdio: $rdio-blue,
+      spotify: $spotify-green
+    );
+
+    @each $service, $color in $services {
+      .link-#{$service}:hover {
+        background-color: $color;
+      }
+    }
+  }
+
+  .track-list {
+    padding-left: 40px;
+  }
+
+  .track-listing {
+    list-style: decimal;
+  }
+}

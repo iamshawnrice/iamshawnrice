@@ -502,7 +502,10 @@ footer[role="contentinfo"] {
   color: #464541;
   -webkit-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
   -moz-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
-  transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245); }
+  transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s; }
   .article-link:hover {
     color: #6b83a6; }
 
@@ -520,3 +523,42 @@ footer[role="contentinfo"] {
   .paplow-box .paplow {
     width: 100%;
     height: 100%; }
+
+.playlist .services {
+  text-align: center; }
+.playlist .service-links {
+  font-size: 2em; }
+.playlist .service {
+  display: inline-block;
+  padding: 10px 20px; }
+  .playlist .service a {
+    -webkit-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
+    -moz-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
+    transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    transition-delay: 0s;
+    box-sizing: content-box;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: relative;
+    border-radius: 50%; }
+    .playlist .service a .icon {
+      position: relative;
+      top: -2px;
+      left: 1px;
+      z-index: 2; }
+    .playlist .service a:hover {
+      color: #fff; }
+  .playlist .service .link-play-music:hover {
+    background-color: #ef6c00; }
+  .playlist .service .link-rdio:hover {
+    background-color: #008fd5; }
+  .playlist .service .link-spotify:hover {
+    background-color: #8cbc31; }
+.playlist .track-list {
+  padding-left: 40px; }
+.playlist .track-listing {
+  list-style: decimal; }

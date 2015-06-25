@@ -1,6 +1,6 @@
-<article>
+<article class="playlist">
   <header class="article-header">
-    <h1 class="article-title" ng-animate-ref="{{ playlist.ID }}">
+    <h1 class="article-title">
       {{ ::playlist.title }}
     </h1>
     <p ng-if="playlist.date" class="date">
@@ -11,17 +11,20 @@
   <section class="introduction" ng-bind-html="playlist.content"></section>
 
   <section class="services">
-    <li ng-repeat="service in playlist.meta.share_links">
-      <a href="{{ service.url }}" target="_blank">
-        <span class="icon icon-{{ service.audio_service }}"></span>
-      </a>
-    </li>
+    <h1 class="sub-title">Listen.</h1>
+    <ul class="service-links">
+      <li class="service" ng-repeat="service in playlist.meta.share_links">
+        <a href="{{ service.url }}" class="link-{{ service.audio_service }}" target="_blank">
+          <span class="icon icon-{{ service.audio_service }}"></span>
+        </a>
+      </li>
+    </ul>
   </section>
 
   <section class="track-list">
-    <ol>
-      <li ng-repeat="track in playlist.meta.track_listing">
-        <strong>{{ ::track.track_artist }}</strong> - 
+    <ol class="track-listing">
+      <li class="track" ng-repeat="track in playlist.meta.track_listing">
+        <strong>{{ ::track.track_artist }}</strong> -
         <em>{{ ::track.track_name }}</em>
       </li>
     </ol>
