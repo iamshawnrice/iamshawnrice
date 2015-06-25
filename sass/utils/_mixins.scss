@@ -7,6 +7,7 @@
   }
 }
 
-@mixin transitioned($properties: all, $duration: .25s) {
+@mixin transitioned($properties: all, $duration: .25s, $delay: 0s) {
   @include transition($properties $duration cubic-bezier(0.250, 0.250, 0.870, 1.245));
+  @include transition-delay($delay);
 }
