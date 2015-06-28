@@ -11,3 +11,8 @@
   @include transition($properties $duration cubic-bezier(0.250, 0.250, 0.870, 1.245));
   @include transition-delay($delay);
 }
+
+@mixin width($max-width) {
+  width: 100%;
+  max-width: $max-width;
+}
