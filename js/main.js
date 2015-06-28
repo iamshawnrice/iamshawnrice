@@ -7,6 +7,7 @@ require.config({
     'angular-sanitize': '../bower_components/angular-sanitize/angular-sanitize',
     'angular-ui-router': '../bower_components/angular-ui-router/release/angular-ui-router',
     'angularAMD': '../bower_components/angularAMD/angularAMD',
+    'moment': '../bower_components/moment/moment',
     // Factories
     'page-factory': './factories/page-factory',
     'playlists-factory': './factories/playlists-factory'

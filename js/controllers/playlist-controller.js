@@ -1,11 +1,12 @@
 define([
   'app',
+  'moment',
   'playlists-factory'
-], function(app) {
+], function(app, moment) {
   app.controller('PlaylistController', function($scope, $stateParams, playlistsFactory, $sce) {
     playlistsFactory.getPlaylist($stateParams.id).then(function(data) {
       $scope.playlist = data;
-      $scope.playerUrl = $sce.trustAsResourceUrl('http://everyonesmixtape.com/e/#' + $scope.playlist.meta.player_id);
+      $scope.playlist.published = moment($scope.playlist.date).format('MMMM Do YYYY');
     });
   });
 });

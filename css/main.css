@@ -490,6 +490,27 @@ footer[role="contentinfo"] {
     float: left; }
     footer[role="contentinfo"] .footer-about li:first-of-type {
       padding-left: 0; }
+  footer[role="contentinfo"] .social-twitter {
+    -webkit-transition: color 0.25s;
+    -moz-transition: color 0.25s;
+    transition: color 0.25s;
+    color: #edeae2; }
+    footer[role="contentinfo"] .social-twitter:hover {
+      color: #55acee; }
+  footer[role="contentinfo"] .social-linkedin {
+    -webkit-transition: color 0.25s;
+    -moz-transition: color 0.25s;
+    transition: color 0.25s;
+    color: #edeae2; }
+    footer[role="contentinfo"] .social-linkedin:hover {
+      color: #0077b5; }
+  footer[role="contentinfo"] .social-github {
+    -webkit-transition: color 0.25s;
+    -moz-transition: color 0.25s;
+    transition: color 0.25s;
+    color: #edeae2; }
+    footer[role="contentinfo"] .social-github:hover {
+      color: #151515; }
   footer[role="contentinfo"] .footer-social {
     float: right; }
     footer[role="contentinfo"] .footer-social li:last-of-type {
@@ -587,4 +608,6 @@ footer[role="contentinfo"] {
     .playlist .playlist-footer a:hover {
       color: #6b83a6; }
   .playlist .playlist-footer .arrow-icon {
-    font-size: .75em; }
+    font-size: .75em;
+    position: relative;
+    top: 2px; }

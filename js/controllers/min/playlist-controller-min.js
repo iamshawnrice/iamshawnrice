@@ -1,0 +1,1 @@
+define(["app","moment","playlists-factory"],function(l,t){l.controller("PlaylistController",function(l,i,n,o){n.getPlaylist(i.id).then(function(i){l.playlist=i,l.playlist.published=t(l.playlist.date).format("MMMM Do YYYY")})})});

@@ -35,6 +35,18 @@ footer[role="contentinfo"] {
     }
   }
 
+  $networks: (
+    twitter: $twitter-blue,
+    linkedin: $linkedin-blue,
+    github: $github-black
+  );
+
+  @each $network, $color in $networks {
+    .social-#{$network} {
+      @include link($iasr-white, $color);
+    }
+  }
+
   .footer-social {
     float: right;
 
