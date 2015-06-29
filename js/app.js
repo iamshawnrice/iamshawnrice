@@ -23,7 +23,7 @@ define([
         controllerUrl: './controllers/playlists-controller'
       }))
       .state('playlist', angularAMD.route({
-        url: '/playlists/:id',
+        url: '/playlists/:slug',
         templateUrl: 'partials/playlist.html',
         controller: 'PlaylistController',
         controllerUrl: './controllers/playlist-controller'
