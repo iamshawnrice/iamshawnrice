@@ -14,7 +14,6 @@ define(['app'], function(app) {
     };
 
     service.getPlaylist = function(slug) {
-      // /api/wp-json/posts?filter[name]==blisters
       var deferred = $q.defer(),
           urlBase = '/api/wp-json/posts?filter[name]==',
           urlSlug = slug.toString(),
