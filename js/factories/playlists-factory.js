@@ -13,12 +13,12 @@ define(['app'], function(app) {
         return deferred.promise;
     };
 
-    service.getPlaylist = function(id) {
+    service.getPlaylist = function(slug) {
+      // /api/wp-json/posts?filter[name]==blisters
       var deferred = $q.defer(),
-          urlBase = '/api/wp-json/posts/',
-          urlId = id.toString(),
-          urlParam = '?cat=playlist',
-          link = urlBase + urlId + urlParam;
+          urlBase = '/api/wp-json/posts?filter[name]==',
+          urlSlug = slug.toString(),
+          link = urlBase + urlSlug;
 
       $http.get(link)
         .success(function(data) {
