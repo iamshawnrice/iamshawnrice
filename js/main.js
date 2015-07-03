@@ -8,6 +8,8 @@ require.config({
     'angular-ui-router': '../bower_components/angular-ui-router/release/angular-ui-router',
     'angularAMD': '../bower_components/angularAMD/angularAMD',
     'moment': '../bower_components/moment/moment',
+    // Directives
+    'accordion': './directives/accordion',
     // Factories
     'page-factory': './factories/page-factory',
     'playlists-factory': './factories/playlists-factory'

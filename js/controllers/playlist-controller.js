@@ -1,7 +1,8 @@
 define([
   'app',
   'moment',
-  'playlists-factory'
+  'playlists-factory',
+  'accordion'
 ], function(app, moment) {
   app.controller('PlaylistController', function($scope, $stateParams, playlistsFactory, $sce) {
     playlistsFactory.getPlaylist($stateParams.slug).then(function(data) {
