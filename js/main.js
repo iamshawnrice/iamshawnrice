@@ -9,7 +9,7 @@ require.config({
     'angularAMD': '../bower_components/angularAMD/angularAMD',
     'moment': '../bower_components/moment/moment',
     // Directives
-    'accordion': './directives/accordion',
+    'iasrTrackList': './directives/track-list',
     // Factories
     'page-factory': './factories/page-factory',
     'playlists-factory': './factories/playlists-factory'

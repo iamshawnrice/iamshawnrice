@@ -1,10 +1,10 @@
 define(['app'], function(app) {
   'use strict';
 
-  app.directive('iasrAccordion', function() {
+  app.directive('iasrTrackList', function() {
     return {
       restrict: 'E',
-      templateUrl: 'partials/accordion.html'
+      templateUrl: 'partials/track-list.html'
     };
   });
 });
