@@ -1,3 +1,4 @@
+@charset 'utf-8';
 // main.scss
 
 // This is the primary manifest file
@@ -24,9 +25,10 @@
 
 // Components
 @import "components/accordion";
-@import "components/article_list";
+@import "components/article-list";
 @import "components/headers";
 @import "components/paplow";
+@import "components/track-list";
 
 // Pages
 @import "pages/playlist";

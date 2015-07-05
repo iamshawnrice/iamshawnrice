@@ -1,24 +1,12 @@
-<ul class="accordion">
-  <li>
-    <a href="javascript:void(0)" class="js-accordion-trigger">Accordion Item</a>
-    <ul class="submenu">
-      <li>
-        <a href="javascript:void(0)">Sub Item 1</a>
-      </li>
-      <li>
-        <a href="javascript:void(0)">Sub Item 2</a>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <a href="javascript:void(0)" class="js-accordion-trigger">Another Item</a>
-    <ul class="submenu">
-      <li>
-        <a href="javascript:void(0)">Sub Item 1</a>
-      </li>
-      <li>
-        <a href="javascript:void(0)">Sub Item 2</a>
-      </li>
-    </ul>
-  </li>
-</ul>
+<section class="track-list">
+  <ol class="tracks">
+    <li class="track" ng-repeat="track in playlist.meta.track_listing">
+      <a href="#" class="js-accordion-trigger">
+        <strong>{{ ::track.track_artist }}</strong> -
+        <em>{{ ::track.track_name }}</em>
+      </a>
+      <div class="track-notes js-accordion-panel" ng-if="track.track_note" ng-bind-html="track.track_notes">
+      </div>
+    </li>
+  </ol>
+</section>

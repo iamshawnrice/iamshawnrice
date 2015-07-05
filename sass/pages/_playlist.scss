@@ -42,16 +42,6 @@
     }
   }
 
-  .track-list {
-    @include width(768px);
-    padding-left: 40px;
-    margin: 2em auto;
-  }
-
-  .track-listing {
-    list-style: decimal;
-  }
-
   .playlist-footer {
     text-align: center;
     font-family: $serif;

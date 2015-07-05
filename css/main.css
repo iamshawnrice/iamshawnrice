@@ -527,6 +527,39 @@ footer[role="contentinfo"] {
         footer[role="contentinfo"] .footer-social li:last-of-type {
           padding: 0 .25em; } }
 
+.accordion, .track-list .tracks {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  margin: 0 0 1.5em 0;
+  padding: 0; }
+  .accordion ul, .track-list .tracks ul {
+    margin: 0;
+    padding: 0; }
+  .accordion li, .track-list .tracks li {
+    border-bottom: 1px solid #ddd;
+    list-style: none; }
+    .accordion li > a, .track-list .tracks li > a {
+      color: #333;
+      display: block;
+      padding: 0.75em 1.618em;
+      text-decoration: none; }
+    .accordion li:last-child, .track-list .tracks li:last-child {
+      border: none; }
+    .accordion li:focus, .track-list .tracks li:focus, .accordion li:hover, .track-list .tracks li:hover {
+      background-color: #fcfcfc; }
+  .accordion ul.submenu, .track-list .tracks ul.submenu {
+    display: none; }
+    .accordion ul.submenu li, .track-list .tracks ul.submenu li {
+      background-color: #eaeaea; }
+      .accordion ul.submenu li:first-child, .track-list .tracks ul.submenu li:first-child {
+        border-top: 1px solid #ddd;
+        box-shadow: inset 0 1px 1px #dadada; }
+      .accordion ul.submenu li:focus, .track-list .tracks ul.submenu li:focus, .accordion ul.submenu li:hover, .track-list .tracks ul.submenu li:hover {
+        background-color: #efefef; }
+  .accordion .is-expanded, .track-list .tracks .is-expanded {
+    display: block;
+    padding-bottom: 0; }
+
 .article-link {
   -webkit-transition: color 0.25s;
   -moz-transition: color 0.25s;
@@ -555,6 +588,28 @@ footer[role="contentinfo"] {
   .paplow-box .paplow {
     width: 100%;
     height: 100%; }
+
+.track-list {
+  width: 100%;
+  max-width: 768px;
+  margin: 2em auto;
+  padding-left: 40px; }
+  .track-list .tracks {
+    list-style: decimal;
+    background-color: transparent;
+    border: 0; }
+    .track-list .tracks li {
+      border-bottom: 0;
+      list-style: decimal; }
+      .track-list .tracks li:hover {
+        background-color: transparent; }
+      .track-list .tracks li > a {
+        padding: 0; }
+      .track-list .tracks li.is-expanded {
+        display: block; }
+  .track-list .track-notes {
+    margin-left: -40px;
+    display: none; }
 
 .playlist .services {
   text-align: center; }
@@ -588,13 +643,6 @@ footer[role="contentinfo"] {
     color: #008fd5; }
   .playlist .service .link-spotify:hover {
     color: #8cbc31; }
-.playlist .track-list {
-  width: 100%;
-  max-width: 768px;
-  padding-left: 40px;
-  margin: 2em auto; }
-.playlist .track-listing {
-  list-style: decimal; }
 .playlist .playlist-footer {
   text-align: center;
   font-family: "Radley", serif;
