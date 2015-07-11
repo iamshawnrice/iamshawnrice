@@ -2,12 +2,15 @@ require.config({
   baseUrl: 'js',
   paths: {
     // Vendors and Dependencies
+    'jquery': '../bower_components/jquery/dist/jquery',
     'angular': '../bower_components/angular/angular',
     'angular-animate': '../bower_components/angular-animate/angular-animate',
     'angular-sanitize': '../bower_components/angular-sanitize/angular-sanitize',
     'angular-ui-router': '../bower_components/angular-ui-router/release/angular-ui-router',
     'angularAMD': '../bower_components/angularAMD/angularAMD',
     'moment': '../bower_components/moment/moment',
+    // Directives
+    'iasrTrackList': './directives/track-list',
     // Factories
     'page-factory': './factories/page-factory',
     'playlists-factory': './factories/playlists-factory'

@@ -1,0 +1,39 @@
+// MAGIC NUMBER ALERT:
+// This is an imperfect solution to aligning the numerals with the left-edge
+// of the track description
+$track-padding: 40px;
+
+.track-list {
+  @include width(768px);
+  margin: 2em auto;
+  padding-left: $track-padding;
+
+  .tracks {
+    @extend .accordion;
+    list-style: decimal;
+    background-color: transparent;
+    border: 0;
+
+    li {
+      border-bottom: 0;
+      list-style: decimal;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      > a {
+        padding: 0;
+      }
+    }
+  }
+
+  .track-notes {
+    display: none;
+    font-size: .75em;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
