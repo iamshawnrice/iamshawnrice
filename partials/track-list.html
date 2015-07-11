@@ -1,7 +1,7 @@
 <section class="track-list">
   <ol class="tracks">
     <li class="track" ng-repeat="track in playlist.meta.track_listing">
-      <a href="#" class="js-accordion-trigger">
+      <a href="#" ng-click="accordionToggle($event)">
         <strong>{{ ::track.track_artist }}</strong> -
         <em>{{ ::track.track_name }}</em>
       </a>

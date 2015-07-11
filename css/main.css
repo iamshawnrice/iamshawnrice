@@ -605,11 +605,11 @@ footer[role="contentinfo"] {
         background-color: transparent; }
       .track-list .tracks li > a {
         padding: 0; }
-      .track-list .tracks li.is-expanded {
-        display: block; }
   .track-list .track-notes {
-    margin-left: -40px;
-    display: none; }
+    display: none;
+    font-size: .75em; }
+    .track-list .track-notes p {
+      margin-bottom: 0; }
 
 .playlist .services {
   text-align: center; }

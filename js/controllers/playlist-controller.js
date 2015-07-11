@@ -8,6 +8,15 @@ define([
     playlistsFactory.getPlaylist($stateParams.slug).then(function(data) {
       $scope.playlist = data[0];
       $scope.playlist.published = moment($scope.playlist.date).format('MMMM Do YYYY');
+
+      $scope.accordionToggle = function(e) {
+        var $self = $(e.currentTarget),
+            $panels = $('.js-accordion-panel');
+
+        $panels.slideUp('fast');
+        $self.next('.js-accordion-panel').slideToggle('fast');  // apply the toggle to the ul
+        e.preventDefault();
+      };
     });
   });
 });

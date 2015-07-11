@@ -25,15 +25,15 @@ $track-padding: 40px;
       > a {
         padding: 0;
       }
-
-       &.is-expanded {
-        display: block;
-      }
     }
   }
 
   .track-notes {
-    margin-left: -$track-padding;
     display: none;
+    font-size: .75em;
+
+    p {
+      margin-bottom: 0;
+    }
   }
 }
