@@ -2,7 +2,8 @@ define([
   'app',
   'moment',
   'playlists-factory',
-  'iasrTrackList'
+  'iasrTrackList',
+  'velocity'
 ], function(app, moment) {
   app.controller('PlaylistController', function($scope, $stateParams, playlistsFactory, $sce) {
     playlistsFactory.getPlaylist($stateParams.slug).then(function(data) {
@@ -14,8 +15,8 @@ define([
             $next = $self.next('.js-accordion-panel'),
             $panels = $('.js-accordion-panel').not($next);
 
-        $panels.slideUp('fast');
-        $next.slideDown('fast');
+        $panels.velocity('slideUp', { duration: 250 });
+        $next.velocity('slideDown', { duration: 250, delay: 250 });
 
         e.preventDefault();
       };

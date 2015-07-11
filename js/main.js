@@ -9,6 +9,7 @@ require.config({
     'angular-ui-router': '../bower_components/angular-ui-router/release/angular-ui-router',
     'angularAMD': '../bower_components/angularAMD/angularAMD',
     'moment': '../bower_components/moment/moment',
+    'velocity': '../bower_components/velocity/velocity',
     // Directives
     'iasrTrackList': './directives/track-list',
     // Factories
@@ -19,7 +20,8 @@ require.config({
     'angular-animate': ['angular'],
     'angular-sanitize': ['angular'],
     'angular-ui-router': ['angular'],
-    'angularAMD': ['angular']
+    'angularAMD': ['angular'],
+    'velocity': ['jquery']
   },
   deps: ['app']
 });
