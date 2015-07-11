@@ -11,10 +11,12 @@ define([
 
       $scope.accordionToggle = function(e) {
         var $self = $(e.currentTarget),
-            $panels = $('.js-accordion-panel');
+            $next = $self.next('.js-accordion-panel'),
+            $panels = $('.js-accordion-panel').not($next);
 
         $panels.slideUp('fast');
-        $self.next('.js-accordion-panel').slideToggle('fast');  // apply the toggle to the ul
+        $next.slideDown('fast');
+
         e.preventDefault();
       };
     });

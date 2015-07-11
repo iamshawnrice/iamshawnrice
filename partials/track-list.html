@@ -5,8 +5,8 @@
         <strong>{{ ::track.track_artist }}</strong> -
         <em>{{ ::track.track_name }}</em>
       </a>
-      <div class="track-notes js-accordion-panel" ng-if="track.track_note" ng-bind-html="track.track_notes">
-      </div>
+      <div class="track-notes js-accordion-panel" ng-if="track.track_note" ng-bind-html="track.track_notes"
+        ng-style="{ display: $first ? 'block' : 'none' }"></div>
     </li>
   </ol>
 </section>
