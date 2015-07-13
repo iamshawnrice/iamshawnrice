@@ -417,6 +417,12 @@ body {
   height: 100%;
   margin: 0;
   font-size: 24px; }
+  @media screen and (max-width: 61.25em) {
+    body {
+      font-size: 20px; } }
+  @media screen and (max-width: 61.25em) {
+    body {
+      font-size: 16px; } }
 
 .body-wrap {
   max-width: 1440px;
@@ -433,6 +439,12 @@ body {
 
 .main-content {
   padding-bottom: 200px; }
+  @media screen and (max-width: 61.25em) {
+    .main-content {
+      padding-bottom: 150px; } }
+  @media screen and (max-width: 61.25em) {
+    .main-content {
+      padding-bottom: 100px; } }
 
 .site-header {
   font-size: 6em; }
@@ -456,8 +468,10 @@ body {
       font-size: 4em; } }
   @media screen and (max-width: 40em) {
     .site-header {
-      font-size: 2.5em;
-      padding: .5em 0; } }
+      font-size: 3em;
+      padding: .5em 0; }
+      .site-header a {
+        padding: .25em; } }
 
 footer[role="contentinfo"] {
   background: #464541;
@@ -517,7 +531,7 @@ footer[role="contentinfo"] {
       padding-right: 0; }
   @media screen and (max-width: 40em) {
     footer[role="contentinfo"] {
-      font-size: 1em; }
+      font-size: 1.5em; }
       footer[role="contentinfo"] .footer-about,
       footer[role="contentinfo"] .footer-social {
         float: none;
@@ -525,7 +539,9 @@ footer[role="contentinfo"] {
         footer[role="contentinfo"] .footer-about li:first-of-type, footer[role="contentinfo"] .footer-about li:last-of-type,
         footer[role="contentinfo"] .footer-social li:first-of-type,
         footer[role="contentinfo"] .footer-social li:last-of-type {
-          padding: 0 .25em; } }
+          padding: 0 .25em; }
+      footer[role="contentinfo"] a {
+        padding: .25em; } }
 
 .accordion, .track-list .tracks {
   background-color: #f7f7f7;
@@ -588,6 +604,14 @@ footer[role="contentinfo"] {
   .paplow-box .paplow {
     width: 100%;
     height: 100%; }
+  @media screen and (max-width: 61.25em) {
+    .paplow-box {
+      width: 394.5px;
+      height: 108.75px; } }
+  @media screen and (max-width: 40em) {
+    .paplow-box {
+      width: 263px;
+      height: 72.5px; } }
 
 .track-list {
   width: 100%;
@@ -637,6 +661,10 @@ footer[role="contentinfo"] {
       top: -2px;
       left: 1px;
       z-index: 2; }
+    @media screen and (max-width: 40em) {
+      .playlist .service a {
+        width: 40px;
+        height: 40px; } }
   .playlist .service .link-play-music:hover {
     color: #ef6c00; }
   .playlist .service .link-rdio:hover {
