@@ -18,7 +18,10 @@ button {
   line-height: 1;
   padding: 0.75em 1em;
   text-decoration: none;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   vertical-align: middle;
   white-space: nowrap; }
   button:hover,
@@ -68,7 +71,8 @@ textarea {
   font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em;
-  transition: border-color;
+  -webkit-transition: border-color;
+          transition: border-color;
   width: 100%; }
   input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, textarea:hover,
   select[multiple=multiple]:hover,
@@ -172,7 +176,8 @@ p {
 a {
   color: #477dca;
   text-decoration: none;
-  transition: color 0.1s linear; }
+  -webkit-transition: color 0.1s linear;
+          transition: color 0.1s linear; }
   a:active,
   a:focus,
   a:hover {
@@ -194,15 +199,11 @@ picture {
   max-width: 100%; }
 
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
 .article-header,
@@ -417,7 +418,6 @@ p.author {
 
 a {
   -webkit-transition: color 0.25s;
-  -moz-transition: color 0.25s;
   transition: color 0.25s;
   color: #464541; }
   a:hover {
@@ -474,7 +474,6 @@ body {
     margin-bottom: .5em; }
     .site-header .site-nav a {
       -webkit-transition: color 0.25s;
-      -moz-transition: color 0.25s;
       transition: color 0.25s;
       color: #6b83a6;
       display: inline-block; }
@@ -507,7 +506,6 @@ footer[role="contentinfo"] {
       display: table; }
   footer[role="contentinfo"] a {
     -webkit-transition: color 0.25s;
-    -moz-transition: color 0.25s;
     transition: color 0.25s;
     color: #edeae2; }
     footer[role="contentinfo"] a:hover {
@@ -523,21 +521,18 @@ footer[role="contentinfo"] {
       padding-left: 0; }
   footer[role="contentinfo"] .social-twitter {
     -webkit-transition: color 0.25s;
-    -moz-transition: color 0.25s;
     transition: color 0.25s;
     color: #edeae2; }
     footer[role="contentinfo"] .social-twitter:hover {
       color: #55acee; }
   footer[role="contentinfo"] .social-linkedin {
     -webkit-transition: color 0.25s;
-    -moz-transition: color 0.25s;
     transition: color 0.25s;
     color: #edeae2; }
     footer[role="contentinfo"] .social-linkedin:hover {
       color: #0077b5; }
   footer[role="contentinfo"] .social-github {
     -webkit-transition: color 0.25s;
-    -moz-transition: color 0.25s;
     transition: color 0.25s;
     color: #edeae2; }
     footer[role="contentinfo"] .social-github:hover {
@@ -600,14 +595,11 @@ footer[role="contentinfo"] {
 
 .article-link {
   -webkit-transition: color 0.25s;
-  -moz-transition: color 0.25s;
   transition: color 0.25s;
   color: #464541;
   -webkit-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
-  -moz-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
   transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
   -webkit-transition-delay: 0s;
-  -moz-transition-delay: 0s;
   transition-delay: 0s; }
   .article-link:hover {
     color: #6b83a6; }
@@ -617,9 +609,7 @@ footer[role="contentinfo"] {
   bottom: 100px;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   width: 526px;
   height: 145px; }
@@ -668,10 +658,8 @@ footer[role="contentinfo"] {
   padding: 10px 20px; }
   .playlist .service a {
     -webkit-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
-    -moz-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
     transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
     -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
     transition-delay: 0s;
     box-sizing: content-box;
     padding: 10px;
@@ -703,7 +691,6 @@ footer[role="contentinfo"] {
   font-weight: bold; }
   .playlist .playlist-footer a {
     -webkit-transition: color 0.25s;
-    -moz-transition: color 0.25s;
     transition: color 0.25s;
     color: #464541; }
     .playlist .playlist-footer a:hover {
@@ -712,3 +699,5 @@ footer[role="contentinfo"] {
     font-size: .75em;
     position: relative;
     top: 2px; }
+
+/*# sourceMappingURL=main.css.map */
