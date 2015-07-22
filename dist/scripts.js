@@ -50112,26 +50112,22 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
       .state('about', {
         url: '/about',
         templateUrl: 'partials/page.html',
-        controller: 'AboutController',
-        controllerUrl: './controllers/about-controller'
+        controller: 'AboutController'
       })
       .state('playlists', {
         url: '/playlists',
         templateUrl: 'partials/playlists.html',
-        controller: 'PlaylistsController',
-        controllerUrl: './controllers/playlists-controller'
+        controller: 'PlaylistsController'
       })
       .state('playlist', {
         url: '/playlists/:slug',
         templateUrl: 'partials/playlist.html',
-        controller: 'PlaylistController',
-        controllerUrl: './controllers/playlist-controller'
+        controller: 'PlaylistController'
       })
       .state('webdeveloper', {
         url: '/web-developer',
         templateUrl: 'partials/page.html',
-        controller: 'DevController',
-        controllerUrl: './controllers/dev-controller'
+        controller: 'DevController'
       });
 
     $urlRouterProvider.otherwise('/');
@@ -50171,29 +50167,6 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
       $scope.playlists = data;
     });
   }]);
-})();
-
-(function($) {
-  'use strict';
-
-  angular.module('app.iasr').directive('iasrTrackList', function() {
-    return {
-      restrict: 'E',
-      templateUrl: 'partials/track-list.html',
-      link: function(scope) {
-        scope.accordionToggle = function(e) {
-          var $self = $(e.currentTarget),
-              $next = $self.next('.js-accordion-panel'),
-              $panels = $('.js-accordion-panel').not($next);
-
-          $panels.velocity('slideUp', { duration: 250 });
-          $next.velocity('slideDown', { duration: 250, delay: 250 });
-
-          e.preventDefault();
-        };
-      }
-    };
-  });
 })();
 
 (function() {
@@ -50249,6 +50222,29 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
 
     return service;
   }]);
+})();
+
+(function($) {
+  'use strict';
+
+  angular.module('app.iasr').directive('iasrTrackList', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'partials/track-list.html',
+      link: function(scope) {
+        scope.accordionToggle = function(e) {
+          var $self = $(e.currentTarget),
+              $next = $self.next('.js-accordion-panel'),
+              $panels = $('.js-accordion-panel').not($next);
+
+          $panels.velocity('slideUp', { duration: 250 });
+          $next.velocity('slideDown', { duration: 250, delay: 250 });
+
+          e.preventDefault();
+        };
+      }
+    };
+  });
 })();
 
 //# sourceMappingURL=scripts.js.map
