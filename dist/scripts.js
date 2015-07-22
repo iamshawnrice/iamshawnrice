@@ -50102,106 +50102,81 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
 
 })(window, window.angular);
 
-define([
-    'angularAMD',
-    'angular-ui-router',
-    'angular-sanitize'
-], function(angularAMD) {
+(function() {
   'use strict';
 
-  var app = angular.module('IASR', ['ui.router', 'ngSanitize']);
+  angular.module('app.iasr', ['ui.router', 'ngSanitize']);
 
-  app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-
+  angular.module('app.iasr').config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
-      .state('about', angularAMD.route({
+      .state('about', {
         url: '/about',
         templateUrl: 'partials/page.html',
         controller: 'AboutController',
         controllerUrl: './controllers/about-controller'
-      }))
-      .state('playlists', angularAMD.route({
+      })
+      .state('playlists', {
         url: '/playlists',
         templateUrl: 'partials/playlists.html',
         controller: 'PlaylistsController',
         controllerUrl: './controllers/playlists-controller'
-      }))
-      .state('playlist', angularAMD.route({
+      })
+      .state('playlist', {
         url: '/playlists/:slug',
         templateUrl: 'partials/playlist.html',
         controller: 'PlaylistController',
         controllerUrl: './controllers/playlist-controller'
-      }))
-      .state('webdeveloper', angularAMD.route({
+      })
+      .state('webdeveloper', {
         url: '/web-developer',
         templateUrl: 'partials/page.html',
         controller: 'DevController',
         controllerUrl: './controllers/dev-controller'
-      }));
+      });
 
     $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode(true);
-  });
+  }]);
+})();
 
-  return angularAMD.bootstrap(app);
-});
-
-define([
-    'app',
-    'page-factory'
-], function(app) {
-  app.controller('AboutController', function($scope, pageFactory) {
+(function(pageFactory) {
+  angular.module('app.iasr').controller('AboutController', ["$scope", "pageFactory", function($scope, pageFactory) {
     pageFactory.getPage(2).then(function(data) {
       $scope.page = data;
     });
-  });
-});
+  }]);
+})();
 
-define([
-    'app',
-    'page-factory'
-], function(app) {
-  app.controller('DevController', function($scope, pageFactory) {
+(function(pageFactory) {
+  angular.module('app.iasr').controller('DevController', ["$scope", "pageFactory", function($scope, pageFactory) {
     pageFactory.getPage(27).then(function(data) {
       $scope.page = data;
     });
-  });
-});
+  }]);
+})();
 
-define([
-  'app',
-  'moment',
-  'playlists-factory',
-  'iasrTrackList',
-  'velocity'
-], function(app, moment) {
-  app.controller('PlaylistController', function($scope, $stateParams, playlistsFactory, $sce) {
+(function() {
+  angular.module('app.iasr').controller('PlaylistController', ["$scope", "$stateParams", "playlistsFactory", "$sce", function($scope, $stateParams, playlistsFactory, $sce) {
     playlistsFactory.getPlaylist($stateParams.slug).then(function(data) {
       $scope.playlist = data[0];
       $scope.playlist.published = moment($scope.playlist.date).format('MMMM Do YYYY');
     });
-  });
-});
+  }]);
+})();
 
-define([
-  'app',
-  'playlists-factory'
-], function(app) {
-  app.controller('PlaylistsController', function($scope, playlistsFactory) {
+(function() {
+  angular.module('app.iasr').controller('PlaylistsController', ["$scope", "playlistsFactory", function($scope, playlistsFactory) {
     playlistsFactory.getPlaylists().then(function(data) {
       $scope.playlists = data;
     });
-  });
-});
+  }]);
+})();
 
-define([
-  'app',
-  'jquery'
-], function(app, $) {
+(function($) {
   'use strict';
 
-  app.directive('iasrTrackList', function() {
+  angular.module('app.iasr').directive('iasrTrackList', function() {
     return {
       restrict: 'E',
       templateUrl: 'partials/track-list.html',
@@ -50219,10 +50194,10 @@ define([
       }
     };
   });
-});
+})();
 
-define(['app'], function(app) {
-  app.factory('pageFactory', function($http, $q) {
+(function() {
+  angular.module('app.iasr').factory('pageFactory', ["$http", "$q", function($http, $q) {
     var service = {};
 
     service.getPage = function(id) {
@@ -50240,11 +50215,11 @@ define(['app'], function(app) {
       };
 
     return service;
-  });
-});
+  }]);
+})();
 
-define(['app'], function(app) {
-  app.factory('playlistsFactory', function($http, $q) {
+(function() {
+  angular.module('app.iasr').factory('playlistsFactory', ["$http", "$q", function($http, $q) {
     var service = {};
 
     service.getPlaylists = function() {
@@ -50273,5 +50248,7 @@ define(['app'], function(app) {
     };
 
     return service;
-  });
-});
+  }]);
+})();
+
+//# sourceMappingURL=scripts.js.map

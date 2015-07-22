@@ -1,10 +1,7 @@
-define([
-  'app',
-  'jquery'
-], function(app, $) {
+(function($) {
   'use strict';
 
-  app.directive('iasrTrackList', function() {
+  angular.module('app.iasr').directive('iasrTrackList', function() {
     return {
       restrict: 'E',
       templateUrl: 'partials/track-list.html',
@@ -22,4 +19,4 @@ define([
       }
     };
   });
-});
+})();

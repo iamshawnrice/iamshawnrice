@@ -1,44 +1,37 @@
-define([
-    'angularAMD',
-    'angular-ui-router',
-    'angular-sanitize'
-], function(angularAMD) {
+(function() {
   'use strict';
 
-  var app = angular.module('IASR', ['ui.router', 'ngSanitize']);
+  angular.module('app.iasr', ['ui.router', 'ngSanitize']);
 
-  app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
-
+  angular.module('app.iasr').config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
-      .state('about', angularAMD.route({
+      .state('about', {
         url: '/about',
         templateUrl: 'partials/page.html',
         controller: 'AboutController',
         controllerUrl: './controllers/about-controller'
-      }))
-      .state('playlists', angularAMD.route({
+      })
+      .state('playlists', {
         url: '/playlists',
         templateUrl: 'partials/playlists.html',
         controller: 'PlaylistsController',
         controllerUrl: './controllers/playlists-controller'
-      }))
-      .state('playlist', angularAMD.route({
+      })
+      .state('playlist', {
         url: '/playlists/:slug',
         templateUrl: 'partials/playlist.html',
         controller: 'PlaylistController',
         controllerUrl: './controllers/playlist-controller'
-      }))
-      .state('webdeveloper', angularAMD.route({
+      })
+      .state('webdeveloper', {
         url: '/web-developer',
         templateUrl: 'partials/page.html',
         controller: 'DevController',
         controllerUrl: './controllers/dev-controller'
-      }));
+      });
 
     $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode(true);
   });
-
-  return angularAMD.bootstrap(app);
-});
+})();

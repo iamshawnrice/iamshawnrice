@@ -4,6 +4,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var bowerFiles = require('main-bower-files');
 var browserSync = require('browser-sync').create();
 var concat = require('gulp-concat');
+var ngAnnotate = require('gulp-ng-annotate');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 
@@ -15,7 +16,8 @@ gulp.task('js', function() {
 
   gulp.src(files)
     .pipe(sourcemaps.init())
-    .pipe(concat('app.js'))
+    .pipe(concat('scripts.js'))
+    .pipe(ngAnnotate())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/'))
     .pipe(browserSync.stream());

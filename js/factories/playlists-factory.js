@@ -1,5 +1,5 @@
-define(['app'], function(app) {
-  app.factory('playlistsFactory', function($http, $q) {
+(function() {
+  angular.module('app.iasr').factory('playlistsFactory', function($http, $q) {
     var service = {};
 
     service.getPlaylists = function() {
@@ -29,4 +29,4 @@ define(['app'], function(app) {
 
     return service;
   });
-});
+})();
