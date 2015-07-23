@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"angu",
+				"angular-sanitize"
+			],
+			[
+				"ur",
+				"urlRouterProvider"
+			],
+			[
 				"page",
 				"pageFactory"
 			],
@@ -73,15 +81,54 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/shawnrice/Sites/iamshawnrice"
+		"/Users/shawnrice/Sites/iamshawnrice",
+		"/Users/shawnrice/Sites/iamshawnrice/api"
 	],
 	"file_history":
 	[
+		"/Users/shawnrice/Sites/iamshawnrice/api/wp-config.php",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_footer.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_header.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_base.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/pages/_playlist.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/main.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_paplow.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/playlist-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/directives/track-list.js",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_track-list.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/js/main.js",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_mixins.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/playlist.html",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/track-list.html",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_accordion.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/page.html",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/accordion.html",
+		"/Users/shawnrice/Sites/iamshawnrice/index.html",
+		"/Users/shawnrice/Desktop/wp-config.php",
+		"/Users/shawnrice/Sites/iamshawnrice/js/factories/playlists-factory.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/playlists-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/app.js",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/playlists.html",
+		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/plugins/WP-JSON-API-ACF-master/plugin.php",
+		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/plugins/json-rest-api/plugin.php",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_variables.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/fonts/icomoon/_style.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_overrides.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_tooltip.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/js/filters.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/directives/paplow.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/directives.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/directives/article-header.js",
+		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/themes/iasr/js/main.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/factories/page-factory.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/dev-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/factories.js",
+		"/Users/shawnrice/Sites/iamshawnrice/.htaccess",
 		"/Users/shawnrice/Sites/iamshawnrice/app/require-config.js",
 		"/Users/shawnrice/Sites/iamshawnrice/app/index.html",
 		"/Users/shawnrice/Sites/iamshawnrice/app/controllers/about-controller.js",
 		"/Users/shawnrice/Sites/iamshawnrice/app/app.js",
-		"/Users/shawnrice/Sites/iamshawnrice/index.html",
 		"/Users/shawnrice/Sites/iamshawnrice/app/core/vendor.js",
 		"/Users/shawnrice/Sites/iamshawnrice/app/core/bootstrap.js",
 		"/Users/shawnrice/Sites/iamshawnrice/app/core/index.js",
@@ -93,10 +140,6 @@
 		"/Users/shawnrice/Sites/iamshawnrice/app/js/controllers.js",
 		"/Users/shawnrice/Sites/iamshawnrice/app/index.js",
 		"/Users/shawnrice/Sites/iamshawnrice/app/js/vendors.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/directives.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/controllers.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/factories.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/app.js",
 		"/Users/shawnrice/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/shawnrice/Sites/iamshawnrice/webpack.config.js",
 		"/Users/shawnrice/Sites/iamshawnrice/app/core/style.js",
@@ -104,46 +147,29 @@
 		"/Users/shawnrice/Sites/iamshawnrice/app/fonts/icomoon/_style.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/index.js",
 		"/Users/shawnrice/Sites/iamshawnrice/iamshawnrice.sublime-project",
-		"/Users/shawnrice/Sites/iamshawnrice/partials/playlist.html",
 		"/Users/shawnrice/Sites/iamshawnrice/fonts/icomoon/demo-files/demo.css",
-		"/Users/shawnrice/Sites/iamshawnrice/fonts/icomoon/_style.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/bundle.js",
 		"/Users/shawnrice/Sites/iamshawnrice/entry.js",
 		"/Users/shawnrice/Desktop/DataService.js",
 		"/Users/shawnrice/Desktop/DashboardsCtrl.js",
-		"/Users/shawnrice/Sites/iamshawnrice/partials/playlists.html",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_footer.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_base.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/main.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_article_list.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_variables.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_mixins.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_headers.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_overrides.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_fonts.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_paplow.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/paplow.html",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_components.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/footer.html",
-		"/Users/shawnrice/Sites/iamshawnrice/partials/page.html",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/plugins/wp-json-api-playlists/plugin.php",
-		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/plugins/WP-JSON-API-ACF-master/plugin.php",
 		"/Users/shawnrice/Sites/iamshawnrice/.gitignore",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_header.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_grid-settings.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/vendors/_vendors.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/.htaccess",
-		"/Users/shawnrice/Sites/iamshawnrice/api/wp-config.php",
 		"/Applications/MAMP/conf/apache/httpd.conf",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/about.html",
-		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/themes/iasr/js/main.js",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_extends.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_utils.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/webdeveloper.html",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/iasr-mixtape.html",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_layout.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/bower.json",
-		"/Users/shawnrice/Sites/iamshawnrice/js/main.js",
 		"/Users/shawnrice/Sites/iamshawnrice/README.md",
 		"/Users/shawnrice/Sites/ng-boilerplate/index.html",
 		"/Users/shawnrice/Sites/ng-boilerplate/sass/utils/_placeholders.scss",
@@ -187,6 +213,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"MIME",
+			"jquery",
 			"/***/",
 			"Mime",
 			".article-title",
@@ -222,7 +250,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -259,7 +287,7 @@
 	"project": "iamshawnrice.sublime-project",
 	"replace":
 	{
-		"height": 120.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -269,8 +297,180 @@
 		"selected_items":
 		[
 			[
+				"_footer.",
+				"sass/layout/_footer.scss"
+			],
+			[
+				"header.scss",
+				"sass/layout/_header.scss"
+			],
+			[
+				"_footer.scss",
+				"sass/layout/_footer.scss"
+			],
+			[
+				"playlst.scss",
+				"sass/pages/_playlist.scss"
+			],
+			[
+				"base.scss",
+				"sass/base/_base.scss"
+			],
+			[
+				"playlist.scss",
+				"sass/pages/_playlist.scss"
+			],
+			[
+				"header",
+				"sass/layout/_header.scss"
+			],
+			[
+				"main.scss",
+				"sass/main.scss"
+			],
+			[
+				"papl",
+				"sass/components/_paplow.scss"
+			],
+			[
+				"_footer",
+				"sass/layout/_footer.scss"
+			],
+			[
+				"tracklist.js",
+				"js/directives/track-list.js"
+			],
+			[
+				"playlistcon",
+				"js/controllers/playlist-controller.js"
+			],
+			[
+				"track",
+				"sass/components/_track-list.scss"
+			],
+			[
+				"play",
+				"sass/pages/_playlist.scss"
+			],
+			[
+				"playlist",
+				"partials/playlist.html"
+			],
+			[
+				"mix",
+				"sass/utils/_mixins.scss"
+			],
+			[
+				"trakc",
+				"partials/track-list.html"
+			],
+			[
+				"tracklist.scss",
+				"sass/components/_track-list.scss"
+			],
+			[
+				"track-list.scss",
+				"sass/components/_track-list.scss"
+			],
+			[
+				"playlist.html",
+				"partials/playlist.html"
+			],
+			[
+				"accor",
+				"sass/components/_accordion.scss"
+			],
+			[
+				"page",
+				"partials/page.html"
+			],
+			[
+				"accordion.scss",
+				"sass/components/_accordion.scss"
+			],
+			[
+				"playlist.h",
+				"partials/playlist.html"
+			],
+			[
+				"playcon",
+				"js/controllers/playlist-controller.js"
+			],
+			[
 				"index",
 				"index.html"
+			],
+			[
+				"playlistscontr",
+				"js/controllers/playlists-controller.js"
+			],
+			[
+				"playlist-cont",
+				"js/controllers/playlist-controller.js"
+			],
+			[
+				"playlistscon",
+				"js/controllers/playlists-controller.js"
+			],
+			[
+				"playlists.",
+				"partials/playlists.html"
+			],
+			[
+				"main",
+				"js/main.js"
+			],
+			[
+				"footer.scss",
+				"sass/layout/_footer.scss"
+			],
+			[
+				"var",
+				"sass/utils/_variables.scss"
+			],
+			[
+				"_mix",
+				"sass/utils/_mixins.scss"
+			],
+			[
+				"playscss",
+				"sass/pages/_playlist.scss"
+			],
+			[
+				"playlistsfa",
+				"js/factories/playlists-factory.js"
+			],
+			[
+				"app.js",
+				"js/app.js"
+			],
+			[
+				"main.js",
+				"api/wp-content/themes/iasr/js/main.js"
+			],
+			[
+				"dire",
+				"js/directives.js"
+			],
+			[
+				"fac",
+				"js/factories.js"
+			],
+			[
+				"dev",
+				"js/controllers/dev-controller.js"
+			],
+			[
+				"page.",
+				"partials/page.html"
+			],
+			[
+				"contro",
+				"js/controllers.js"
+			],
+			[
+				".ht",
+				".htaccess"
 			],
 			[
 				"bun",
@@ -289,14 +489,6 @@
 				"node_modules/webpack-dev-server/client/live.bundle.js"
 			],
 			[
-				"app.js",
-				"app/js/app.js"
-			],
-			[
-				"dire",
-				"js/directives.js"
-			],
-			[
 				"contr",
 				"js/controllers.js"
 			],
@@ -310,10 +502,6 @@
 			],
 			[
 				"",
-				"app/js/factories.js"
-			],
-			[
-				"fac",
 				"app/js/factories.js"
 			],
 			[
@@ -349,10 +537,6 @@
 				"app/core/style.js"
 			],
 			[
-				"main.scss",
-				"app/sass/main.scss"
-			],
-			[
 				"style.js",
 				"app/core/style.js"
 			],
@@ -365,32 +549,8 @@
 				"webpack.config.js"
 			],
 			[
-				"playlist",
-				"partials/playlist.html"
-			],
-			[
-				"contro",
-				"js/controllers.js"
-			],
-			[
 				"factor",
 				"js/factories.js"
-			],
-			[
-				"play",
-				"partials/playlists.html"
-			],
-			[
-				"_footer.",
-				"sass/layout/_footer.scss"
-			],
-			[
-				"base.scss",
-				"sass/base/_base.scss"
-			],
-			[
-				"_footer.scss",
-				"sass/layout/_footer.scss"
 			],
 			[
 				"vari",
@@ -403,10 +563,6 @@
 			[
 				"playlists",
 				"partials/playlists.html"
-			],
-			[
-				"_mix",
-				"sass/utils/_mixins.scss"
 			],
 			[
 				"headers.scss",
@@ -425,10 +581,6 @@
 				".gitignore"
 			],
 			[
-				"header.scss",
-				"sass/layout/_header.scss"
-			],
-			[
 				"_base.scss",
 				"sass/base/_base.scss"
 			],
@@ -438,10 +590,6 @@
 			],
 			[
 				"_va",
-				"sass/utils/_variables.scss"
-			],
-			[
-				"var",
 				"sass/utils/_variables.scss"
 			],
 			[
@@ -465,15 +613,7 @@
 				"partials/about.html"
 			],
 			[
-				"main.js",
-				"api/wp-content/themes/iasr/js/main.js"
-			],
-			[
 				"footer",
-				"sass/layout/_footer.scss"
-			],
-			[
-				"footer.scss",
 				"sass/layout/_footer.scss"
 			],
 			[
@@ -483,10 +623,6 @@
 			[
 				"control",
 				"js/controllers.js"
-			],
-			[
-				"mix",
-				"sass/utils/_mixins.scss"
 			],
 			[
 				"lay",
@@ -519,10 +655,6 @@
 			[
 				"bo",
 				"bower.json"
-			],
-			[
-				"main",
-				"js/main.js"
 			],
 			[
 				"header.php",

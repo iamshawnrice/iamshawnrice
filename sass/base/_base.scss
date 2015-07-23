@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background: lighten(#edeae2, 5%);
+  background: $iasr-white;
   color: #464541;
   position: relative;
   min-height: 100%;
@@ -26,7 +26,7 @@ body {
   }
 }
 
-// sticky-footer helpers
+// sticky-footer helper
 $footer-height: 126px;
 
 .body-wrap {
