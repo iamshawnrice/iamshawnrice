@@ -11,7 +11,6 @@ var autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     uglifycss = require('gulp-uglifycss');
 
-// JS Tasks
 gulp.task('js', function() {
   var files = bowerFiles();
 
@@ -37,7 +36,6 @@ gulp.task('js-build', function() {
     .pipe(gulp.dest('./dist/'))
 });
 
-// Sass Tasks
 gulp.task('sass', function () {
   gulp.src('./sass/**/*.scss')
     .pipe(sourcemaps.init())
@@ -67,4 +65,6 @@ gulp.task('serve', ['sass'], function() {
   gulp.watch('./js/**/*.js', ['js']);
 });
 
+gulp.task('build', ['sass-build', 'js-build']);
 gulp.task('default', ['serve']);
+
