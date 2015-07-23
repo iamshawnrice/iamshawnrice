@@ -1,12 +1,15 @@
 var gulp = require('gulp');
 
-var autoprefixer = require('gulp-autoprefixer');
-var bowerFiles = require('main-bower-files');
-var browserSync = require('browser-sync').create();
-var concat = require('gulp-concat');
-var ngAnnotate = require('gulp-ng-annotate');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer'),
+    bowerFiles = require('main-bower-files'),
+    browserSync = require('browser-sync').create(),
+    buster = require('gulp-buster'),
+    concat = require('gulp-concat'),
+    ngAnnotate = require('gulp-ng-annotate'),
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    uglify = require('gulp-uglify'),
+    uglifycss = require('gulp-uglifycss');
 
 // JS Tasks
 gulp.task('js', function() {
@@ -17,10 +20,21 @@ gulp.task('js', function() {
   gulp.src(files)
     .pipe(sourcemaps.init())
     .pipe(concat('scripts.js'))
-    .pipe(ngAnnotate())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist/'))
     .pipe(browserSync.stream());
+});
+
+gulp.task('js-build', function() {
+  var files = bowerFiles();
+
+  files.push('./js/**/*.js');
+
+  gulp.src(files)
+    .pipe(concat('scripts.js'))
+    .pipe(ngAnnotate())
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/'))
 });
 
 // Sass Tasks
@@ -34,7 +48,16 @@ gulp.task('sass', function () {
     .pipe(browserSync.stream());
 });
 
-// Static Server + watching scss/html files
+gulp.task('sass-build', function () {
+  gulp.src('./sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(uglifycss())
+    .pipe(buster())
+    .pipe(gulp.dest('./css'))
+});
+
+// Server + watching scss/js files
 gulp.task('serve', ['sass'], function() {
   browserSync.init({
     proxy: 'localhost:8888'
