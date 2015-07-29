@@ -9,16 +9,24 @@ html {
 }
 
 body {
-  background: lighten(#edeae2, 5%);
+  background: $iasr-white;
   color: #464541;
   position: relative;
   min-height: 100%;
   height: 100%;
   margin: 0;
   font-size: 24px;
+
+  @media screen and (max-width: $medium-screen) {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: $medium-screen) {
+    font-size: 16px;
+  }
 }
 
-// sticky-footer helpers
+// sticky-footer helper
 $footer-height: 126px;
 
 .body-wrap {
@@ -39,4 +47,12 @@ $footer-height: 126px;
 
 .main-content {
   padding-bottom: 200px;
+
+  @media screen and (max-width: $medium-screen) {
+    padding-bottom: 150px;
+  }
+
+  @media screen and (max-width: $medium-screen) {
+    padding-bottom: 100px;
+  }
 }

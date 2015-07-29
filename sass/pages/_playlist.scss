@@ -27,6 +27,11 @@
         left: 1px;
         z-index: 2;
       }
+
+      @media screen and (max-width: $small-screen) {
+        width: 40px;
+        height: 40px;
+      }
     }
 
     $services: (

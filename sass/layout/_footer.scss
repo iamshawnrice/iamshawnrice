@@ -56,7 +56,7 @@ footer[role="contentinfo"] {
   }
 
   @media screen and (max-width: $small-screen) {
-    font-size: 1em;
+    font-size: 1.5em;
 
     .footer-about,
     .footer-social {
@@ -69,6 +69,10 @@ footer[role="contentinfo"] {
           padding: 0 .25em;
         }
       }
+    }
+
+    a {
+      padding: .25em;
     }
   }
 }

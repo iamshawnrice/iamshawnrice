@@ -1,10 +1,7 @@
-define([
-    'app',
-    'page-factory'
-], function(app) {
-  app.controller('AboutController', function($scope, pageFactory) {
+(function(pageFactory) {
+  angular.module('app.iasr').controller('AboutController', function($scope, pageFactory) {
     pageFactory.getPage(2).then(function(data) {
       $scope.page = data;
     });
   });
-});
+})();

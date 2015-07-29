@@ -1,5 +1,5 @@
-define(['app'], function(app) {
-  app.factory('pageFactory', function($http, $q) {
+(function() {
+  angular.module('app.iasr').factory('pageFactory', function($http, $q) {
     var service = {};
 
     service.getPage = function(id) {
@@ -18,4 +18,4 @@ define(['app'], function(app) {
 
     return service;
   });
-});
+})();

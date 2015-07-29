@@ -1,7 +1,8 @@
 # Include your project-specific ignores in this file
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 
-.codekit-cache
+bower_components/
+bower_components/*
+node_modules/
 /sass/.sass-cache
 /sass/.sass-cache/*
-config.codekit
