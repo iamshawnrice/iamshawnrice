@@ -20,6 +20,11 @@
         templateUrl: 'partials/playlist.html',
         controller: 'PlaylistController'
       })
+      .state('portfolio', {
+        url: '/portfolio',
+        templateUrl: 'partials/portolio.html',
+        controller: 'PortfolioController'
+      })
       .state('webdeveloper', {
         url: '/web-developer',
         templateUrl: 'partials/page.html',
