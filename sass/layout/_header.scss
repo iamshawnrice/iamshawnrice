@@ -6,6 +6,10 @@
     font-size: 1em;
     margin: 0;
     line-height: .85;
+
+    a:focus {
+      color: inherit;
+    }
   }
 
   .site-nav {

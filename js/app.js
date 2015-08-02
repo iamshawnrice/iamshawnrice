@@ -10,6 +10,11 @@
         templateUrl: 'partials/page.html',
         controller: 'AboutController'
       })
+      .state('default', {
+        url: '/',
+        templateUrl: 'partials/page.html',
+        controller: 'DevController'
+      })
       .state('playlists', {
         url: '/playlists',
         templateUrl: 'partials/playlists.html',
@@ -20,15 +25,10 @@
         templateUrl: 'partials/playlist.html',
         controller: 'PlaylistController'
       })
-      .state('portfolio', {
-        url: '/portfolio',
-        templateUrl: 'partials/portolio.html',
-        controller: 'PortfolioController'
-      })
       .state('webdeveloper', {
         url: '/web-developer',
-        templateUrl: 'partials/page.html',
-        controller: 'DevController'
+        templateUrl: 'partials/portolio.html',
+        controller: 'PortfolioController'
       });
 
     $urlRouterProvider.otherwise('/');

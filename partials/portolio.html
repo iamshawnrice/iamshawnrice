@@ -1,24 +1,22 @@
-<section>
+<section class="page-portfolio">
   <h1 class="article-title">{{ ::title }}</h1>
 
-  <article class="" ng-repeat="item in portfolio track by $index">
+  <article class="portfolio-item" ng-repeat="item in portfolio track by $index">
     <h2><a href="{{ item.url }}" target="_blank">{{ item.client }}</a></h2>
-    <div ng-bind-html="item.description"></div>
+    <div ng-bind-html="item.description" class="description"></div>
 
     <div ng-if="item.add_links">
       <p ng-bind-html="item.additional_links_context"></p>
-      <ul>
+      <ul class="additional-links">
         <li ng-repeat="link in item.additional_links">
           <a href="{{ link.url }}" target="_blank">{{ link.anchor_text }}</a>
         </li>
       </ul>
     </div>
 
-    <div>
-      <h3>Built With</h3>
-      <ul>
-        <li ng-repeat="tool in item.built_with">{{ tool.tool }}</li>
-      </ul>
-    </div>
+    <h3>Built With</h3>
+    <ul class="built-with">
+      <li ng-repeat="tool in item.built_with">{{ tool.tool }}</li>
+    </ul>
   </article>
 </section>
