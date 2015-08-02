@@ -469,6 +469,8 @@ body {
     font-size: 1em;
     margin: 0;
     line-height: .85; }
+    .site-header .site-title a:focus {
+      color: inherit; }
   .site-header .site-nav {
     font-size: .4em;
     margin-bottom: .5em; }
@@ -699,5 +701,28 @@ footer[role="contentinfo"] {
     font-size: .75em;
     position: relative;
     top: 2px; }
+
+.portfolio-item {
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #d9d3c3; }
+  .portfolio-item p {
+    margin-bottom: 1em; }
+  .portfolio-item a {
+    -webkit-transition: color 0.25s;
+    transition: color 0.25s;
+    color: #6b83a6; }
+    .portfolio-item a:hover {
+      color: #464541; }
+  .portfolio-item .description {
+    margin-bottom: 1.5em; }
+  .portfolio-item .additional-links {
+    font-size: 1.25em;
+    margin-bottom: 1em; }
+  .portfolio-item .built-with {
+    font-family: monospace; }
+  .portfolio-item:last-of-type {
+    margin-bottom: 0;
+    border-bottom: 0; }
 
 /*# sourceMappingURL=main.css.map */
