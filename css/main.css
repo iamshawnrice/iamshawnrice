@@ -418,7 +418,7 @@ p.author {
 
 a {
   -webkit-transition: color 0.25s;
-  transition: color 0.25s;
+          transition: color 0.25s;
   color: #464541; }
   a:hover {
     color: #605f5a; }
@@ -476,7 +476,7 @@ body {
     margin-bottom: .5em; }
     .site-header .site-nav a {
       -webkit-transition: color 0.25s;
-      transition: color 0.25s;
+              transition: color 0.25s;
       color: #6b83a6;
       display: inline-block; }
       .site-header .site-nav a:hover {
@@ -508,7 +508,7 @@ footer[role="contentinfo"] {
       display: table; }
   footer[role="contentinfo"] a {
     -webkit-transition: color 0.25s;
-    transition: color 0.25s;
+            transition: color 0.25s;
     color: #edeae2; }
     footer[role="contentinfo"] a:hover {
       color: #6b83a6; }
@@ -523,19 +523,19 @@ footer[role="contentinfo"] {
       padding-left: 0; }
   footer[role="contentinfo"] .social-twitter {
     -webkit-transition: color 0.25s;
-    transition: color 0.25s;
+            transition: color 0.25s;
     color: #edeae2; }
     footer[role="contentinfo"] .social-twitter:hover {
       color: #55acee; }
   footer[role="contentinfo"] .social-linkedin {
     -webkit-transition: color 0.25s;
-    transition: color 0.25s;
+            transition: color 0.25s;
     color: #edeae2; }
     footer[role="contentinfo"] .social-linkedin:hover {
       color: #0077b5; }
   footer[role="contentinfo"] .social-github {
     -webkit-transition: color 0.25s;
-    transition: color 0.25s;
+            transition: color 0.25s;
     color: #edeae2; }
     footer[role="contentinfo"] .social-github:hover {
       color: #151515; }
@@ -597,12 +597,12 @@ footer[role="contentinfo"] {
 
 .article-link {
   -webkit-transition: color 0.25s;
-  transition: color 0.25s;
+          transition: color 0.25s;
   color: #464541;
   -webkit-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
-  transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
+          transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
   -webkit-transition-delay: 0s;
-  transition-delay: 0s; }
+          transition-delay: 0s; }
   .article-link:hover {
     color: #6b83a6; }
 
@@ -611,8 +611,8 @@ footer[role="contentinfo"] {
   bottom: 100px;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
   width: 526px;
   height: 145px; }
   .paplow-box .paplow {
@@ -660,9 +660,9 @@ footer[role="contentinfo"] {
   padding: 10px 20px; }
   .playlist .service a {
     -webkit-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
-    transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
+            transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
     -webkit-transition-delay: 0s;
-    transition-delay: 0s;
+            transition-delay: 0s;
     box-sizing: content-box;
     padding: 10px;
     width: 60px;
@@ -693,7 +693,7 @@ footer[role="contentinfo"] {
   font-weight: bold; }
   .playlist .playlist-footer a {
     -webkit-transition: color 0.25s;
-    transition: color 0.25s;
+            transition: color 0.25s;
     color: #464541; }
     .playlist .playlist-footer a:hover {
       color: #6b83a6; }
@@ -710,7 +710,7 @@ footer[role="contentinfo"] {
     margin-bottom: 1em; }
   .portfolio-item a {
     -webkit-transition: color 0.25s;
-    transition: color 0.25s;
+            transition: color 0.25s;
     color: #6b83a6; }
     .portfolio-item a:hover {
       color: #464541; }

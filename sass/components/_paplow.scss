@@ -5,7 +5,7 @@ $paplow-height: 145;
 // Paplow
 .paplow-box {
   @include position(absolute, null null 100px 50%);
-  @include transform(translateX(-50%) translateY(-50%));
+  transform: translateX(-50%) translateY(-50%);
   width: $paplow-width * 1px;
   height: $paplow-height * 1px;
 
