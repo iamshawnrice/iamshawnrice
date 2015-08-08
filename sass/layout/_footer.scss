@@ -55,6 +55,12 @@ footer[role="contentinfo"] {
     }
   }
 
+  @media screen and (max-width: $medium-screen) and (min-width: $small-screen) {
+    .foot-wrap {
+      padding: 2em 5%;
+    }
+  }
+
   @media screen and (max-width: $small-screen) {
     font-size: 1.5em;
 

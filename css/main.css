@@ -543,6 +543,9 @@ footer[role="contentinfo"] {
     float: right; }
     footer[role="contentinfo"] .footer-social li:last-of-type {
       padding-right: 0; }
+  @media screen and (max-width: 61.25em) and (min-width: 40em) {
+    footer[role="contentinfo"] .foot-wrap {
+      padding: 2em 5%; } }
   @media screen and (max-width: 40em) {
     footer[role="contentinfo"] {
       font-size: 1.5em; }

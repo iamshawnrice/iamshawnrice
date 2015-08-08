@@ -50208,21 +50208,22 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
 })();
 
 (function() {
-  angular.module('app.iasr').factory('pageFactory', function($http, $q) {
+  angular.module('app.iasr').factory('pageFactory', function($http) {
     var service = {};
 
     service.getPage = function(id) {
-      var deferred = $q.defer(),
-          urlBase = '/api/wp-json/pages/',
+      var urlBase = '/api/wp-json/pages/',
           urlId = id.toString(),
           link = urlBase + urlId;
 
-      $http.get(link)
-        .success(function(data) {
-          deferred.resolve(data);
+      return $http.get(link).then(
+        function(response) {
+          return response.data;
+        },
+        function(response) {
+          console.error('There was an issue retrieving this page');
+          console.log(response);
         });
-
-        return deferred.promise;
       };
 
     return service;
@@ -50230,32 +50231,35 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
 })();
 
 (function() {
-  angular.module('app.iasr').factory('playlistsFactory', function($http, $q) {
+  angular.module('app.iasr').factory('playlistsFactory', function($http) {
     var service = {};
 
     service.getPlaylists = function() {
-      var deferred = $q.defer();
-
-      $http.get('/api/wp-json/posts')
-        .success(function(data) {
-          deferred.resolve(data);
-        });
-
-        return deferred.promise;
+      return $http.get('/api/wp-json/posts').then(
+        function(response) {
+          return response.data;
+        },
+        function(response) {
+          console.error('There was a problem retrieving the playlists');
+          console.log(response);
+        }
+      );
     };
 
     service.getPlaylist = function(slug) {
-      var deferred = $q.defer(),
-          urlBase = '/api/wp-json/posts?filter[name]==',
+      var urlBase = '/api/wp-json/posts?filter[name]==',
           urlSlug = slug.toString(),
           link = urlBase + urlSlug;
 
-      $http.get(link)
-        .success(function(data) {
-          deferred.resolve(data);
-        });
-
-        return deferred.promise;
+      return $http.get(link).then(
+        function(response) {
+          return response.data;
+        },
+        function(response) {
+          console.error('There was a problem retrieving this playlist');
+          console.log(response);
+        }
+      );
     };
 
     return service;
