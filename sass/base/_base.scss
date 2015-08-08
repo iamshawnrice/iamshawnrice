@@ -52,7 +52,7 @@ $footer-height: 126px;
     padding-bottom: 150px;
   }
 
-  @media screen and (max-width: $medium-screen) {
+  @media screen and (max-width: $small-screen) {
     padding-bottom: 100px;
   }
 }
