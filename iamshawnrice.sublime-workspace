@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"ug",
+				"uglifycss"
+			],
+			[
+				"sta",
+				"stateProvider"
+			],
+			[
 				"angu",
 				"angular-sanitize"
 			],
@@ -81,37 +89,48 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/shawnrice/Sites/iamshawnrice",
-		"/Users/shawnrice/Sites/iamshawnrice/api"
+		"/Users/shawnrice/Sites/iamshawnrice"
 	],
 	"file_history":
 	[
+		"/Users/shawnrice/Sites/iamshawnrice/index.html",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_header.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/js/app.js",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/main.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/portfolio-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/portolio.html",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/pages/_portfolio.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_side-image.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_variables.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_mixins.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/gulpfile.js",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/page.html",
+		"/Users/shawnrice/Desktop/page-reel.php",
+		"/Users/shawnrice/Sites/iamshawnrice/.gitignore",
+		"/Users/shawnrice/Sites/iamshawnrice/css/busters.json",
+		"/Users/shawnrice/Sites/iamshawnrice/css/main.css",
+		"/Users/shawnrice/Sites/iamshawnrice/js/directives/track-list.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/factories/playlists-factory.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/about-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/dev-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/playlist-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/playlists-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/factories/page-factory.js",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_base.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-config.php",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_footer.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_header.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_base.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/pages/_playlist.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/main.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_paplow.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/playlist-controller.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/directives/track-list.js",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_track-list.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/js/main.js",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_mixins.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/playlist.html",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/track-list.html",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_accordion.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/partials/page.html",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/accordion.html",
-		"/Users/shawnrice/Sites/iamshawnrice/index.html",
 		"/Users/shawnrice/Desktop/wp-config.php",
-		"/Users/shawnrice/Sites/iamshawnrice/js/factories/playlists-factory.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/playlists-controller.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/app.js",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/playlists.html",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/plugins/WP-JSON-API-ACF-master/plugin.php",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/plugins/json-rest-api/plugin.php",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_variables.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/fonts/icomoon/_style.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_overrides.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_tooltip.scss",
@@ -120,8 +139,6 @@
 		"/Users/shawnrice/Sites/iamshawnrice/js/directives.js",
 		"/Users/shawnrice/Sites/iamshawnrice/js/directives/article-header.js",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/themes/iasr/js/main.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/factories/page-factory.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/dev-controller.js",
 		"/Users/shawnrice/Sites/iamshawnrice/js/controllers.js",
 		"/Users/shawnrice/Sites/iamshawnrice/js/factories.js",
 		"/Users/shawnrice/Sites/iamshawnrice/.htaccess",
@@ -159,7 +176,6 @@
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_components.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/footer.html",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/plugins/wp-json-api-playlists/plugin.php",
-		"/Users/shawnrice/Sites/iamshawnrice/.gitignore",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_grid-settings.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/vendors/_vendors.scss",
 		"/Applications/MAMP/conf/apache/httpd.conf",
@@ -213,6 +229,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".site-title",
+			"@license",
 			"MIME",
 			"jquery",
 			"/***/",
@@ -297,6 +315,94 @@
 		"selected_items":
 		[
 			[
+				"inde",
+				"index.html"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"port",
+				"js/controllers/portfolio-controller.js"
+			],
+			[
+				"vari",
+				"sass/utils/_variables.scss"
+			],
+			[
+				"mixi",
+				"sass/utils/_mixins.scss"
+			],
+			[
+				"side-",
+				"sass/components/_side-image.scss"
+			],
+			[
+				"side-im",
+				"sass/components/_side-image.scss"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"page",
+				"partials/page.html"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"track",
+				"js/directives/track-list.js"
+			],
+			[
+				"app.js",
+				"js/app.js"
+			],
+			[
+				"playfac",
+				"js/factories/playlists-factory.js"
+			],
+			[
+				"pagefa",
+				"js/factories/page-factory.js"
+			],
+			[
+				"tracklist",
+				"js/directives/track-list.js"
+			],
+			[
+				"playcon",
+				"js/controllers/playlist-controller.js"
+			],
+			[
+				"dev",
+				"js/controllers/dev-controller.js"
+			],
+			[
+				"aboutcon",
+				"js/controllers/about-controller.js"
+			],
+			[
+				"main.scss",
+				"sass/main.scss"
+			],
+			[
+				"gitin",
+				".gitignore"
+			],
+			[
+				"base.scss",
+				"sass/base/_base.scss"
+			],
+			[
+				"var",
+				"sass/utils/_variables.scss"
+			],
+			[
 				"_footer.",
 				"sass/layout/_footer.scss"
 			],
@@ -313,20 +419,12 @@
 				"sass/pages/_playlist.scss"
 			],
 			[
-				"base.scss",
-				"sass/base/_base.scss"
-			],
-			[
 				"playlist.scss",
 				"sass/pages/_playlist.scss"
 			],
 			[
 				"header",
 				"sass/layout/_header.scss"
-			],
-			[
-				"main.scss",
-				"sass/main.scss"
 			],
 			[
 				"papl",
@@ -343,10 +441,6 @@
 			[
 				"playlistcon",
 				"js/controllers/playlist-controller.js"
-			],
-			[
-				"track",
-				"sass/components/_track-list.scss"
 			],
 			[
 				"play",
@@ -381,24 +475,12 @@
 				"sass/components/_accordion.scss"
 			],
 			[
-				"page",
-				"partials/page.html"
-			],
-			[
 				"accordion.scss",
 				"sass/components/_accordion.scss"
 			],
 			[
 				"playlist.h",
 				"partials/playlist.html"
-			],
-			[
-				"playcon",
-				"js/controllers/playlist-controller.js"
-			],
-			[
-				"index",
-				"index.html"
 			],
 			[
 				"playlistscontr",
@@ -425,10 +507,6 @@
 				"sass/layout/_footer.scss"
 			],
 			[
-				"var",
-				"sass/utils/_variables.scss"
-			],
-			[
 				"_mix",
 				"sass/utils/_mixins.scss"
 			],
@@ -441,10 +519,6 @@
 				"js/factories/playlists-factory.js"
 			],
 			[
-				"app.js",
-				"js/app.js"
-			],
-			[
 				"main.js",
 				"api/wp-content/themes/iasr/js/main.js"
 			],
@@ -455,10 +529,6 @@
 			[
 				"fac",
 				"js/factories.js"
-			],
-			[
-				"dev",
-				"js/controllers/dev-controller.js"
 			],
 			[
 				"page.",
@@ -551,10 +621,6 @@
 			[
 				"factor",
 				"js/factories.js"
-			],
-			[
-				"vari",
-				"sass/utils/_variables.scss"
 			],
 			[
 				"mixin",
