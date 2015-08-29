@@ -429,11 +429,11 @@ html {
 body {
   background: #edeae2;
   color: #464541;
-  position: relative;
-  min-height: 100%;
+  font-size: 24px;
   height: 100%;
   margin: 0;
-  font-size: 24px; }
+  min-height: 100%;
+  position: relative; }
   @media screen and (max-width: 61.25em) {
     body {
       font-size: 20px; } }
@@ -442,10 +442,10 @@ body {
       font-size: 16px; } }
 
 .body-wrap {
-  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 5% 100px;
+  max-width: 1280px;
   min-height: 100%;
+  padding: 0 5% 100px;
   position: relative;
   z-index: 1; }
 
@@ -489,7 +489,7 @@ footer[role="contentinfo"] {
   z-index: 2; }
   footer[role="contentinfo"] .foot-wrap {
     padding: 10px 5%;
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto; }
     footer[role="contentinfo"] .foot-wrap::after {
       clear: both;
