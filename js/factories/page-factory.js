@@ -1,4 +1,6 @@
 (function() {
+  'use strict';
+
   angular.module('app.iasr').factory('pageFactory', function($http) {
     var service = {};
 

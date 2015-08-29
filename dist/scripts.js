@@ -50142,6 +50142,8 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
 })();
 
 (function(pageFactory) {
+  'use strict';
+
   angular.module('app.iasr').controller('AboutController', function($scope, pageFactory) {
     pageFactory.getPage(2).then(function(data) {
       $scope.page = data;
@@ -50150,6 +50152,8 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
 })();
 
 (function(pageFactory) {
+  'use strict';
+
   angular.module('app.iasr').controller('DevController', function($scope, pageFactory) {
     pageFactory.getPage(27).then(function(data) {
       $scope.page = data;
@@ -50158,6 +50162,8 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
 })();
 
 (function() {
+  'use strict';
+
   angular.module('app.iasr').controller('PlaylistController', function($scope, $stateParams, playlistsFactory, $sce) {
     playlistsFactory.getPlaylist($stateParams.slug).then(function(data) {
       $scope.playlist = data[0];
@@ -50167,6 +50173,8 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
 })();
 
 (function() {
+  'use strict';
+
   angular.module('app.iasr').controller('PlaylistsController', function($scope, playlistsFactory) {
     playlistsFactory.getPlaylists().then(function(data) {
       $scope.playlists = data;
@@ -50175,12 +50183,47 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
 })();
 
 (function(pageFactory) {
+  'use strict';
+
   angular.module('app.iasr').controller('PortfolioController', function($scope, pageFactory) {
     pageFactory.getPage(83).then(function(data) {
       $scope.title = data.title;
       // process array so items are in reverse chronological order
       $scope.portfolio = data.meta.portfolio_items.reverse();
     });
+  });
+})();
+
+(function() {
+  'use strict';
+
+  angular.module('app.iasr').directive('iasrPaplow', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'partials/paplow.html',
+      link: function($rootScope) {
+        $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+          var stateChangeInfo = {
+            toState: toState,
+            fromState: fromState,
+          };
+
+          console.log(stateChangeInfo);
+
+          // Clear out previous listeners
+          $rootScope.$$listeners.$viewContentLoading = [];
+          $rootScope.$on('$viewContentLoading', function(event, viewConfig){
+            console.log('loading');
+          });
+
+          // Clear out previous listeners
+          $rootScope.$$listeners.$viewContentLoaded = [];
+          $rootScope.$on('$viewContentLoaded', function(event){
+            console.log('loaded');
+          });
+        });
+      }
+    };
   });
 })();
 
@@ -50208,6 +50251,8 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
 })();
 
 (function() {
+  'use strict';
+
   angular.module('app.iasr').factory('pageFactory', function($http) {
     var service = {};
 
@@ -50231,6 +50276,8 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
 })();
 
 (function() {
+  'use strict';
+
   angular.module('app.iasr').factory('playlistsFactory', function($http) {
     var service = {};
 
