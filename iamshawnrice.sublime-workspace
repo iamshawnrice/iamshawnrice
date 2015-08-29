@@ -89,11 +89,25 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/shawnrice/Sites/iamshawnrice"
+		"/Users/shawnrice/Sites/iamshawnrice",
+		"/Users/shawnrice/Sites/iamshawnrice/js"
 	],
 	"file_history":
 	[
 		"/Users/shawnrice/Sites/iamshawnrice/index.html",
+		"/Users/shawnrice/Sites/iamshawnrice/js/factories/playlists-factory.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/animation-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/dev-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/playlists-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/factories/page-factory.js",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_footer.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_paplow.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/pages/_playlist.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_mixins.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/paplow.html",
+		"/Users/shawnrice/Sites/iamshawnrice/images/paplow.svg",
+		"/Users/shawnrice/Sites/iamshawnrice/bower.json",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_base.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_header.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/js/app.js",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/main.scss",
@@ -102,7 +116,6 @@
 		"/Users/shawnrice/Sites/iamshawnrice/sass/pages/_portfolio.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_side-image.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_variables.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_mixins.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/gulpfile.js",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/page.html",
 		"/Users/shawnrice/Desktop/page-reel.php",
@@ -110,17 +123,9 @@
 		"/Users/shawnrice/Sites/iamshawnrice/css/busters.json",
 		"/Users/shawnrice/Sites/iamshawnrice/css/main.css",
 		"/Users/shawnrice/Sites/iamshawnrice/js/directives/track-list.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/factories/playlists-factory.js",
 		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/about-controller.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/dev-controller.js",
 		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/playlist-controller.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/playlists-controller.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/factories/page-factory.js",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_base.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-config.php",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_footer.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/pages/_playlist.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_paplow.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_track-list.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/js/main.js",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/playlist.html",
@@ -172,7 +177,6 @@
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_article_list.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_headers.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_fonts.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/partials/paplow.html",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_components.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/footer.html",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/plugins/wp-json-api-playlists/plugin.php",
@@ -185,7 +189,6 @@
 		"/Users/shawnrice/Sites/iamshawnrice/partials/webdeveloper.html",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/iasr-mixtape.html",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_layout.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/bower.json",
 		"/Users/shawnrice/Sites/iamshawnrice/README.md",
 		"/Users/shawnrice/Sites/ng-boilerplate/index.html",
 		"/Users/shawnrice/Sites/ng-boilerplate/sass/utils/_placeholders.scss",
@@ -221,6 +224,7 @@
 		"height": 164.0,
 		"where_history":
 		[
+			"*.scss",
 			""
 		]
 	},
@@ -229,6 +233,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"@include",
 			".site-title",
 			"@license",
 			"MIME",
@@ -315,11 +320,39 @@
 		"selected_items":
 		[
 			[
-				"inde",
-				"index.html"
+				"factor",
+				"js/factories/playlists-factory.js"
+			],
+			[
+				"footer",
+				"sass/layout/_footer.scss"
+			],
+			[
+				"mixin",
+				"sass/utils/_mixins.scss"
+			],
+			[
+				"pap",
+				"partials/paplow.html"
+			],
+			[
+				"papl",
+				"images/paplow.svg"
+			],
+			[
+				"bower",
+				"bower.json"
 			],
 			[
 				"index",
+				"index.html"
+			],
+			[
+				"base.scss",
+				"sass/base/_base.scss"
+			],
+			[
+				"inde",
 				"index.html"
 			],
 			[
@@ -395,10 +428,6 @@
 				".gitignore"
 			],
 			[
-				"base.scss",
-				"sass/base/_base.scss"
-			],
-			[
 				"var",
 				"sass/utils/_variables.scss"
 			],
@@ -425,10 +454,6 @@
 			[
 				"header",
 				"sass/layout/_header.scss"
-			],
-			[
-				"papl",
-				"sass/components/_paplow.scss"
 			],
 			[
 				"_footer",
@@ -619,14 +644,6 @@
 				"webpack.config.js"
 			],
 			[
-				"factor",
-				"js/factories.js"
-			],
-			[
-				"mixin",
-				"sass/utils/_mixins.scss"
-			],
-			[
 				"playlists",
 				"partials/playlists.html"
 			],
@@ -677,10 +694,6 @@
 			[
 				"about",
 				"partials/about.html"
-			],
-			[
-				"footer",
-				"sass/layout/_footer.scss"
 			],
 			[
 				"paly",

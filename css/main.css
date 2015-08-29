@@ -444,27 +444,14 @@ body {
 .body-wrap {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 5% 100px;
   min-height: 100%;
-  margin-bottom: -126px;
   position: relative;
   z-index: 1; }
-  .body-wrap:after {
-    content: "";
-    display: block;
-    height: 126px; }
-
-.main-content {
-  padding-bottom: 200px; }
-  @media screen and (max-width: 61.25em) {
-    .main-content {
-      padding-bottom: 150px; } }
-  @media screen and (max-width: 40em) {
-    .main-content {
-      padding-bottom: 100px; } }
 
 .site-header {
-  font-size: 6em; }
+  font-size: 6em;
+  text-align: center; }
   .site-header .site-title {
     font-size: 1em;
     margin: 0;
@@ -492,14 +479,16 @@ body {
         padding: .25em; } }
 
 footer[role="contentinfo"] {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: #464541;
   font-family: "Radley", serif;
   font-size: 1.5em;
-  min-height: 126px;
-  position: relative;
   z-index: 2; }
   footer[role="contentinfo"] .foot-wrap {
-    padding: 1em 5%;
+    padding: 10px 5%;
     max-width: 1440px;
     margin: 0 auto; }
     footer[role="contentinfo"] .foot-wrap::after {
@@ -545,7 +534,7 @@ footer[role="contentinfo"] {
       padding-right: 0; }
   @media screen and (max-width: 61.25em) and (min-width: 40em) {
     footer[role="contentinfo"] .foot-wrap {
-      padding: 2em 5%; } }
+      padding: 5px 5%; } }
   @media screen and (max-width: 40em) {
     footer[role="contentinfo"] {
       font-size: 1.5em; }
@@ -611,24 +600,17 @@ footer[role="contentinfo"] {
 
 .paplow-box {
   position: absolute;
-  bottom: 100px;
+  top: 50%;
   left: 50%;
+  height: 34px;
   -webkit-transform: translateX(-50%) translateY(-50%);
       -ms-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
-  width: 526px;
-  height: 145px; }
+  width: 125px; }
   .paplow-box .paplow {
-    width: 100%;
-    height: 100%; }
-  @media screen and (max-width: 61.25em) {
-    .paplow-box {
-      width: 394.5px;
-      height: 108.75px; } }
-  @media screen and (max-width: 40em) {
-    .paplow-box {
-      width: 263px;
-      height: 72.5px; } }
+    fill: #edeae2;
+    height: 100%;
+    width: 100%; }
 
 .track-list {
   width: 100%;
