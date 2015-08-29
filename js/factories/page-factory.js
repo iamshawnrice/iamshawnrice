@@ -1,7 +1,7 @@
-(function() {
+(function($rootScope) {
   'use strict';
 
-  angular.module('app.iasr').factory('pageFactory', function($http) {
+  angular.module('app.iasr').factory('pageFactory', function($rootScope, $http) {
     var service = {};
 
     service.getPage = function(id) {

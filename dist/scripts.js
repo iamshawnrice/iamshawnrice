@@ -50147,6 +50147,7 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
   angular.module('app.iasr').controller('AboutController', function($scope, pageFactory) {
     pageFactory.getPage(2).then(function(data) {
       $scope.page = data;
+      $scope.$emit('paplowOut');
     });
   });
 })();
@@ -50157,6 +50158,7 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
   angular.module('app.iasr').controller('DevController', function($scope, pageFactory) {
     pageFactory.getPage(27).then(function(data) {
       $scope.page = data;
+      $scope.$emit('paplowOut');
     });
   });
 })();
@@ -50168,6 +50170,7 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
     playlistsFactory.getPlaylist($stateParams.slug).then(function(data) {
       $scope.playlist = data[0];
       $scope.playlist.published = moment($scope.playlist.date).format('MMMM Do YYYY');
+      $scope.$emit('paplowOut');
     });
   });
 })();
@@ -50178,6 +50181,7 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
   angular.module('app.iasr').controller('PlaylistsController', function($scope, playlistsFactory) {
     playlistsFactory.getPlaylists().then(function(data) {
       $scope.playlists = data;
+      $scope.$emit('paplowOut');
     });
   });
 })();
@@ -50190,6 +50194,7 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
       $scope.title = data.title;
       // process array so items are in reverse chronological order
       $scope.portfolio = data.meta.portfolio_items.reverse();
+      $scope.$emit('paplowOut');
     });
   });
 })();
@@ -50202,25 +50207,33 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
       restrict: 'E',
       templateUrl: 'partials/paplow.html',
       link: function($rootScope) {
+        $rootScope.$$listeners.$stateChangeStart = [];
         $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
-          var stateChangeInfo = {
-            toState: toState,
-            fromState: fromState,
-          };
+          // var stateChangeInfo = {
+          //   toState: toState,
+          //   fromState: fromState,
+          // };
 
-          console.log(stateChangeInfo);
+          // console.log(stateChangeInfo);
+          console.log('paplow in');
+        });
 
-          // Clear out previous listeners
-          $rootScope.$$listeners.$viewContentLoading = [];
-          $rootScope.$on('$viewContentLoading', function(event, viewConfig){
-            console.log('loading');
-          });
+        // Clear out previous listeners
+        $rootScope.$$listeners.$viewContentLoading = [];
+        $rootScope.$on('$viewContentLoading', function(event, viewConfig){
+          console.log('loading');
+        });
 
-          // Clear out previous listeners
-          $rootScope.$$listeners.$viewContentLoaded = [];
-          $rootScope.$on('$viewContentLoaded', function(event){
-            console.log('loaded');
-          });
+        // Clear out previous listeners
+        $rootScope.$$listeners.$viewContentLoaded = [];
+        $rootScope.$on('$viewContentLoaded', function(event){
+          console.log('loaded');
+        });
+
+        $rootScope.$$listeners.paplowOut = [];
+        $rootScope.$on('paplowOut', function() {
+          console.log('paplow out');
+          console.log('================');
         });
       }
     };
@@ -50250,10 +50263,10 @@ angular.module('ngSanitize').filter('linky', ['$sanitize', function($sanitize) {
   });
 })();
 
-(function() {
+(function($rootScope) {
   'use strict';
 
-  angular.module('app.iasr').factory('pageFactory', function($http) {
+  angular.module('app.iasr').factory('pageFactory', function($rootScope, $http) {
     var service = {};
 
     service.getPage = function(id) {
