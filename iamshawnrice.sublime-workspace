@@ -51,10 +51,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 354.0,
-		"last_filter": "inst",
+		"height": 101.0,
+		"last_filter": "install",
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"inst",
 				"Package Control: Install Package"
@@ -62,13 +66,9 @@
 			[
 				"pack",
 				"Package Control: Install Package"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			]
 		],
-		"width": 431.0
+		"width": 475.0
 	},
 	"console":
 	{
@@ -90,41 +90,45 @@
 	"expanded_folders":
 	[
 		"/Users/shawnrice/Sites/iamshawnrice",
-		"/Users/shawnrice/Sites/iamshawnrice/js"
+		"/Users/shawnrice/Sites/iamshawnrice/js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/directives"
 	],
 	"file_history":
 	[
+		"/Users/shawnrice/Sites/iamshawnrice/js/directives/main-content.js",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_base.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_variables.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/index.html",
-		"/Users/shawnrice/Sites/iamshawnrice/js/factories/playlists-factory.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/animation-controller.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/dev-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/directives/paplow.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/portfolio-controller.js",
 		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/playlists-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/about-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/playlist-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/gulpfile.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/directives/track-list.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/dev-controller.js",
+		"/Users/shawnrice/Sites/iamshawnrice/js/app.js",
 		"/Users/shawnrice/Sites/iamshawnrice/js/factories/page-factory.js",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_footer.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/js/factories/playlists-factory.js",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_overrides.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_header.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_paplow.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_footer.scss",
+		"/Users/shawnrice/Sites/iamshawnrice/partials/paplow.html",
+		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/animation-controller.js",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/pages/_playlist.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_mixins.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/partials/paplow.html",
 		"/Users/shawnrice/Sites/iamshawnrice/images/paplow.svg",
 		"/Users/shawnrice/Sites/iamshawnrice/bower.json",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_base.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/layout/_header.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/js/app.js",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/main.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/portfolio-controller.js",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/portolio.html",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/pages/_portfolio.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_side-image.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/utils/_variables.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/gulpfile.js",
 		"/Users/shawnrice/Sites/iamshawnrice/partials/page.html",
 		"/Users/shawnrice/Desktop/page-reel.php",
 		"/Users/shawnrice/Sites/iamshawnrice/.gitignore",
 		"/Users/shawnrice/Sites/iamshawnrice/css/busters.json",
 		"/Users/shawnrice/Sites/iamshawnrice/css/main.css",
-		"/Users/shawnrice/Sites/iamshawnrice/js/directives/track-list.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/about-controller.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/controllers/playlist-controller.js",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-config.php",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_track-list.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/js/main.js",
@@ -137,10 +141,8 @@
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/plugins/WP-JSON-API-ACF-master/plugin.php",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/plugins/json-rest-api/plugin.php",
 		"/Users/shawnrice/Sites/iamshawnrice/fonts/icomoon/_style.scss",
-		"/Users/shawnrice/Sites/iamshawnrice/sass/base/_overrides.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/sass/components/_tooltip.scss",
 		"/Users/shawnrice/Sites/iamshawnrice/js/filters.js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/directives/paplow.js",
 		"/Users/shawnrice/Sites/iamshawnrice/js/directives.js",
 		"/Users/shawnrice/Sites/iamshawnrice/js/directives/article-header.js",
 		"/Users/shawnrice/Sites/iamshawnrice/api/wp-content/themes/iasr/js/main.js",
@@ -233,6 +235,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$large-screen",
+			"fill=\"#474541\"",
 			"@include",
 			".site-title",
 			"@license",
@@ -256,6 +260,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -310,7 +315,7 @@
 	"project": "iamshawnrice.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -319,6 +324,58 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"maincon",
+				"js/directives/main-content.js"
+			],
+			[
+				"var",
+				"sass/utils/_variables.scss"
+			],
+			[
+				"base.scss",
+				"sass/base/_base.scss"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"app.js",
+				"js/app.js"
+			],
+			[
+				"pagefac",
+				"js/factories/page-factory.js"
+			],
+			[
+				"dev",
+				"js/controllers/dev-controller.js"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"dev-con",
+				"js/controllers/dev-controller.js"
+			],
+			[
+				"header.scss",
+				"sass/layout/_header.scss"
+			],
+			[
+				"_footer",
+				"sass/layout/_footer.scss"
+			],
+			[
+				"paplow.scss",
+				"sass/components/_paplow.scss"
+			],
+			[
+				"papl",
+				"partials/paplow.html"
+			],
 			[
 				"factor",
 				"js/factories/playlists-factory.js"
@@ -336,20 +393,8 @@
 				"partials/paplow.html"
 			],
 			[
-				"papl",
-				"images/paplow.svg"
-			],
-			[
 				"bower",
 				"bower.json"
-			],
-			[
-				"index",
-				"index.html"
-			],
-			[
-				"base.scss",
-				"sass/base/_base.scss"
 			],
 			[
 				"inde",
@@ -376,10 +421,6 @@
 				"sass/components/_side-image.scss"
 			],
 			[
-				"gulp",
-				"gulpfile.js"
-			],
-			[
 				"page",
 				"partials/page.html"
 			],
@@ -390,10 +431,6 @@
 			[
 				"track",
 				"js/directives/track-list.js"
-			],
-			[
-				"app.js",
-				"js/app.js"
 			],
 			[
 				"playfac",
@@ -412,10 +449,6 @@
 				"js/controllers/playlist-controller.js"
 			],
 			[
-				"dev",
-				"js/controllers/dev-controller.js"
-			],
-			[
 				"aboutcon",
 				"js/controllers/about-controller.js"
 			],
@@ -428,16 +461,8 @@
 				".gitignore"
 			],
 			[
-				"var",
-				"sass/utils/_variables.scss"
-			],
-			[
 				"_footer.",
 				"sass/layout/_footer.scss"
-			],
-			[
-				"header.scss",
-				"sass/layout/_header.scss"
 			],
 			[
 				"_footer.scss",
@@ -454,10 +479,6 @@
 			[
 				"header",
 				"sass/layout/_header.scss"
-			],
-			[
-				"_footer",
-				"sass/layout/_footer.scss"
 			],
 			[
 				"tracklist.js",

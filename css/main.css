@@ -437,9 +437,9 @@ body {
   @media screen and (max-width: 61.25em) {
     body {
       font-size: 20px; } }
-  @media screen and (max-width: 61.25em) {
+  @media screen and (max-width: 40em) {
     body {
-      font-size: 16px; } }
+      font-size: 18px; } }
 
 .body-wrap {
   margin: 0 auto;
@@ -448,6 +448,18 @@ body {
   padding: 0 5% 100px;
   position: relative;
   z-index: 1; }
+
+.main-content > p {
+  -webkit-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
+          transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s; }
+
+.main-content.loading > p {
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px); }
 
 .site-header {
   font-size: 6em;

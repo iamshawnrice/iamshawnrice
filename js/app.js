@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('app.iasr', ['ui.router', 'ngSanitize']);
+  angular.module('app.iasr', ['ui.router', 'ngSanitize', 'ngAnimate']);
 
   angular.module('app.iasr').config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider

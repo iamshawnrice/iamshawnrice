@@ -21,8 +21,8 @@ body {
     font-size: 20px;
   }
 
-  @media screen and (max-width: $medium-screen) {
-    font-size: 16px;
+  @media screen and (max-width: $small-screen) {
+    font-size: 18px;
   }
 }
 
@@ -36,4 +36,12 @@ body {
 }
 
 .main-content {
+  > p {
+    @include transitioned;
+  }
+
+  &.loading > p {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 }
