@@ -53088,23 +53088,6 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
   });
 })();
 
-(function() {
-  'use strict';
-
-  angular.module('app.iasr')
-    .animation('.main-content', function() {
-      return {
-        enter: function(element, doneFn) {
-          // Figure out why the content is popping in
-          $(element).fadeIn(500, doneFn);
-        },
-        leave: function(element, doneFn) {
-          $(element).fadeOut(500, doneFn);
-        }
-      }
-    });
-})();
-
 (function(pageFactory) {
   'use strict';
 
@@ -53160,47 +53143,6 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
       $scope.portfolio = data.meta.portfolio_items.reverse();
       $scope.$emit('paplowOut');
     });
-  });
-})();
-
-(function() {
-  'use-strict';
-
-  angular.module('app.iasr').directive('iasrMainContent', function() {
-    return {
-      restrict: 'A',
-      link: function($rootScope, element) {
-        var $mainContent = $('.js-main-content');
-
-        // Clear out previous listeners
-        $rootScope.$$listeners.$stateChangeStart = [];
-        $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
-          $mainContent.addClass('loading');
-
-          console.log('paplow in');
-        });
-
-        // Clear out previous listeners
-        $rootScope.$$listeners.$viewContentLoading = [];
-        $rootScope.$on('$viewContentLoading', function(event, viewConfig){
-          console.log('loading');
-        });
-
-        // Clear out previous listeners
-        $rootScope.$$listeners.$viewContentLoaded = [];
-        $rootScope.$on('$viewContentLoaded', function(event){
-          console.log('loaded');
-        });
-
-        $rootScope.$$listeners.paplowOut = [];
-        $rootScope.$on('paplowOut', function() {
-          $mainContent.removeClass('loading');
-          console.log('paplow out');
-          // add bar to make clear when one transition 'cycle' is complete
-          console.log('================');
-        });
-      }
-    }
   });
 })();
 

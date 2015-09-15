@@ -36,12 +36,21 @@ body {
 }
 
 .main-content {
-  > p {
-    @include transitioned;
+  @include transitioned;
+
+  &.ng-enter,
+  &.ng-leave {
+    transform: translateY(0);
+    opacity: 1;
   }
 
-  &.loading > p {
+  &.ng-enter.ng-enter-active {
+    transform: translateY(-20px);
     opacity: 0;
-    transform: translateY(10px);
+  }
+
+  &.ng-leave.ng-leave-active {
+    transform: translateY(20px);
+    opacity: 0;
   }
 }

@@ -449,17 +449,27 @@ body {
   position: relative;
   z-index: 1; }
 
-.main-content > p {
+.main-content {
   -webkit-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
           transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
   -webkit-transition-delay: 0s;
           transition-delay: 0s; }
-
-.main-content.loading > p {
-  opacity: 0;
-  -webkit-transform: translateY(10px);
-      -ms-transform: translateY(10px);
-          transform: translateY(10px); }
+  .main-content.ng-enter,
+  .main-content.ng-leave {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1; }
+  .main-content.ng-enter.ng-enter-active {
+    -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+            transform: translateY(-20px);
+    opacity: 0; }
+  .main-content.ng-leave.ng-leave-active {
+    -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0; }
 
 .site-header {
   font-size: 6em;
