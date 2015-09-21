@@ -53092,9 +53092,10 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
   'use strict';
 
   angular.module('app.iasr').controller('AboutController', function($scope, pageFactory) {
+    $scope.contentClass = 'about';
+
     pageFactory.getPage(2).then(function(data) {
       $scope.page = data;
-      $scope.$emit('paplowOut');
     });
   });
 })();
@@ -53103,9 +53104,10 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
   'use strict';
 
   angular.module('app.iasr').controller('DevController', function($scope, pageFactory) {
+    $scope.contentClass = 'web-developer';
+
     pageFactory.getPage(27).then(function(data) {
       $scope.page = data;
-      $scope.$emit('paplowOut');
     });
   });
 })();
@@ -53113,11 +53115,13 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
 (function() {
   'use strict';
 
-  angular.module('app.iasr').controller('PlaylistController', function($scope, $stateParams, playlistsFactory, $sce) {
+  angular.module('app.iasr').controller('PlaylistController',
+    function($scope, $stateParams, playlistsFactory, $sce) {
+    $scope.contentClass = 'playlist';
+
     playlistsFactory.getPlaylist($stateParams.slug).then(function(data) {
       $scope.playlist = data[0];
       $scope.playlist.published = moment($scope.playlist.date).format('MMMM Do YYYY');
-      $scope.$emit('paplowOut');
     });
   });
 })();
@@ -53126,6 +53130,8 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
   'use strict';
 
   angular.module('app.iasr').controller('PlaylistsController', function($scope, playlistsFactory) {
+    $scope.contentClass = 'playlists'
+
     playlistsFactory.getPlaylists().then(function(data) {
       $scope.playlists = data;
       $scope.$emit('paplowOut');
@@ -53138,10 +53144,11 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
 
   angular.module('app.iasr').controller('PortfolioController', function($scope, pageFactory) {
     pageFactory.getPage(83).then(function(data) {
+      $scope.contentClass = 'portfolio';
+
       $scope.title = data.title;
       // process array so items are in reverse chronological order
       $scope.portfolio = data.meta.portfolio_items.reverse();
-      $scope.$emit('paplowOut');
     });
   });
 })();

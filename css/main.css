@@ -416,6 +416,14 @@ p.author {
   src: local("Noto Sans Bold Italic"), local("NotoSans-BoldItalic"), url(http://fonts.gstatic.com/s/notosans/v6/9Z3uUWMRR7crzm1TjRicDv79_ZuUxCigM2DespTnFaw.woff2) format("woff2");
   unicode-range: U0-0FF, U131, U152-153, U2C 6, U2DA, U2DC, U2000-206F, U2074, U20AC, U2212, U2215, UE0FF, UEFFD, UF000; }
 
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important; }
+
 a {
   -webkit-transition: color 0.25s;
           transition: color 0.25s;
@@ -454,12 +462,12 @@ body {
           transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
   -webkit-transition-delay: 0s;
           transition-delay: 0s; }
-  .main-content a {
+  .main-content p a {
     -webkit-transition: color 0.25s;
             transition: color 0.25s;
     color: #6b83a6;
     border-bottom: 1px dashed #6b83a6; }
-    .main-content a:hover {
+    .main-content p a:hover {
       color: #8b9eb9; }
   .main-content.ng-enter,
   .main-content.ng-leave {

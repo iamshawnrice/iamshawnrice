@@ -1,3 +1,13 @@
+// Angular Styles
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+
 // Global Styles
 
 a {
@@ -38,7 +48,7 @@ body {
 .main-content {
   @include transitioned;
 
-  a {
+  p a {
     @include link($iasr-blue);
     border-bottom: 1px dashed $iasr-blue;
   }
