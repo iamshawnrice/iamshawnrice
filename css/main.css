@@ -454,6 +454,13 @@ body {
           transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
   -webkit-transition-delay: 0s;
           transition-delay: 0s; }
+  .main-content a {
+    -webkit-transition: color 0.25s;
+            transition: color 0.25s;
+    color: #6b83a6;
+    border-bottom: 1px dashed #6b83a6; }
+    .main-content a:hover {
+      color: #8b9eb9; }
   .main-content.ng-enter,
   .main-content.ng-leave {
     -webkit-transform: translateY(0);

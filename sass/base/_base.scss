@@ -1,7 +1,7 @@
 // Global Styles
 
 a {
-  @include link(#464541);
+  @include link($gray-4);
 }
 
 html {
@@ -37,6 +37,11 @@ body {
 
 .main-content {
   @include transitioned;
+
+  a {
+    @include link($iasr-blue);
+    border-bottom: 1px dashed $iasr-blue;
+  }
 
   &.ng-enter,
   &.ng-leave {
