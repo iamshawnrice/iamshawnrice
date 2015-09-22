@@ -4,9 +4,7 @@
   angular.module('app.iasr').directive('iasrPaplow', function() {
     return {
       restrict: 'E',
-      templateUrl: 'partials/paplow.html',
-      link: function($rootScope) {
-      }
+      templateUrl: 'partials/paplow.html'
     };
   });
 })();
