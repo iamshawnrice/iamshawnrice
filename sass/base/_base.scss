@@ -43,6 +43,10 @@ body {
   padding: 0 5% 100px;
   position: relative;
   z-index: 1;
+
+  @media screen and (max-width: $small-screen) {
+    padding-bottom: 0;
+  }
 }
 
 .main-content {
