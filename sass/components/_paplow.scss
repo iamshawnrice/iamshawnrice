@@ -1,26 +1,13 @@
-// Magic Number Alert:
-$paplow-width: 526;
-$paplow-height: 145;
-
 // Paplow
 .paplow-box {
-  @include position(absolute, null null 100px 50%);
-  @include transform(translateX(-50%) translateY(-50%));
-  width: $paplow-width * 1px;
-  height: $paplow-height * 1px;
+  @include position(absolute, 50% null null 50%);
+  height: 34px;
+  transform: translateX(-50%) translateY(-50%);
+  width: 125px;
 
   .paplow {
-    width: 100%;
+    fill: $iasr-white;
     height: 100%;
-  }
-
-  @media screen and (max-width: $medium-screen) {
-    width: (.75 * $paplow-width) * 1px;
-    height: (.75 * $paplow-height)* 1px;
-  }
-
-  @media screen and (max-width: $small-screen) {
-    width: (.5 * $paplow-width) * 1px;
-    height: (.5 * $paplow-height)* 1px;
+    width: 100%;
   }
 }

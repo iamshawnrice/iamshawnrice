@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" type="image/png" href="./images/favicon.png" />
-    <link rel="stylesheet" href="/css/main.css?ver=1.2">
+    <link rel="stylesheet" href="/css/main.css?ver=1.3">
 
     <base href="/">
     <script src="/bower_components/modernizr/modernizr.js"></script>
@@ -33,8 +33,7 @@
           </span>
         </p>
       </header>
-      <section ui-view class="main-content view-animation"></section>
-      <ng-include src="'partials/paplow.html'"></ng-include>
+      <section ui-view class="main-content js-main-content" ng-class="contentClass" ng-cloak></section>
     </div><!-- .body-wrap -->
 
     <footer role="contentinfo">
@@ -43,6 +42,8 @@
           <li><a ui-sref="about">About</a></li>
           <li><a href="mailto:iamshawnrice@gmail.com">Contact</a></li>
         </ul>
+
+        <iasr-paplow></iasr-paplow>
 
         <ul class="footer-social">
           <li>
@@ -64,7 +65,7 @@
       </div><!-- .foot-wrap -->
     </footer>
 
-    <script src="dist/scripts.js?ver=1.2"></script>
+    <script src="dist/scripts.js?ver=1.3"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

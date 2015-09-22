@@ -1,5 +1,5 @@
 @mixin link($initial, $hover: lighten($initial, 10%)) {
-  @include transition(color .25s);
+  transition: color .25s;
   color: $initial;
 
   &:hover {
@@ -8,8 +8,8 @@
 }
 
 @mixin transitioned($properties: all, $duration: .25s, $delay: 0s) {
-  @include transition($properties $duration cubic-bezier(0.250, 0.250, 0.870, 1.245));
-  @include transition-delay($delay);
+  transition: $properties $duration cubic-bezier(0.250, 0.250, 0.870, 1.245);
+  transition-delay: $delay;
 }
 
 @mixin width($max-width) {

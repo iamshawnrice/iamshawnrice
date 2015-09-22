@@ -1,19 +1,22 @@
-(function() {
-  angular.module('app.iasr').factory('pageFactory', function($http, $q) {
+(function($rootScope) {
+  'use strict';
+
+  angular.module('app.iasr').factory('pageFactory', function($rootScope, $http) {
     var service = {};
 
     service.getPage = function(id) {
-      var deferred = $q.defer(),
-          urlBase = '/api/wp-json/pages/',
+      var urlBase = '/api/wp-json/pages/',
           urlId = id.toString(),
           link = urlBase + urlId;
 
-      $http.get(link)
-        .success(function(data) {
-          deferred.resolve(data);
+      return $http.get(link).then(
+        function(response) {
+          return response.data;
+        },
+        function(response) {
+          console.error('There was an issue retrieving this page');
+          console.log(response);
         });
-
-        return deferred.promise;
       };
 
     return service;

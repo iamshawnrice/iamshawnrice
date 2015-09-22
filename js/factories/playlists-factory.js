@@ -1,30 +1,35 @@
 (function() {
-  angular.module('app.iasr').factory('playlistsFactory', function($http, $q) {
+  'use strict';
+
+  angular.module('app.iasr').factory('playlistsFactory', function($http) {
     var service = {};
 
     service.getPlaylists = function() {
-      var deferred = $q.defer();
-
-      $http.get('/api/wp-json/posts')
-        .success(function(data) {
-          deferred.resolve(data);
-        });
-
-        return deferred.promise;
+      return $http.get('/api/wp-json/posts').then(
+        function(response) {
+          return response.data;
+        },
+        function(response) {
+          console.error('There was a problem retrieving the playlists');
+          console.log(response);
+        }
+      );
     };
 
     service.getPlaylist = function(slug) {
-      var deferred = $q.defer(),
-          urlBase = '/api/wp-json/posts?filter[name]==',
+      var urlBase = '/api/wp-json/posts?filter[name]==',
           urlSlug = slug.toString(),
           link = urlBase + urlSlug;
 
-      $http.get(link)
-        .success(function(data) {
-          deferred.resolve(data);
-        });
-
-        return deferred.promise;
+      return $http.get(link).then(
+        function(response) {
+          return response.data;
+        },
+        function(response) {
+          console.error('There was a problem retrieving this playlist');
+          console.log(response);
+        }
+      );
     };
 
     return service;
