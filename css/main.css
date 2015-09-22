@@ -458,8 +458,8 @@ body {
   z-index: 1; }
 
 .main-content {
-  -webkit-transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
-          transition: all 0.25s cubic-bezier(0.25, 0.25, 0.87, 1.245);
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.25, 0.87, 1.245);
+          transition: all 0.5s cubic-bezier(0.25, 0.25, 0.87, 1.245);
   -webkit-transition-delay: 0s;
           transition-delay: 0s; }
   .main-content p a {

@@ -46,7 +46,7 @@ body {
 }
 
 .main-content {
-  @include transitioned;
+  @include transitioned(all, .5s);
 
   p a {
     @include link($iasr-blue);
