@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 
 var autoprefixer = require('gulp-autoprefixer'),
-    bowerFiles = require('main-bower-files'),
     browserSync = require('browser-sync').create(),
     buster = require('gulp-buster'),
     concat = require('gulp-concat'),
@@ -11,12 +10,20 @@ var autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
     uglifycss = require('gulp-uglifycss');
 
+var vendorJSFiles = [
+  './bower_components/angular/angular.js',
+  './bower_components/angular-animate/angular-animate.js',
+  './bower_components/angular-sanitize/angular-sanitize.js',
+  './bower_components/angular-ui-router/release/angular-ui-router.js',
+  './bower_components/jquery/dist/jquery.js',
+  './bower_components/moment/moment.js',
+  './bower_components/velocity/velocity.js'
+];
+
 gulp.task('js', function() {
-  var files = bowerFiles();
+  vendorJSFiles.push('./js/**/*.js');
 
-  files.push('./js/**/*.js');
-
-  gulp.src(files)
+  gulp.src(vendorJSFiles)
     .pipe(sourcemaps.init())
     .pipe(concat('scripts.js'))
     .pipe(sourcemaps.write('.'))
@@ -25,11 +32,9 @@ gulp.task('js', function() {
 });
 
 gulp.task('js-build', function() {
-  var files = bowerFiles();
+  vendorJSFiles.push('./js/**/*.js');
 
-  files.push('./js/**/*.js');
-
-  gulp.src(files)
+  gulp.src(vendorJSFiles)
     .pipe(concat('scripts.js'))
     .pipe(ngAnnotate())
     .pipe(uglify())

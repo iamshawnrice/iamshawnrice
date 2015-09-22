@@ -1,15 +1,14 @@
 // Footer
 footer[role="contentinfo"] {
+  @include position(fixed, null 0 0 0);
   background: $gray-4;
   font-family: $serif;
   font-size: 1.5em;
-  min-height: $footer-height;
-  position: relative;
   z-index: 2;
 
   .foot-wrap {
     @include clearfix;
-    padding: 1em 5%;
+    padding: 10px 5%;
     max-width: $large-screen;
     margin: 0 auto;
   }
@@ -55,13 +54,8 @@ footer[role="contentinfo"] {
     }
   }
 
-  @media screen and (max-width: $medium-screen) and (min-width: $small-screen) {
-    .foot-wrap {
-      padding: 2em 5%;
-    }
-  }
-
   @media screen and (max-width: $small-screen) {
+    @include position(relative, null 0 0 0);
     font-size: 1.5em;
 
     .footer-about,
@@ -75,6 +69,10 @@ footer[role="contentinfo"] {
           padding: 0 .25em;
         }
       }
+    }
+
+    .paplow-box {
+      opacity: .1;
     }
 
     a {

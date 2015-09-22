@@ -33,8 +33,7 @@
           </span>
         </p>
       </header>
-      <section ui-view class="main-content"></section>
-      <ng-include src="'partials/paplow.html'"></ng-include>
+      <section ui-view class="main-content js-main-content" ng-class="contentClass" ng-cloak></section>
     </div><!-- .body-wrap -->
 
     <footer role="contentinfo">
@@ -43,6 +42,8 @@
           <li><a ui-sref="about">About</a></li>
           <li><a href="mailto:iamshawnrice@gmail.com">Contact</a></li>
         </ul>
+
+        <iasr-paplow></iasr-paplow>
 
         <ul class="footer-social">
           <li>
