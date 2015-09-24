@@ -6,6 +6,6 @@ This is an ongoing project for me to hack on and try new things. I know that a l
 Built with
 * Angular (front end)
 * WordPress (back end)
-* require.js
+* gulp.js
 * Sass (enhanced with Bourbon)
 * Velocity.js
