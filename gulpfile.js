@@ -2,7 +2,6 @@ var gulp = require('gulp');
 
 var autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
-    buster = require('gulp-buster'),
     concat = require('gulp-concat'),
     ngAnnotate = require('gulp-ng-annotate'),
     sass = require('gulp-sass'),
@@ -56,7 +55,6 @@ gulp.task('sass-build', function () {
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(uglifycss())
-    .pipe(buster())
     .pipe(gulp.dest('./css'))
 });
 
