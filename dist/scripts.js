@@ -53088,6 +53088,40 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
   });
 })();
 
+(function() {
+  'use strict';
+
+  angular.module('app.iasr').directive('iasrPaplow', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'partials/paplow.html'
+    };
+  });
+})();
+
+(function() {
+  'use strict';
+
+  angular.module('app.iasr').directive('iasrTrackList', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'partials/track-list.html',
+      link: function(scope) {
+        scope.accordionToggle = function(e) {
+          var $self = $(e.currentTarget),
+              $next = $self.next('.js-accordion-panel'),
+              $panels = $('.js-accordion-panel').not($next);
+
+          $panels.velocity('slideUp', { duration: 250 });
+          $next.velocity('slideDown', { duration: 250, delay: 250 });
+
+          e.preventDefault();
+        };
+      }
+    };
+  });
+})();
+
 (function(pageFactory) {
   'use strict';
 
@@ -53150,40 +53184,6 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
       // process array so items are in reverse chronological order
       $scope.portfolio = data.meta.portfolio_items.reverse();
     });
-  });
-})();
-
-(function() {
-  'use strict';
-
-  angular.module('app.iasr').directive('iasrPaplow', function() {
-    return {
-      restrict: 'E',
-      templateUrl: 'partials/paplow.html'
-    };
-  });
-})();
-
-(function() {
-  'use strict';
-
-  angular.module('app.iasr').directive('iasrTrackList', function() {
-    return {
-      restrict: 'E',
-      templateUrl: 'partials/track-list.html',
-      link: function(scope) {
-        scope.accordionToggle = function(e) {
-          var $self = $(e.currentTarget),
-              $next = $self.next('.js-accordion-panel'),
-              $panels = $('.js-accordion-panel').not($next);
-
-          $panels.velocity('slideUp', { duration: 250 });
-          $next.velocity('slideDown', { duration: 250, delay: 250 });
-
-          e.preventDefault();
-        };
-      }
-    };
   });
 })();
 
