@@ -290,7 +290,7 @@ a {
 .type {
   border-bottom: 2px solid;
   display: inline-block;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Muli", sans-serif;
   font-size: .7em;
   font-weight: 800;
   margin-bottom: 2em;
@@ -299,13 +299,12 @@ a {
   text-transform: uppercase; }
 
 h1 {
-  font-family: "Radley", serif;
+  font-family: "Ovo", serif;
   font-size: 1.9em;
-  font-weight: 700;
   margin-bottom: 0.3em; }
 
 h2 {
-  font-family: "Radley", serif;
+  font-family: "Ovo", serif;
   font-size: 1.3em;
   font-weight: 400;
   line-height: 1.25em;
@@ -327,7 +326,7 @@ h2 code {
   font-size: 0.65em; }
 
 h3 {
-  font-family: "Radley", serif;
+  font-family: "Ovo", serif;
   font-size: 1.4em;
   font-style: italic;
   font-weight: 400;
@@ -336,30 +335,30 @@ h3 {
 
 p.date {
   color: rgba(51, 51, 51, 0.4);
-  font-family: "Radley", serif;
+  font-family: "Ovo", serif;
   font-style: italic;
   margin-bottom: .3em; }
 
 p {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Muli", sans-serif;
   letter-spacing: 1;
   line-height: 1.55em;
   margin-bottom: 1.5em; }
   p span {
-    font-family: "Radley", serif;
+    font-family: "Ovo", serif;
     font-size: 1.2em;
     font-style: italic; }
 
 a.read-more {
   display: inline-block;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Muli", sans-serif;
   font-size: 0.8em;
   font-weight: 700;
   margin-left: 0.2em;
   position: relative;
   text-transform: uppercase; }
   a.read-more span {
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Muli", sans-serif;
     font-size: 1.5em;
     font-style: normal;
     position: absolute;
@@ -370,50 +369,24 @@ hr {
   width: 3em; }
 
 p.author {
-  font-family: "Radley", serif;
+  font-family: "Ovo", serif;
   font-size: 1.2em;
   font-style: italic; }
 
+/* latin */
 @font-face {
-  font-family: 'Radley';
+  font-family: 'Muli';
   font-style: normal;
   font-weight: 400;
-  src: local("Radley"), url(http://fonts.gstatic.com/s/radley/v9/f3gLyPJWVyU_VgfjouW3yevvDin1pK8aKteLpeZ5c0A.woff2) format("woff2");
+  src: local("Muli"), url(https://fonts.gstatic.com/s/muli/v7/zscZFkjVRGyfQ_Pw-5exXPesZW2xOQ-xsNqO47m55DA.woff2) format("woff2");
   unicode-range: U0-0FF, U131, U152-153, U2C 6, U2DA, U2DC, U2000-206F, U2074, U20AC, U2212, U2215, UE0FF, UEFFD, UF000; }
 
+/* latin */
 @font-face {
-  font-family: 'Radley';
-  font-style: italic;
-  font-weight: 400;
-  src: local("Radley Italic"), local("Radley-Italic"), url(http://fonts.gstatic.com/s/radley/v9/hztq3onOJfu5NWEzZxu6D3YhjbSpvc47ee6xR_80Hnw.woff2) format("woff2");
-  unicode-range: U0-0FF, U131, U152-153, U2C 6, U2DA, U2DC, U2000-206F, U2074, U20AC, U2212, U2215, UE0FF, UEFFD, UF000; }
-
-@font-face {
-  font-family: 'Noto Sans';
+  font-family: 'Ovo';
   font-style: normal;
   font-weight: 400;
-  src: local("Noto Sans"), local("NotoSans"), url(http://fonts.gstatic.com/s/notosans/v6/LeFlHvsZjXu2c3ZRgBq9nJBw1xU1rKptJj_0jans920.woff2) format("woff2");
-  unicode-range: U0-0FF, U131, U152-153, U2C 6, U2DA, U2DC, U2000-206F, U2074, U20AC, U2212, U2215, UE0FF, UEFFD, UF000; }
-
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Noto Sans Bold"), local("NotoSans-Bold"), url(http://fonts.gstatic.com/s/notosans/v6/PIbvSEyHEdL91QLOQRnZ1xampu5_7CjHW5spxoeN3Vs.woff2) format("woff2");
-  unicode-range: U0-0FF, U131, U152-153, U2C 6, U2DA, U2DC, U2000-206F, U2074, U20AC, U2212, U2215, UE0FF, UEFFD, UF000; }
-
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local("Noto Sans Italic"), local("NotoSans-Italic"), url(http://fonts.gstatic.com/s/notosans/v6/ByLA_FLEa-16SpQuTcQn4Igp9Q8gbYrhqGlRav_IXfk.woff2) format("woff2");
-  unicode-range: U0-0FF, U131, U152-153, U2C 6, U2DA, U2DC, U2000-206F, U2074, U20AC, U2212, U2215, UE0FF, UEFFD, UF000; }
-
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: local("Noto Sans Bold Italic"), local("NotoSans-BoldItalic"), url(http://fonts.gstatic.com/s/notosans/v6/9Z3uUWMRR7crzm1TjRicDv79_ZuUxCigM2DespTnFaw.woff2) format("woff2");
+  src: local("Ovo"), url(https://fonts.gstatic.com/s/ovo/v7/uESMHgkDLAXca4EoZKNOtw.woff2) format("woff2");
   unicode-range: U0-0FF, U131, U152-153, U2C 6, U2DA, U2DC, U2000-206F, U2074, U20AC, U2212, U2215, UE0FF, UEFFD, UF000; }
 
 [ng\:cloak],
@@ -490,7 +463,8 @@ body {
     opacity: 0; }
 
 .site-header {
-  font-size: 6em;
+  padding-top: .25em;
+  font-size: 4em;
   text-align: center; }
   .site-header .site-title {
     font-size: 1em;
@@ -524,7 +498,7 @@ footer[role="contentinfo"] {
   bottom: 0;
   left: 0;
   background: #464541;
-  font-family: "Radley", serif;
+  font-family: "Ovo", serif;
   font-size: 1.5em;
   z-index: 2; }
   footer[role="contentinfo"] .foot-wrap {
@@ -716,7 +690,7 @@ footer[role="contentinfo"] {
 
 .playlist .playlist-footer {
   text-align: center;
-  font-family: "Radley", serif;
+  font-family: "Ovo", serif;
   font-size: 2em;
   font-weight: bold; }
   .playlist .playlist-footer a {
