@@ -7,6 +7,10 @@
     postsFactory.getPost($stateParams.slug).then(function(data) {
       $scope.post = data[0];
       $scope.post.published = dateService.verbal($scope.post.date);
+
+      angular.element(document).ready(function() {
+        Prism.highlightAll();
+      });
     });
   });
 })();

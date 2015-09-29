@@ -36,7 +36,7 @@
         controller: 'BlogController'
       })
       .state('post', {
-        url: '/post/:slug',
+        url: '/blog/:slug',
         templateUrl: 'partials/post.html',
         controller: 'PostController'
       });
