@@ -53088,6 +53088,70 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
   });
 })();
 
+(function(pageFactory) {
+  'use strict';
+
+  angular.module('app.iasr').controller('AboutController', function($scope, pageFactory) {
+    $scope.contentClass = 'about';
+
+    pageFactory.getPage(2).then(function(data) {
+      $scope.page = data;
+    });
+  });
+})();
+
+(function(pageFactory) {
+  'use strict';
+
+  angular.module('app.iasr').controller('DevController', function($scope, pageFactory) {
+    $scope.contentClass = 'web-developer';
+
+    pageFactory.getPage(27).then(function(data) {
+      $scope.page = data;
+    });
+  });
+})();
+
+(function() {
+  'use strict';
+
+  angular.module('app.iasr').controller('PlaylistController',
+    function($scope, $stateParams, postsFactory, dateService) {
+    $scope.contentClass = 'playlist';
+
+    postsFactory.getPost($stateParams.slug).then(function(data) {
+      $scope.playlist = data[0];
+      $scope.playlist.published = dateService.verbal($scope.playlist.date);
+    });
+  });
+})();
+
+(function() {
+  'use strict';
+
+  angular.module('app.iasr').controller('PlaylistsController', function($scope, postsFactory) {
+    $scope.contentClass = 'playlists'
+
+    postsFactory.getPosts('playlists').then(function(data) {
+      $scope.playlists = data;
+    });
+  });
+})();
+
+(function(pageFactory) {
+  'use strict';
+
+  angular.module('app.iasr').controller('PortfolioController', function($scope, pageFactory) {
+    pageFactory.getPage(83).then(function(data) {
+      $scope.contentClass = 'portfolio';
+
+      $scope.title = data.title;
+      // process array so items are in reverse chronological order
+      $scope.portfolio = data.meta.portfolio_items.reverse();
+    });
+  });
+})();
+
 (function() {
   'use strict';
 
@@ -53119,71 +53183,6 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
         };
       }
     };
-  });
-})();
-
-(function(pageFactory) {
-  'use strict';
-
-  angular.module('app.iasr').controller('AboutController', function($scope, pageFactory) {
-    $scope.contentClass = 'about';
-
-    pageFactory.getPage(2).then(function(data) {
-      $scope.page = data;
-    });
-  });
-})();
-
-(function(pageFactory) {
-  'use strict';
-
-  angular.module('app.iasr').controller('DevController', function($scope, pageFactory) {
-    $scope.contentClass = 'web-developer';
-
-    pageFactory.getPage(27).then(function(data) {
-      $scope.page = data;
-    });
-  });
-})();
-
-(function() {
-  'use strict';
-
-  angular.module('app.iasr').controller('PlaylistController',
-    function($scope, $stateParams, playlistsFactory, dateService) {
-    $scope.contentClass = 'playlist';
-
-    playlistsFactory.getPlaylist($stateParams.slug).then(function(data) {
-      $scope.playlist = data[0];
-      $scope.playlist.published = dateService.verbal($scope.playlist.date);
-    });
-  });
-})();
-
-(function() {
-  'use strict';
-
-  angular.module('app.iasr').controller('PlaylistsController', function($scope, playlistsFactory) {
-    $scope.contentClass = 'playlists'
-
-    playlistsFactory.getPlaylists().then(function(data) {
-      $scope.playlists = data;
-      $scope.$emit('paplowOut');
-    });
-  });
-})();
-
-(function(pageFactory) {
-  'use strict';
-
-  angular.module('app.iasr').controller('PortfolioController', function($scope, pageFactory) {
-    pageFactory.getPage(83).then(function(data) {
-      $scope.contentClass = 'portfolio';
-
-      $scope.title = data.title;
-      // process array so items are in reverse chronological order
-      $scope.portfolio = data.meta.portfolio_items.reverse();
-    });
   });
 })();
 
@@ -53246,11 +53245,11 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
 (function() {
   'use strict';
 
-  angular.module('app.iasr').factory('playlistsFactory', function($http) {
+  angular.module('app.iasr').factory('postsFactory', function($http) {
     var service = {};
 
-    service.getPlaylists = function() {
-      return $http.get('/api/wp-json/posts').then(
+    service.getPosts = function(category) {
+      return $http.get('/api/wp-json/posts?filter[category_name]=' + category).then(
         function(response) {
           return response.data;
         },
@@ -53261,7 +53260,7 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
       );
     };
 
-    service.getPlaylist = function(slug) {
+    service.getPost = function(slug) {
       var urlBase = '/api/wp-json/posts?filter[name]==',
           urlSlug = slug.toString(),
           link = urlBase + urlSlug;
