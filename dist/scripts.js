@@ -53080,11 +53080,67 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
         url: '/web-developer',
         templateUrl: 'partials/portolio.html',
         controller: 'PortfolioController'
+      })
+      .state('blog', {
+        url: '/blog',
+        templateUrl: 'partials/blog.html',
+        controller: 'BlogController'
+      })
+      .state('post', {
+        url: '/post/:slug',
+        templateUrl: 'partials/post.html',
+        controller: 'PostController'
       });
 
     $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode(true);
+  });
+})();
+
+(function() {
+  'use strict';
+
+  angular.module('app.iasr').controller('BlogController', function($scope, postsFactory) {
+    $scope.contentClass = 'development';
+
+    postsFactory.getPosts('development').then(function(data) {
+      $scope.posts = data;
+    });
+  });
+})();
+
+(function() {
+  'use strict';
+
+  angular.module('app.iasr').directive('iasrPaplow', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'partials/paplow.html'
+    };
+  });
+})();
+
+(function() {
+  'use strict';
+
+  angular.module('app.iasr').directive('iasrTrackList', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'partials/track-list.html',
+      link: function(scope) {
+        scope.accordionToggle = function(e) {
+          var $self = $(e.currentTarget),
+              $next = $self.next('.js-accordion-panel'),
+              $panels = $('.js-accordion-panel').not($next);
+
+          $panels.velocity('slideUp', { duration: 250 });
+          $next.velocity('slideDown', { duration: 250, delay: 250 });
+
+          e.preventDefault();
+        };
+      }
+    };
   });
 })();
 
@@ -53155,34 +53211,13 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
 (function() {
   'use strict';
 
-  angular.module('app.iasr').directive('iasrPaplow', function() {
-    return {
-      restrict: 'E',
-      templateUrl: 'partials/paplow.html'
-    };
-  });
-})();
+  angular.module('app.iasr').controller('PostController', function($scope, $stateParams, postsFactory, dateService) {
+    $scope.contentClass = 'post';
 
-(function() {
-  'use strict';
-
-  angular.module('app.iasr').directive('iasrTrackList', function() {
-    return {
-      restrict: 'E',
-      templateUrl: 'partials/track-list.html',
-      link: function(scope) {
-        scope.accordionToggle = function(e) {
-          var $self = $(e.currentTarget),
-              $next = $self.next('.js-accordion-panel'),
-              $panels = $('.js-accordion-panel').not($next);
-
-          $panels.velocity('slideUp', { duration: 250 });
-          $next.velocity('slideDown', { duration: 250, delay: 250 });
-
-          e.preventDefault();
-        };
-      }
-    };
+    postsFactory.getPost($stateParams.slug).then(function(data) {
+      $scope.post = data[0];
+      $scope.post.published = dateService.verbal($scope.post.date);
+    });
   });
 })();
 

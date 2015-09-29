@@ -29,6 +29,16 @@
         url: '/web-developer',
         templateUrl: 'partials/portolio.html',
         controller: 'PortfolioController'
+      })
+      .state('blog', {
+        url: '/blog',
+        templateUrl: 'partials/blog.html',
+        controller: 'BlogController'
+      })
+      .state('post', {
+        url: '/post/:slug',
+        templateUrl: 'partials/post.html',
+        controller: 'PostController'
       });
 
     $urlRouterProvider.otherwise('/');

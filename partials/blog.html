@@ -1,0 +1,7 @@
+<article ng-repeat="post in posts">
+  <h1 class="article-title">
+    <a ui-sref="post({ slug: post.slug })" class="article-link">{{ post.title }}</a>
+  </h1>
+
+  <p ng-bind-html="post.excerpt"></p>
+</article>
