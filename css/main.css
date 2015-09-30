@@ -1,3 +1,4 @@
+@charset "UTF-8";
 button, input[type="button"], input[type="reset"], input[type="submit"],
 button {
   -webkit-appearance: none;
@@ -206,19 +207,19 @@ html {
 *:after {
   box-sizing: inherit; }
 
-/* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript+git+php+sass */
+/* http://prismjs.com/download.html?themes=prism-twilight&languages=markup+css+clike+javascript+git+markdown+php+sass */
 /**
- * prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
- * @author Lea Verou
+ * prism.js Twilight theme
+ * Based (more or less) on the Twilight theme originally of Textmate fame.
+ * @author Remy Bach
  */
 code[class*="language-"],
 pre[class*="language-"] {
-  color: black;
-  text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  color: white;
   direction: ltr;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   text-align: left;
+  text-shadow: 0 -0.1em 0.2em black;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
@@ -232,85 +233,113 @@ pre[class*="language-"] {
   -ms-hyphens: none;
   hyphens: none; }
 
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] {
+  background: #141414;
+  /* #141414 */ }
+
+/* Code blocks */
+pre[class*="language-"] {
+  border-radius: .5em;
+  border: 0.3em solid #545454;
+  /* #282A2B */
+  box-shadow: 1px 1px 0.5em black inset;
+  margin: .5em 0;
+  overflow: auto;
+  padding: 1em; }
+
+pre[class*="language-"]::-moz-selection {
+  /* Safari */
+  background: #27292a;
+  /* #282A2B */ }
+
+pre[class*="language-"]::selection {
+  /* Safari */
+  background: #27292a;
+  /* #282A2B */ }
+
+pre[class*="language-"]::-moz-selection {
+  /* Firefox */
+  background: #27292a;
+  /* #282A2B */ }
+
+pre[class*="language-"]::selection {
+  /* Firefox */
+  background: #27292a;
+  /* #282A2B */ }
+
+/* Text Selection colour */
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
   text-shadow: none;
-  background: #b3d4fc; }
+  background: rgba(237, 237, 237, 0.15);
+  /* #EDEDED */ }
 
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
   text-shadow: none;
-  background: #b3d4fc; }
-
-@media print {
-  code[class*="language-"],
-  pre[class*="language-"] {
-    text-shadow: none; } }
-
-/* Code blocks */
-pre[class*="language-"] {
-  padding: 1em;
-  margin: .5em 0;
-  overflow: auto; }
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: #f5f2f0; }
+  background: rgba(237, 237, 237, 0.15);
+  /* #EDEDED */ }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em; }
+  border-radius: .3em;
+  border: 0.13em solid #545454;
+  /* #545454 */
+  box-shadow: 1px 1px 0.3em -0.1em black inset;
+  padding: 0.15em 0.2em 0.05em; }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: slategray; }
+  color: #787878;
+  /* #777777 */ }
 
 .token.punctuation {
-  color: #999; }
+  opacity: .7; }
 
 .namespace {
   opacity: .7; }
 
-.token.property,
 .token.tag,
 .token.boolean,
 .token.number,
+.token.deleted {
+  color: #cf694a;
+  /* #CF6A4C */ }
+
+.token.keyword,
+.token.property,
+.token.selector,
 .token.constant,
 .token.symbol,
-.token.deleted {
-  color: #905; }
+.token.builtin {
+  color: #f9ee9a;
+  /* #F9EE98 */ }
 
-.token.selector,
 .token.attr-name,
+.token.attr-value,
 .token.string,
 .token.char,
-.token.builtin,
-.token.inserted {
-  color: #690; }
-
 .token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
-.style .token.string {
-  color: #a67f59;
-  background: rgba(255, 255, 255, 0.5); }
+.style .token.string,
+.token.variable,
+.token.inserted {
+  color: #919e6b;
+  /* #8F9D6A */ }
 
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-  color: #07a; }
-
-.token.function {
-  color: #DD4A68; }
+.token.atrule {
+  color: #7386a5;
+  /* #7587A6 */ }
 
 .token.regex,
-.token.important,
-.token.variable {
-  color: #e90; }
+.token.important {
+  color: #e9c163;
+  /* #E9C062 */ }
 
 .token.important,
 .token.bold {
@@ -321,6 +350,70 @@ pre[class*="language-"] {
 
 .token.entity {
   cursor: help; }
+
+pre[data-line] {
+  padding: 1em 0 1em 3em;
+  position: relative; }
+
+/* Markup */
+.language-markup .token.tag,
+.language-markup .token.attr-name,
+.language-markup .token.punctuation {
+  color: #ad895c;
+  /* #AC885B */ }
+
+/* Make the tokens sit above the line highlight so the colours don't look faded. */
+.token {
+  position: relative;
+  z-index: 1; }
+
+.line-highlight {
+  /* #545454 */
+  /* #545454 */
+  background: -webkit-linear-gradient(left, rgba(84, 84, 84, 0.1) 70%, rgba(84, 84, 84, 0));
+  /* #545454 */
+  background: rgba(84, 84, 84, 0.25);
+  /* #545454 */
+  background: linear-gradient(left, rgba(84, 84, 84, 0.1) 70%, rgba(84, 84, 84, 0));
+  /* #545454 */
+  border-bottom: 1px dashed #545454;
+  /* #545454 */
+  border-top: 1px dashed #545454;
+  /* #545454 */
+  left: 0;
+  line-height: inherit;
+  margin-top: 0.75em;
+  /* Same as .prism’s padding-top */
+  padding: inherit 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  white-space: pre;
+  z-index: 0; }
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  background-color: #8794a6;
+  /* #8794A6 */
+  border-radius: 999px;
+  box-shadow: 0 1px white;
+  color: #f5f2f0;
+  /* #F5F2F0 */
+  content: attr(data-start);
+  font: bold 65%/1.5 sans-serif;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  position: absolute;
+  text-align: center;
+  text-shadow: none;
+  top: .4em;
+  vertical-align: .3em; }
+
+.line-highlight[data-end]:after {
+  bottom: .4em;
+  content: attr(data-end);
+  top: auto; }
 
 .article-header,
 .page-header {
@@ -429,18 +522,6 @@ h2 {
     h2 {
       font-size: 1.5em; } }
 
-code {
-  background: #F7F7F7;
-  border-radius: 4.5px;
-  border: 1px solid #E0E0E0;
-  font-size: 0.75em;
-  font-style: normal;
-  padding: 0.1em 0.4em;
-  white-space: nowrap; }
-
-h2 code {
-  font-size: 0.65em; }
-
 h3 {
   font-family: "Ovo", serif;
   font-size: 1.4em;
@@ -448,6 +529,10 @@ h3 {
   font-weight: 400;
   line-height: 1.3em;
   margin-bottom: 0.4em; }
+
+pre[class*="language-"] {
+  border: 0;
+  font-size: .75em; }
 
 p.date {
   color: rgba(51, 51, 51, 0.4);
@@ -767,6 +852,22 @@ footer[role="contentinfo"] {
     .track-list .track-notes p {
       margin-bottom: 0; }
 
+.post-footer {
+  text-align: center;
+  font-family: "Ovo", serif;
+  font-size: 2em;
+  font-weight: bold; }
+  .post-footer a {
+    -webkit-transition: color 0.25s;
+            transition: color 0.25s;
+    color: #464541; }
+    .post-footer a:hover {
+      color: #6b83a6; }
+  .post-footer .arrow-icon {
+    font-size: .75em;
+    position: relative;
+    top: 2px; }
+
 .playlist .services {
   text-align: center; }
 
@@ -803,22 +904,6 @@ footer[role="contentinfo"] {
     color: #008fd5; }
   .playlist .service .link-spotify:hover {
     color: #8cbc31; }
-
-.playlist .playlist-footer {
-  text-align: center;
-  font-family: "Ovo", serif;
-  font-size: 2em;
-  font-weight: bold; }
-  .playlist .playlist-footer a {
-    -webkit-transition: color 0.25s;
-            transition: color 0.25s;
-    color: #464541; }
-    .playlist .playlist-footer a:hover {
-      color: #6b83a6; }
-  .playlist .playlist-footer .arrow-icon {
-    font-size: .75em;
-    position: relative;
-    top: 2px; }
 
 .portfolio-item {
   margin-bottom: 2em;
