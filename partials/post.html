@@ -1,4 +1,4 @@
-<article class="post">
+<article class="post" ng-cloak>
   <header class="article-header">
     <h1 class="article-title">
       {{ ::post.title }}
@@ -9,6 +9,12 @@
   </header>
 
   <section class="post-body" ng-bind-html="post.content"></section>
+
+  <section class="post-comments">
+    <dir-disqus disqus-shortname="iasr" disqus-identifier="{{ post.ID }}" disqus-url="{{ disqusURL }}"
+        ready-to-bind="{{ contentLoaded }}">
+    </dir-disqus>
+  </section>
 
   <footer class="post-footer">
     <a ui-sref="blog">

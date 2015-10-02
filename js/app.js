@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('app.iasr', ['ui.router', 'ngSanitize', 'ngAnimate']);
+  angular.module('app.iasr', ['ui.router', 'ngSanitize', 'ngAnimate', 'angularUtils.directives.dirDisqus']);
 
   angular.module('app.iasr').config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider

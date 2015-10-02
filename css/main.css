@@ -532,7 +532,8 @@ h3 {
 
 pre[class*="language-"] {
   border: 0;
-  font-size: .75em; }
+  font-size: .75em;
+  margin-bottom: 1.5em; }
 
 p.date {
   color: rgba(51, 51, 51, 0.4);
@@ -867,6 +868,19 @@ footer[role="contentinfo"] {
     font-size: .75em;
     position: relative;
     top: 2px; }
+
+.post-preview p {
+  margin-bottom: 0; }
+
+.read-more {
+  font-family: "Ovo", serif;
+  float: right; }
+  .read-more a {
+    -webkit-transition: color 0.25s;
+            transition: color 0.25s;
+    color: #6b83a6; }
+    .read-more a:hover {
+      color: #464541; }
 
 .playlist .services {
   text-align: center; }
