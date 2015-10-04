@@ -7,9 +7,3 @@ node_modules/
 node_modules/*
 /sass/.sass-cache
 /sass/.sass-cache/*
-/api/*
-!/api/wp-content/
-/api/wp-content/*
-!/api/wp-content/themes
-/api/wp-content/themes/*
-!/api/wp-content/themes/iasr
