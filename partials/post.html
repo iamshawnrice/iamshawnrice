@@ -1,0 +1,25 @@
+<article class="post">
+  <header class="article-header">
+    <h1 class="article-title">
+      {{ ::post.title }}
+    </h1>
+    <p ng-if="post.date" class="date">
+      {{ ::post.published }}
+    </p>
+  </header>
+
+  <section class="post-body" ng-bind-html="post.content" iasr-syntax></section>
+
+  <section class="post-comments">
+    <dir-disqus disqus-shortname="iasr" disqus-identifier="{{ post.ID }}" disqus-url="{{ disqusURL }}"
+        ready-to-bind="{{ contentLoaded }}">
+    </dir-disqus>
+  </section>
+
+  <footer class="post-footer">
+    <a ui-sref="blog">
+      <span class="icon icon-arrow-left arrow-icon"></span>
+      Back
+    </a>
+  </footer>
+</article>

@@ -1,11 +1,11 @@
 (function() {
   'use strict';
 
-  angular.module('app.iasr').factory('playlistsFactory', function($http) {
+  angular.module('app.iasr').factory('postsFactory', function($http) {
     var service = {};
 
-    service.getPlaylists = function() {
-      return $http.get('/api/wp-json/posts').then(
+    service.getPosts = function(category) {
+      return $http.get('/api/wp-json/posts?filter[category_name]=' + category).then(
         function(response) {
           return response.data;
         },
@@ -16,7 +16,7 @@
       );
     };
 
-    service.getPlaylist = function(slug) {
+    service.getPost = function(slug) {
       var urlBase = '/api/wp-json/posts?filter[name]==',
           urlSlug = slug.toString(),
           link = urlBase + urlSlug;

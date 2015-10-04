@@ -1,12 +1,11 @@
 (function() {
   'use strict';
 
-  angular.module('app.iasr').controller('PlaylistsController', function($scope, playlistsFactory) {
+  angular.module('app.iasr').controller('PlaylistsController', function($scope, postsFactory) {
     $scope.contentClass = 'playlists'
 
-    playlistsFactory.getPlaylists().then(function(data) {
+    postsFactory.getPosts('playlists').then(function(data) {
       $scope.playlists = data;
-      $scope.$emit('paplowOut');
     });
   });
 })();
