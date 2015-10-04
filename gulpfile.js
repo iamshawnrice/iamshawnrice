@@ -57,7 +57,6 @@ gulp.task('sass-build', function () {
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(uglifycss())
-    .pipe(buster())
     .pipe(gulp.dest('./css'))
 });
 
