@@ -1,0 +1,14 @@
+.post-preview {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.read-more {
+  font-family: $serif;
+  float: right;
+
+  a {
+    @include link($iasr-blue, $gray-4);
+  }
+}

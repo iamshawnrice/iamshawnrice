@@ -1,0 +1,16 @@
+.post-footer {
+  text-align: center;
+  font-family: $serif;
+  font-size: 2em;
+  font-weight: bold;
+
+  a {
+    @include link($gray-4, $iasr-blue);
+  }
+
+  .arrow-icon {
+    font-size: .75em;
+    position: relative;
+    top: 2px;
+  }
+}
