@@ -1,0 +1,46 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: lighten(#edeae2, 5%);
+  color: #464541;
+  position: relative;
+  min-height: 100%;
+}
+
+.body-wrap {
+  @include outer-container;
+}
+
+
+// Header
+.site-header {
+  position: absolute;
+  bottom: 0;
+}
+
+.site-title {
+  font-size: 10em;
+  margin: 0;
+  line-height: .85;
+}
+
+.site-nav {
+  font-size: 4em;
+
+  a {
+    @include link($iasr-blue, $gray-4);
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .site-title {
+    font-size: 4em;
+  }
+
+  .site-nav {
+    font-size: 2em;
+  }
+}

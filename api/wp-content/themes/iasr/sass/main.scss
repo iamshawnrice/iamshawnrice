@@ -1,0 +1,15 @@
+// main.scss
+
+// This is the primary manifest file
+// Files should be imported according to the folder they live in,
+// one after the other in the following order:
+
+// Dependencies
+@import "vendors/vendors";
+@import "utils/utils";
+
+@import "base/base";
+@import "layout/layout";
+@import "components/components";
+// pages/
+// themes/

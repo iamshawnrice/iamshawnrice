@@ -1,0 +1,8 @@
+@mixin link($initial, $hover: lighten($initial, 10%)) {
+  @include transition(color .25s);
+  color: $initial;
+
+  &:hover {
+    color: $hover;
+  }
+}
