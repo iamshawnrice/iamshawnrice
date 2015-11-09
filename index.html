@@ -33,7 +33,7 @@
           </span>
         </p>
       </header>
-      <section ui-view class="main-content js-main-content" ng-class="contentClass" ng-cloak></section>
+      <section ng-init="active = false" ui-view class="main-content js-main-content {{contentClass}}"></section>
     </div><!-- .body-wrap -->
 
     <footer role="contentinfo">

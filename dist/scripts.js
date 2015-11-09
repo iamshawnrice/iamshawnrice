@@ -53161,12 +53161,20 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
       .state('about', {
         url: '/about',
         templateUrl: 'partials/page.html',
-        controller: 'AboutController'
+        controller: 'PageController',
+        data: {
+          pageClass: 'about',
+          pageID: 2
+        }
       })
       .state('default', {
         url: '/',
         templateUrl: 'partials/page.html',
-        controller: 'DevController'
+        controller: 'PageController',
+        data: {
+          pageClass: 'web-developer',
+          pageID: 27
+        }
       })
       .state('playlists', {
         url: '/playlists',
@@ -53212,57 +53220,65 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
   });
 })();
 
-(function(pageFactory) {
-  'use strict';
+angular.module('app.iasr').controller('DevController', function($scope, getPage) {
+  $scope.contentClass = 'web-developer';
 
-  angular.module('app.iasr').controller('DevController', function($scope, pageFactory) {
-    $scope.contentClass = 'web-developer';
-
-    pageFactory.getPage(27).then(function(data) {
-      $scope.page = data;
-    });
+  getPage(27).then(function(data) {
+    $scope.page = data;
   });
-})();
+});
 
-(function() {
-  'use strict';
+angular.module('app.iasr').controller('PageController', function($scope, $state, $http) {
+  $scope.page = null;
 
-  angular.module('app.iasr').controller('PlaylistController',
-    function($scope, $stateParams, postsFactory, dateService) {
-    $scope.contentClass = 'playlist';
+  function getPageContent(id) {
+    $http.get('/api/wp-json/pages/' + id).then(
+      function(response) {
+        $scope.page = response.data;
+      },
+      function(response) {
+        console.error('There was an issue retrieving this page');
+        console.log(response);
+      });
+  };
 
-    postsFactory.getPost($stateParams.slug).then(function(data) {
-      $scope.playlist = data[0];
+  getPageContent($state.current.data.pageID);
+});
+
+angular.module('app.iasr').controller('PlaylistController',
+  function($scope, $stateParams, posts, dateService) {
+  $scope.contentClass = 'playlist';
+
+  $scope.posts = posts;
+
+  $scope.$watch('posts', function(newVal, oldVal) {
+    if (Object.keys(newVal).length) {
+      $scope.playlist = $scope.posts[$stateParams.slug];
       $scope.playlist.published = dateService.verbal($scope.playlist.date);
-    });
+    }
+  }, true);
+
+  // postsFactory.getPost($stateParams.slug).then(function(data) {
+  //   $scope.playlist = data[0];
+  //   $scope.playlist.published = dateService.verbal($scope.playlist.date);
+  // });
+});
+
+angular.module('app.iasr').controller('PlaylistsController', function($scope, posts) {
+  $scope.contentClass = 'playlists'
+
+  $scope.playlists = posts;
+});
+
+angular.module('app.iasr').controller('PortfolioController', function($scope, getPage) {
+  getPage(83).then(function(data) {
+    $scope.contentClass = 'portfolio';
+
+    $scope.title = data.title;
+    // process array so items are in reverse chronological order
+    $scope.portfolio = data.meta.portfolio_items.reverse();
   });
-})();
-
-(function() {
-  'use strict';
-
-  angular.module('app.iasr').controller('PlaylistsController', function($scope, postsFactory) {
-    $scope.contentClass = 'playlists'
-
-    postsFactory.getPosts('playlists').then(function(data) {
-      $scope.playlists = data;
-    });
-  });
-})();
-
-(function(pageFactory) {
-  'use strict';
-
-  angular.module('app.iasr').controller('PortfolioController', function($scope, pageFactory) {
-    pageFactory.getPage(83).then(function(data) {
-      $scope.contentClass = 'portfolio';
-
-      $scope.title = data.title;
-      // process array so items are in reverse chronological order
-      $scope.portfolio = data.meta.portfolio_items.reverse();
-    });
-  });
-})();
+});
 
 (function() {
   'use strict';
@@ -53364,68 +53380,40 @@ will produce an inaccurate conversion value. The same issue exists with the cx/c
   });
 })();
 
-(function($rootScope) {
-  'use strict';
+angular.module('app.iasr').service('getPage', function($rootScope, $http) {
+  return function(id) {
+    var urlBase = '/api/wp-json/pages/',
+        urlId = id.toString(),
+        link = urlBase + urlId;
 
-  angular.module('app.iasr').factory('pageFactory', function($rootScope, $http) {
-    var service = {};
+    return $http.get(link).then(
+      function(response) {
+        return response.data;
+      },
+      function(response) {
+        console.error('There was an issue retrieving this page');
+        console.log(response);
+      });
+  };
+});
 
-    service.getPage = function(id) {
-      var urlBase = '/api/wp-json/pages/',
-          urlId = id.toString(),
-          link = urlBase + urlId;
+angular.module('app.iasr').service('posts', function($http) {
+  var posts = {};
 
-      return $http.get(link).then(
-        function(response) {
-          return response.data;
-        },
-        function(response) {
-          console.error('There was an issue retrieving this page');
-          console.log(response);
-        });
-      };
+  $http.get('/api/wp-json/posts?filter[category_name]=playlists').then(
+    function(response) {
+      response.data.forEach(function(currentValue) {
+        posts[currentValue.slug] = currentValue;
+      });
+    },
+    function(response) {
+      console.error('There was a problem retrieving the playlists');
+      console.log(response);
+    }
+  );
 
-    return service;
-  });
-})();
-
-(function() {
-  'use strict';
-
-  angular.module('app.iasr').factory('postsFactory', function($http) {
-    var service = {};
-
-    service.getPosts = function(category) {
-      return $http.get('/api/wp-json/posts?filter[category_name]=' + category).then(
-        function(response) {
-          return response.data;
-        },
-        function(response) {
-          console.error('There was a problem retrieving the playlists');
-          console.log(response);
-        }
-      );
-    };
-
-    service.getPost = function(slug) {
-      var urlBase = '/api/wp-json/posts?filter[name]==',
-          urlSlug = slug.toString(),
-          link = urlBase + urlSlug;
-
-      return $http.get(link).then(
-        function(response) {
-          return response.data;
-        },
-        function(response) {
-          console.error('There was a problem retrieving this playlist');
-          console.log(response);
-        }
-      );
-    };
-
-    return service;
-  });
-})();
+  return posts;
+});
 
 /* http://prismjs.com/download.html?themes=prism-twilight&languages=markup+css+clike+javascript+git+markdown+php+sass */
 var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(?!\*)(\w+)\b/i,t=_self.Prism={util:{encode:function(e){return e instanceof n?new n(e.type,t.util.encode(e.content),e.alias):"Array"===t.util.type(e)?e.map(t.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},clone:function(e){var n=t.util.type(e);switch(n){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=t.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return t.util.clone(e)})}return e}},languages:{extend:function(e,n){var a=t.util.clone(t.languages[e]);for(var r in n)a[r]=n[r];return a},insertBefore:function(e,n,a,r){r=r||t.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==n)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return t.languages.DFS(t.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,n,a){for(var r in e)e.hasOwnProperty(r)&&(n.call(e,r,e[r],a||r),"Object"===t.util.type(e[r])?t.languages.DFS(e[r],n):"Array"===t.util.type(e[r])&&t.languages.DFS(e[r],n,r))}},plugins:{},highlightAll:function(e,n){for(var a,r=document.querySelectorAll('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'),l=0;a=r[l++];)t.highlightElement(a,e===!0,n)},highlightElement:function(n,a,r){for(var l,i,o=n;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=t.languages[l]),n.className=n.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=n.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=n.textContent,u={element:n,language:l,grammar:i,code:s};if(!s||!i)return t.hooks.run("complete",u),void 0;if(t.hooks.run("before-highlight",u),a&&_self.Worker){var g=new Worker(t.filename);g.onmessage=function(e){u.highlightedCode=e.data,t.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),t.hooks.run("after-highlight",u),t.hooks.run("complete",u)},g.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=t.highlight(u.code,u.grammar,u.language),t.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(n),t.hooks.run("after-highlight",u),t.hooks.run("complete",u)},highlight:function(e,a,r){var l=t.tokenize(e,a);return n.stringify(t.util.encode(l),r)},tokenize:function(e,n){var a=t.Token,r=[e],l=n.rest;if(l){for(var i in l)n[i]=l[i];delete n.rest}e:for(var i in n)if(n.hasOwnProperty(i)&&n[i]){var o=n[i];o="Array"===t.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],g=u.inside,c=!!u.lookbehind,f=0,h=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var d=r[p];if(r.length>e.length)break e;if(!(d instanceof a)){u.lastIndex=0;var m=u.exec(d);if(m){c&&(f=m[1].length);var y=m.index-1+f,m=m[0].slice(f),v=m.length,k=y+v,b=d.slice(0,y+1),w=d.slice(k+1),P=[p,1];b&&P.push(b);var A=new a(i,g?t.tokenize(m,g):m,h);P.push(A),w&&P.push(w),Array.prototype.splice.apply(r,P)}}}}}return r},hooks:{all:{},add:function(e,n){var a=t.hooks.all;a[e]=a[e]||[],a[e].push(n)},run:function(e,n){var a=t.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(n)}}},n=t.Token=function(e,t,n){this.type=e,this.content=t,this.alias=n};if(n.stringify=function(e,a,r){if("string"==typeof e)return e;if("Array"===t.util.type(e))return e.map(function(t){return n.stringify(t,a,e)}).join("");var l={type:e.type,content:n.stringify(e.content,a,r),tag:"span",classes:["token",e.type],attributes:{},language:a,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===t.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}t.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var n=JSON.parse(e.data),a=n.language,r=n.code,l=n.immediateClose;_self.postMessage(t.highlight(r,t.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var a=document.getElementsByTagName("script");return a=a[a.length-1],a&&(t.filename=a.src,document.addEventListener&&!a.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",t.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);

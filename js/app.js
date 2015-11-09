@@ -8,12 +8,20 @@
       .state('about', {
         url: '/about',
         templateUrl: 'partials/page.html',
-        controller: 'AboutController'
+        controller: 'PageController',
+        data: {
+          pageClass: 'about',
+          pageID: 2
+        }
       })
       .state('default', {
         url: '/',
         templateUrl: 'partials/page.html',
-        controller: 'DevController'
+        controller: 'PageController',
+        data: {
+          pageClass: 'web-developer',
+          pageID: 27
+        }
       })
       .state('playlists', {
         url: '/playlists',
