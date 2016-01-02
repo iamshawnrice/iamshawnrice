@@ -43,6 +43,13 @@
 	},
 	"buffers":
 	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -90,13 +97,8 @@
 	"expanded_folders":
 	[
 		"/Users/shawnrice/Sites/iamshawnrice",
-		"/Users/shawnrice/Sites/iamshawnrice/bower_components",
-		"/Users/shawnrice/Sites/iamshawnrice/dist",
-		"/Users/shawnrice/Sites/iamshawnrice/js",
-		"/Users/shawnrice/Sites/iamshawnrice/js/controllers",
 		"/Users/shawnrice/Sites/iamshawnrice/js/directives",
-		"/Users/shawnrice/Sites/iamshawnrice/js/factories",
-		"/Users/shawnrice/Sites/iamshawnrice/partials"
+		"/Users/shawnrice/Sites/iamshawnrice/js/factories"
 	],
 	"file_history":
 	[
@@ -289,8 +291,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"default_dir": "/Users/shawnrice/Sites/iamshawnrice",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -854,7 +885,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 236.0,
 	"status_bar_visible": true,
 	"template_settings":

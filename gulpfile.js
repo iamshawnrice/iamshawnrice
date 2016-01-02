@@ -15,7 +15,6 @@ var vendorJSFiles = [
   './bower_components/angular-animate/angular-animate.js',
   './bower_components/angular-sanitize/angular-sanitize.js',
   './bower_components/angular-ui-router/release/angular-ui-router.js',
-  './bower_components/angularUtils-disqus/dirDisqus.js',
   './bower_components/jquery/dist/jquery.js',
   './bower_components/moment/moment.js',
   './bower_components/velocity/velocity.js'
