@@ -1,7 +1,7 @@
 angular.module('app.iasr').service('posts', function($http) {
   var posts = {};
 
-  $http.get('/api/wp-json/posts?filter[category_name]=playlists').then(
+  $http.get('/api/wp-json/posts?filter[posts_per_page]=-1').then(
     function(response) {
       response.data.forEach(function(currentValue) {
         posts[currentValue.slug] = currentValue;
