@@ -36,16 +36,6 @@ angular.module('app.iasr').config(function($stateProvider, $urlRouterProvider, $
       url: '/web-developer',
       templateUrl: 'partials/portolio.html',
       controller: 'PortfolioController'
-    })
-    .state('blog', {
-      url: '/blog',
-      templateUrl: 'partials/blog.html',
-      controller: 'BlogController'
-    })
-    .state('post', {
-      url: '/blog/:slug',
-      templateUrl: 'partials/post.html',
-      controller: 'PostController'
     });
 
   $urlRouterProvider.otherwise('/');
