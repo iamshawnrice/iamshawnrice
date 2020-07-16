@@ -1,95 +1,54 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="" ng-app> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="" ng-app> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="" ng-app> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="" ng-app="app.iasr"> <!--<![endif]-->
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Shawn Rice | Web Developer &amp; Music Snob</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="icon" type="image/png" href="./images/favicon.png" />
-    <link rel="stylesheet" href="/css/main.css?ver=1.5">
-
-    <base href="/">
-    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shawn Rice</title>
+    <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <div class="body-wrap">
-      <header role="banner" class="site-header">
-        <h1 class="site-title">
-          <a ui-sref="default">Shawn Rice</a>
-        </h1>
-        <p class="site-nav">
-          <span>
-            <a ui-sref="webdeveloper">Web Developer</a>
-            &amp;
-            <a ui-sref="playlists">Music Snob</a>
-          </span>
+    <section class="page-wrap">
+      <div class="content-wrap">
+        <h1>Hi. I am Shawn Rice.</h1>
+
+        <div class="headshot">
+          <img src="./assets/headshot-740.jpg" alt="Shawn Rice" />
+        </div>
+
+        <p class="subtitle">
+          I am a web developer living and working in Charleston, SC.
         </p>
-      </header>
-      <section ui-view class="main-content js-main-content" ng-class="contentClass" ng-cloak></section>
-    </div><!-- .body-wrap -->
 
-    <footer role="contentinfo">
-      <div class="foot-wrap">
-        <ul class="footer-about">
-          <li><a ui-sref="about">About</a></li>
-          <li><a href="mailto:iamshawnrice@gmail.com">Contact</a></li>
-        </ul>
+        <p>
+          When not making websites, I am usually chasing after a toddler with my
+          wife, walking a grumpy old labrador, doing dishes/laundry, going to
+          the grocery store, listening to podcasts while running, playing
+          videogames, watching/reading Sci-fi, or burning food on the grill. I
+          have been obsessed with music for as long as I can remember.
+        </p>
 
-        <iasr-paplow></iasr-paplow>
-
-        <ul class="footer-social">
-          <li>
-            <a class="social-twitter" href="https://twitter.com/iamshawnrice">
-              <span class="icon-twitter"></span>
-            </a>
-          </li>
-          <li>
-            <a class="social-linkedin" href="https://www.linkedin.com/in/iamshawnrice">
-              <span class="icon-linkedin2"></span>
-            </a>
-          </li>
-          <li>
-            <a class="social-github" href="https://github.com/iamshawnrice">
-              <span class="icon-github"></span>
-            </a>
-          </li>
-        </ul>
-      </div><!-- .foot-wrap -->
-    </footer>
-
-    <script src="dist/scripts.js?ver=1.5"></script>
-
-    <!-- Kissmetrics tracking snippet -->
-    <script type="text/javascript">var _kmq = _kmq || [];
-    var _kmk = _kmk || '76dfed6a6b7b5399a413ef94852104eea54665ad';
-    function _kms(u){
-      setTimeout(function(){
-        var d = document, f = d.getElementsByTagName('script')[0],
-        s = d.createElement('script');
-        s.type = 'text/javascript'; s.async = true; s.src = u;
-        f.parentNode.insertBefore(s, f);
-      }, 1);
-    }
-    _kms('//i.kissmetrics.com/i.js');
-    _kms('//scripts.kissmetrics.com/' + _kmk + '.2.js');
-    </script>
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-54224506-1','auto');ga('send','pageview');
-    </script>
+        <footer>
+          <ul class="social">
+            <li>
+              <a href="https://github.com/iamshawnrice" class="github"
+                >github</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/iamshawnrice/"
+                class="linkedin"
+                >linkedin</a
+              >
+            </li>
+            <li>
+              <a href="https://twitter.com/iamshawnrice" class="twitter"
+                >twitter</a
+              >
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </section>
   </body>
 </html>
